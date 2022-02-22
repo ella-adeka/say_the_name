@@ -1,0 +1,35 @@
+
+
+
+// FONTS
+@font-face {
+    font-family: Appears;
+    src: url('../../fonts/appears/AppearsDemoRegular.otf');
+}
+
+@font-face {
+    font-family: Barracuda;
+    src: url('../../fonts/Barracuda/Barracuda-Bold.ttf');
+}
+
+@font-face {
+    font-family: Mangsi;
+    src: url('../../fonts/mangsi/Mangsi.otf');
+}
+
+@font-face {
+    font-family: Seraya;
+    src: url('../../fonts/seraya-font/SerayaDemo-0W64R.otf');
+}
+
+@font-face {
+    font-family: Valery;
+    src: url('../../fonts/valery/ValeryRegular.otf');
+}
+
+$backGroundTextFont: Appears;
+// $sideBarFont: 'Epilogue', sans-serif;
+$sideBarFont: Seraya;
+$navBarFont: Valery;
+$bodyTextFont: Valery;
+// $bodyTextFont: 'Asap', sans-serif;
