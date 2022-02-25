@@ -37,11 +37,7 @@
         </nav> 
     </header> 
 
-    <main class="mainMembers">
-        <p>MEMBERS PAGE</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, eum quos ullam laborum quasi eius blanditiis animi sunt eaque dolorem ea perferendis numquam itaque corporis, nam a unde, tempore quam?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, eum quos ullam laborum quasi eius blanditiis animi sunt eaque dolorem ea perferendis numquam itaque corporis, nam a unde, tempore quam?</p>
-    </main>
+    <main class="mainMembers"></main>
 
     <footer>
         <div class="pledis">
@@ -58,11 +54,48 @@
     </footer>
 
     <div class="backgroundText">Members</div>
-    <!-- <div class="imageDiv">
-        <img class="image" src="images/seventeen_logo.png" alt="">
-    </div> -->
 
-    <script type="module" src="/main.js"></script>
+    <script src="/javascript/members_data.js"></script>
+    <script type="module" src="main.js"></script>
+    <script>
+        const main = document.querySelector('.mainMembers');
+
+        membersData.forEach(member => {
+            const dets = document.createElement('div');
+            dets.setAttribute("class", "mainMembers__dets");
+            
+            // INFO DIV
+            const info = document.createElement('div');
+            info.setAttribute("class", "mainMembers__dets__info");
+
+            // IMAGES
+            const memberImage = document.createElement('img');
+            const image = 'images/members/'+member.image+".jpg";
+            memberImage.setAttribute("src", image);
+            memberImage.setAttribute("class", "mainMembers__dets__image");
+            memberImage.innerHTML = member.img;
+
+            // NAME
+            const name = document.createElement('p');
+            name.setAttribute("class", "mainMembers__dets__info__name");
+            name.innerHTML = member.name;
+
+            // TEAM
+            const team = document.createElement('p');
+            team.setAttribute("class", "mainMembers__dets__info__unit");
+            team.innerHTML = member.team;
+
+            info.append(name);
+            info.append(team);
+
+            dets.append(memberImage);
+            dets.append(info);
+            main.append(dets);
+        });
+
+        
+
+    </script>
     <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
 </body>
 </html>
