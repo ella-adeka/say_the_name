@@ -525,6 +525,47 @@ body.dark {
   font-size: 5em;
 }
 
+.mainMembers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 90%;
+  padding-top: 2em;
+}
+
+.mainMembers__dets {
+  position: relative;
+  height: 100vh;
+}
+
+.mainMembers__dets__image {
+  position: absolute;
+  width: 420px;
+  right: 20%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.mainMembers__dets__info {
+  position: absolute;
+  width: 430px;
+  left: 3em;
+  top: 40%;
+  text-align: right;
+}
+
+.mainMembers__dets__info__name {
+  font-size: 5em;
+}
+
+.mainMembers__dets__info__unit {
+  margin-top: -0.4em;
+  font-size: 1.3em;
+}
+
 html, body {
   -webkit-user-select: none;
      -moz-user-select: none;
