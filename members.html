@@ -63,33 +63,19 @@
         membersData.forEach(member => {
             const dets = document.createElement('div');
             dets.setAttribute("class", "mainMembers__dets");
-            
-            // INFO DIV
-            const info = document.createElement('div');
-            info.setAttribute("class", "mainMembers__dets__info");
-
-            // IMAGES
-            const memberImage = document.createElement('img');
             const image = 'images/members/'+member.image+".jpg";
-            memberImage.setAttribute("src", image);
-            memberImage.setAttribute("class", "mainMembers__dets__image");
-            memberImage.innerHTML = member.img;
-
-            // NAME
-            const name = document.createElement('p');
-            name.setAttribute("class", "mainMembers__dets__info__name");
-            name.innerHTML = member.name;
-
-            // TEAM
-            const team = document.createElement('p');
-            team.setAttribute("class", "mainMembers__dets__info__unit");
-            team.innerHTML = member.team;
-
-            info.append(name);
-            info.append(team);
-
-            dets.append(memberImage);
-            dets.append(info);
+            ;
+            dets.innerHTML = `
+                    <a class="mainMembers__dets__link" href="member_details.html/${member.id}" onclick="window.location.href="member_details.html/${member.id}">
+                        <div class="mainMembers__dets__imageDiv">
+                            <img class="mainMembers__dets__imageDiv__image" src='${image}' />
+                        </div>
+                        <div class="mainMembers__dets__info">
+                            <p class="mainMembers__dets__info__name">${member.name}</p>
+                            <p class="mainMembers__dets__info__team">${member.team}</p>
+                        </div>
+                    </a>
+            `;
             main.append(dets);
         });
 
