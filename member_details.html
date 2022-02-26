@@ -37,7 +37,9 @@
         </nav> 
     </header> 
 
-    <main class="mainMembers"></main>
+    <main class="mainMembers">
+        NODI
+    </main>
 
     <footer>
         <div class="pledis">
@@ -57,6 +59,25 @@
 
     <script src="/javascript/members_data.js"></script>
     <script type="module" src="main.js"></script>
+    <script>
+        for (const id in membersData) {
+            if (Object.hasOwnProperty.call(membersData, id)) {
+                const element = membersData[id];
+                console.log(element);
+            }
+        }
+
+        membersData.forEach(member => {
+            const urlParams = new URLSearchParams();
+            const num = urlParams.get(`${member.id}`)
+            if (member.id === '01') {
+                console.log(member.name);
+            } else {
+                console.log("no member");
+            }
+        });
+
+    </script>
     <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
 </body>
 </html>
