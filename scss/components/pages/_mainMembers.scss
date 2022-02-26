@@ -12,27 +12,47 @@
         position: relative;
         height: 100vh;
         // bottom: 0;
+
+        &__link{
+            color: inherit;
+        }
         
-        &__image{
+        &__imageDiv{
             position: absolute;
-            width: 420px;
-            right: 20%; // 0%
-            object-fit: contain;
+            display: inline-block;
+            overflow: hidden;
+            height: 550px;
+            right: 20%;
+
+            img{
+                transition: transform .5s ease;
+            }
+
+            &:hover img{
+                transform: scale(1.4) rotate(20deg);
+                // transform-origin: 50% 50%;
+            }
+
+            
+            &__image{
+                width: 410px;
+                height: 550px;
+                object-fit: cover; 
+            } 
         }
     
         &__info{
             position: absolute;
             width: 430px;
-            left: 3em;
+            left: 6em;
             top: 40%;
             text-align: right;
-            
 
             &__name{
                 font-size: 5em;
             }
     
-            &__unit{
+            &__team{
                 margin-top: -0.4em;
                 font-size: 1.3em;
             }
