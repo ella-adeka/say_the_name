@@ -521,8 +521,18 @@ body.dark {
   padding: 2em;
 }
 
-.mainProfile__paragraph__seventeen {
+.mainProfile__paragraph {
+  height: 10em;
+  width: 50%;
+  background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat auto;
+  margin: 2em;
+}
+
+.mainProfile__paragraph::before {
+  content: "01";
+  position: absolute;
   font-size: 5em;
+  opacity: .05;
 }
 
 .mainMembers {
@@ -587,6 +597,21 @@ body.dark {
 .mainMembers__dets__info__team {
   margin-top: -0.4em;
   font-size: 1.3em;
+}
+
+.mainDiscography {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  padding: 2em;
+}
+
+.mainDiscography__paragraph__seventeen {
+  font-size: 5em;
 }
 
 html, body {
