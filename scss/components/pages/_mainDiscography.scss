@@ -1,0 +1,23 @@
+.mainDiscography{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    // background-color: slategray;
+    // z-index: -10;
+    padding: 2em;
+    // height: auto;
+// overflow: auto;
+    // overflow: scroll;
+    &__paragraph{
+        // writing-mode: vertical-lr;
+        // text-orientation: upright;
+
+
+        &__seventeen{
+            font-size: 5em;
+        }
+    }
+}
