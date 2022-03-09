@@ -8,9 +8,17 @@
     padding: 2em;
 
     &__paragraph{
-
-        &__seventeen{
+        // top: 2em;
+        height: 10em;
+        width: 50%;
+        background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat auto;
+        margin: 2em;
+        
+        &::before{
+            content: "01";
+            position: absolute;
             font-size: 5em;
+            opacity: .05;
         }
     }
 }
