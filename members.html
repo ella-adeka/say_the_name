@@ -26,10 +26,10 @@
             <div class="navbar">
                 <div class="navbar__item">
                     <ul class="navbar__ul">
-                        <li><a href="main.html">Home</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="discography.html">Discography</a></li>
-                        <li><a href="members.html">Members</a></li>
+                        <li><a class="link" href="main.html">Home</a></li>
+                        <li><a class="link" href="profile.html">Profile</a></li>
+                        <li><a class="link" href="discography.html">Discography</a></li>
+                        <li><a class="link" href="members.html">Members</a></li>
                     </ul>
                 </div>
                 
@@ -43,19 +43,20 @@
         <div class="pledis">
             <p>pledis entertainment</p>
         </div>
+        <div class="bar"></div>
         <div class="icons">
-            <a href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fa-solid fa-heart"></i></i></a>
-            <a href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fab fa-spotify"></i></i></a>
-            <a href="https://www.facebook.com/seventeennews"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://twitter.com/pledis_17"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
+            <a class="icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fa-solid fa-heart"></i></i></a>
+            <a class="icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fab fa-spotify"></i></i></a>
+            <a class="icons__links link" href="https://twitter.com/pledis_17"><i class="fa-brands fa-twitter"></i></a>
+            <a class="icons__links link" href="https://www.facebook.com/seventeennews"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
+            <a class="icons__links link" href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
 
     <div class="backgroundText">Members</div>
 
-    <script src="/javascript/members_data.js"></script>
+    <script src="/javascript/data/members_data.js"></script>
     <script type="module" src="main.js"></script>
     <script>
         const main = document.querySelector('.mainMembers');
@@ -66,15 +67,20 @@
             const image = 'images/members/'+member.image+".jpg";
             ;
             dets.innerHTML = `
-                    <a class="mainMembers__dets__link" href="member_details.html/${member.id}" onclick="window.location.href="member_details.html/${member.id}">
+                    
                         <div class="mainMembers__dets__imageDiv">
                             <img class="mainMembers__dets__imageDiv__image" src='${image}' />
                         </div>
                         <div class="mainMembers__dets__info">
-                            <p class="mainMembers__dets__info__name">${member.name}</p>
-                            <p class="mainMembers__dets__info__team">${member.team}</p>
+                            <p class="mainMembers__dets__info__name">${member.stage_name}<span>${member.korean_stage_name}</span></p>
+                            <p class="mainMembers__dets__info__subunit">${member.sub_unit}</p>
+                            
+                            <p class="mainMembers__dets__info__birth_name"><span class="mainMembers__dets__info__label">Birth Name:</span> ${member.birth_name}</p>
+                            <p class="mainMembers__dets__info__position"><span class="mainMembers__dets__info__label">Position:</span> ${member.position}</p>
+                            <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${member.birthday}</p>
+                            <p class="mainMembers__dets__info__zodiac"><span class="mainMembers__dets__info__label">Zodiac Sign:</span> ${member.zodiac_sign}</p>
                         </div>
-                    </a>
+                    
             `;
             main.append(dets);
         });
