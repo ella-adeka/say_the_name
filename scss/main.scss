@@ -1,5 +1,6 @@
 @import './components/variables';
 @import './components/config';
+@import './components/backgroundText';
 @import './components/colorMode';
 @import './components/cursor';
 @import './components/navbar';
@@ -8,6 +9,14 @@
 @import './components/pages/mainMembers';
 @import './components/pages/mainDiscography';
 @import './components/responsive';
+@import './components/footer';
+
+a{
+    color: inherit;
+}
+a:visited{
+    color: dimgray;
+}
 
 
 html, body{
@@ -43,74 +52,5 @@ main{
     overflow: auto;
 }
 
-.backgroundText{
-    position: absolute;
-    // left: 1.5em;
-    top: 0;
-    right: .3em;
-    font-size: 8em;
-    z-index: -1;
-    opacity: .03;
-    font-family: $backGroundTextFont;
-    text-align: center;
-}
 
-footer {
-    right: 0;
-    bottom: 0;
-    width: 25px;
 
-    .pledis{
-        position: absolute;
-        margin: 1em .5em 0 .1em;
-        width: 15px;
-        opacity: .1;
-        top: -26.6em;
-        font-family: $sideBarFont;
-        z-index: -1;
-    
-        p{
-            writing-mode: vertical-lr;
-            text-orientation: mixed;
-            text-transform: uppercase;
-            font-weight: lighter;
-            font-size: .7em;
-            padding-bottom: 1em;
-            letter-spacing: 3px;
-            text-align: center;           
-        }
-        
-    }
-
-    .icons{
-        text-align: center;
-
-        a{
-            display: inline-block;
-            padding-bottom: 1.3em;
-            color: inherit;
-
-            i{
-                opacity: .3;
-                
-                &:hover{
-                    transform: rotate(360deg);
-                    transition: .5s ease-in;
-                    opacity: 1;
-                }
-            }  
-        }
-        
-        &::before{
-            content: '';
-            position: absolute;
-            border: 1px solid white;
-            height: 195px;
-            top: -13em;
-            left: 40%;
-            opacity: .3;
-            z-index: -1;
-        }
-         
-    }
-}
