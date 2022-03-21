@@ -4,25 +4,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: 90%;
-    // background-color: slategray;
+    height: 80%;
     padding-top: 2em;
 
     &__dets{
         position: relative;
-        height: 100vh;
-        // bottom: 0;
+        height: 80vh;
+        // padding: 0 0 5em 0;
+        padding-bottom: -1em;
 
-        &__link{
-            color: inherit;
-        }
-        
         &__imageDiv{
             position: absolute;
             display: inline-block;
             overflow: hidden;
             height: 550px;
             right: 20%;
+            margin: 2em;
 
             img{
                 transition: transform .5s ease;
@@ -33,7 +30,6 @@
                 // transform-origin: 50% 50%;
             }
 
-            
             &__image{
                 width: 410px;
                 height: 550px;
@@ -48,14 +44,29 @@
             top: 40%;
             text-align: right;
 
+            &__label{
+                // font-size: 1.2em;
+                font-style: oblique;
+                font-weight: 800;
+            }
+
             &__name{
                 font-size: 5em;
+
+                span{
+                    font-size: .3em;
+                }
             }
     
-            &__team{
+            &__subunit{
                 margin-top: -0.4em;
                 font-size: 1.3em;
             }
+
+            &__birth_name{
+                margin-top: 2em;
+            }
+            
         }
     }
 }
