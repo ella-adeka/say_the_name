@@ -5,20 +5,297 @@
     transform: translate(-50%, -50%);
     width: 90%;
     height: 100%;
-    padding: 2em;
+    padding: 7em 2em;
+    overflow-x: hidden;
 
     &__paragraph{
+        position: relative;
         // top: 2em;
-        height: 10em;
-        width: 50%;
-        background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat auto;
-        margin: 2em;
+        height: 40%;
+        // width: 40%;
+        margin: 2em 0 10em 0;
+        display: inline-block;
+
         
-        &::before{
-            content: "01";
-            position: absolute;
-            font-size: 5em;
-            opacity: .05;
+        &__name{
+            background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed;
+            background-size: cover;
+            background-blend-mode: saturation;
+            width: 30em;
+            height: 20em;
+            filter: grayscale(100%);
+            transition: .5s ease-in-out;
+            text-align: right;
+            padding: 2em;
+            
+
+            &::before{
+                content: "Name";
+                position: absolute;
+                font-size: 5em;
+                opacity: .5;
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: .5s ease-in;
+            }
+        }
+
+        &__debut{
+            background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
+            background-size: cover;
+            background-blend-mode: saturation;
+            // top: 20em;
+            margin-top: 5em;
+            margin-left: 80%;
+            width: 20em;
+            height: 20em;
+            filter: grayscale(100%);
+            transition: .5s ease-in-out;
+            text-align: left;
+            padding: 2em;
+
+            &::before{
+                content: "Debut";
+                position: absolute;
+                font-size: 5em;
+                opacity: .5;
+                right: 3.5em;
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: .5s ease-in;
+            }
+        }
+
+        &__members{
+            // position: absolute;
+            background: url("../../../images/attacca_group_photo_3.jpg") no-repeat fixed center 70%;
+            background-size: cover;
+            background-blend-mode: saturation;
+            margin-top: 10em;
+            right: 3em;
+            width: 40em;
+            height: 20em;
+            filter: grayscale(100%);
+            transition: .5s ease-in-out;
+            text-align: right;
+            padding: 2em;
+
+            &::before{
+                content: "Members";
+                position: absolute;
+                font-size: 5em;
+                opacity: .5;
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: .5s ease-in;
+            }
+        }
+
+        &__list{
+            // background: url("../../../images/attacca_group_photo_3.jpg") no-repeat fixed;
+            background-size: cover;
+            background-blend-mode: saturation;
+            margin-top: 7em;
+            margin-bottom: 3em;
+            // right: 3em;
+            // width: 30em;
+            // height: 40em;
+            filter: grayscale(100%);
+            transition: .5s ease-in-out;
+            text-align: center;
+            padding: 2em;
+            
+            &::before{
+                content: "Sub-Units";
+                position: absolute;
+                font-size: 5em;
+                opacity: .5;
+                left: 1.8em;
+                width: 100%;
+                text-align: center;
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: .5s ease-in;
+            }
+        }
+
+
+        &__units{
+            margin-bottom: 2em;
+            
+            &__unit{
+                display: grid;
+                grid-template-columns: 32.3% 32.3% 32.3%;
+                gap: 2%;
+                // right: 4em;
+                height: 50%;
+                // float: right;
+                // margin-bottom: 7em;
+
+                &__hhu{
+                    // position: absolute;
+                    background: url("../../../images/units/hhu_2.jpg") no-repeat fixed;
+                    background-size: cover;
+                    background-blend-mode: saturation;
+                    // top: 67em;
+                    // right: 3.5em;
+                    // width: 20em;
+                    height: 40em;
+                    filter: grayscale(100%);
+                    transition: .5s ease-in-out;
+                    text-align: right;
+                    padding: 2em;
+                    margin-bottom: 2em;
+                    
+                    
+        
+                    &::before{
+                        content: "Hip-Hop";
+                        position: absolute;
+                        font-size: 3em;
+                        opacity: .5;
+                        writing-mode: vertical-lr;
+                        text-orientation: upright;
+                        right: -0.5em;
+                        
+                    }
+
+                    &:hover{
+                        filter: grayscale(0%);
+                        background: url("../../../images/units/hhu_3.jpeg") no-repeat fixed center;
+                        background-size: cover;
+                        transition: .5s ease-in;
+                    }
+                }
+                &__vu{
+                    // position: absolute;
+                    background: url("../../../images/units/vu.jpg") no-repeat fixed;
+                    background-size: cover;
+                    background-blend-mode: saturation;
+                    // top: 80em;
+                    // right: 3.5em;
+                    // width: 30em;
+                    // height: 20em;
+                    filter: grayscale(100%);
+                    transition: .5s ease-in-out;
+                    text-align: right;
+                    padding: 2em;
+                    margin-bottom: 2em;
+        
+                    &::before{
+                        content: "Vocal";
+                        position: absolute;
+                        font-size: 3em;
+                        opacity: .5;
+                        writing-mode: vertical-lr;
+                        text-orientation: upright;
+                        right: -0.6em;
+                    }
+
+                    &:hover{
+                        filter: grayscale(0%);
+                        transition: .5s ease-in;
+                        background: url("../../../images/units/vu_2.jpeg") no-repeat fixed center;
+                        background-size: cover;
+                    }
+                }
+                &__pu{
+                    background: url("../../../images/units/pu.jpg") no-repeat fixed;
+                    background-size: cover;
+                    background-blend-mode: saturation;
+                    transition: .5s ease-in-out;
+                    text-align: right;
+                    padding: 2em;
+                    margin-bottom: 2em;
+                    
+                    
+        
+                    &::before{
+                        content: "Performance";
+                        position: absolute;
+                        font-size: 3em;
+                        opacity: .5;
+                        writing-mode: vertical-lr;
+                        text-orientation: upright;
+                        right: -0.1em;
+                    }
+
+                    &:hover{
+                        transition: .5s ease-in-out;
+                        background: url("../../../images/units/pu_2.jpeg") no-repeat fixed right;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        
+
+        
+
+        &__contents{
+            // position: absolute;
+            background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+            background-size: cover;
+            background-blend-mode: saturation;
+            display: inline-block;
+            // top: 115em;
+            // right: 3.5em;
+            width: 50%;
+            height: 30em;
+            filter: grayscale(100%);
+            transition: .5s ease-in-out;
+            // text-align: left;
+            padding: 2em;
+            margin-top: 20em;
+            margin-bottom: 2em;
+
+            &::before{
+                content: "Contents";
+                position: absolute;
+                font-size: 5em;
+                opacity: .5;
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: .5s ease-in;
+            }
+        }
+        &__morecontents{
+            background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+            background-size: cover;
+            background-blend-mode: saturation;
+            display: inline-block;
+            width: 49%;
+            height: 30em;
+            filter: grayscale(100%);
+            transition: .5s ease-in-out;
+            text-align: left;
+            padding: 2em;
+
+            &::before{
+                content: "More Contents";
+                position: absolute;
+                font-size: 5em;
+                opacity: .5;
+                text-align: right;
+                bottom: 0;
+                padding-right: 0.5em;
+                
+            }
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: .5s ease-in;
+            }
         }
     }
 }
