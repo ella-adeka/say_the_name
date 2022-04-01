@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet"> 
+    <title>SEVENTEEN - MEMBERS</title>
+</head>
+<body onload="showMembers()">
+    <header>
+        <div id="cursor"></div>
+        <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div>
+        
+        <span id="colorMode"></span>
+        <div class="menu_btn">
+            <span class="menu_btn__burger"></span>
+        </div>
+                
+        <nav class="nav">
+            <div class="navbar">
+                <div class="navbar__item">
+                    <ul class="navbar__ul">
+                        <li><a class="link" href="main.html">Home</a></li>
+                        <li><a class="link" href="profile.html">Profile</a></li>
+                        <li><a class="link" href="discography.html">Discography</a></li>
+                        <li><a class="link" href="members.html">Members</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav> 
+    </header> 
+
+    <main class="mainMembers"></main>
+
+    <footer>
+        <div class="pledis">
+            <p>pledis entertainment</p>
+        </div>
+        <div class="bar"></div>
+        <div class="icons">
+            <a class="icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fa-solid fa-heart"></i></i></a>
+            <a class="icons__links link" href="https://open.spotify.com/artist/7nqOGRxlXj7N2JYbgNEjYH" target="_blank"><i class="fab fa-spotify"></i></i></a>
+            <a class="icons__links link" href="https://twitter.com/pledis_17"><i class="fa-brands fa-twitter"></i></a>
+            <a class="icons__links link" href="https://www.facebook.com/seventeennews"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
+            <a class="icons__links link" href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <div class="backgroundText">Members</div>
+
+    <script src="/javascript/data/members_data.js"></script>
+    <script type="module" src="main.js"></script>
+    
+    <script>
+        const main = document.querySelector('.mainMembers');
+        const dets = document.createElement('div');
+
+        let i = 0;
+
+        // window.onscroll = nextMember();
+
+        function showMembers() {
+            members();
+        }
+
+        function prevMember() {
+            if (i!=0) {
+                i--;
+            }
+        }
+        // function nextMember() {
+        //     if (i<membersData.length) {
+        //         i++;
+        //     }
+        // }
+
+        // main.addEventListener("scroll", () => {
+        //     prevMember();
+        //     members();
+        // });
+        
+        
+        main.addEventListener("scroll", () => {
+            // nextMember();
+            i = i+1;
+            members();
+        });
+        
+
+        function members() {
+            if (i<membersData.length) {
+                dets.setAttribute("class", "mainMembers__dets");
+                
+                dets.innerHTML = `
+                    <div class="mainMembers__dets__imageDiv">
+                        <img class="mainMembers__dets__imageDiv__image" src='images/members/${membersData[i].image}.jpg' />
+                    </div>
+                    <div class="mainMembers__dets__info">
+                        <p class="mainMembers__dets__info__name">${membersData[i].stage_name}<span>${membersData[i].korean_stage_name}</span></p>
+                        <p class="mainMembers__dets__info__subunit">${membersData[i].sub_unit}</p>
+                        
+                        <p class="mainMembers__dets__info__birth_name"><span class="mainMembers__dets__info__label">Birth Name:</span> ${membersData[i].birth_name}</p>
+                        <p class="mainMembers__dets__info__position"><span class="mainMembers__dets__info__label">Position:</span> ${membersData[i].position}</p>
+                        <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${membersData[i].birthday}</p>
+                        <p class="mainMembers__dets__info__zodiac"><span class="mainMembers__dets__info__label">Zodiac Sign:</span> ${membersData[i].zodiac_sign}</p>
+                    </div>   
+                `;
+                main.append(dets);
+            }
+        }
+
+        // nextMember();
+    </script>
+    <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
+</body>
+</html>
