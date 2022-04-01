@@ -8,6 +8,14 @@
     padding: 7em 2em;
     overflow-x: hidden;
 
+    &__seventeen__name{
+        position: absolute;
+        font-size: 8em;
+        font-family: $discographyfont;
+        filter: invert(50%);
+        margin-top: 0.5em;
+    }
+
     &__paragraph{
         position: relative;
         // top: 2em;
@@ -42,12 +50,14 @@
             }
         }
 
+        
+
         &__debut{
             background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
             background-size: cover;
             background-blend-mode: saturation;
             // top: 20em;
-            margin-top: 5em;
+            margin-top: 30em;
             margin-left: 80%;
             width: 20em;
             height: 20em;
@@ -71,30 +81,77 @@
         }
 
         &__members{
-            // position: absolute;
-            background: url("../../../images/attacca_group_photo_3.jpg") no-repeat fixed center 70%;
-            background-size: cover;
-            background-blend-mode: saturation;
-            margin-top: 10em;
-            right: 3em;
-            width: 40em;
-            height: 20em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
+            margin-top: 18em;
+            // right: 3em;
+            width: 100%;
             text-align: right;
-            padding: 2em;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            transition: .5s ease-in-out;
+            filter: grayscale(100%);
+
+            // &:hover{
+            //     filter: grayscale(0%);
+            // }
+            
 
             &::before{
                 content: "Members";
                 position: absolute;
                 font-size: 5em;
                 opacity: .5;
+                margin-top: -0.5em;
+                left: 0;
+                z-index: 1;
             }
 
-            &:hover{
-                filter: grayscale(0%);
-                transition: .5s ease-in;
+
+            &__image{
+                width: 40em;
+                transition: .5s ease-in-out;
+                // height: 20em;
+                height: 35em;
+                object-fit: cover;
+                object-position: center 10%;
+    
+                &:hover{
+                    transition: .5s ease-in;
+                }
             }
+
+            &__names{
+                z-index: 1;
+                font-size: 3em;
+                transition: .2s ease-in-out;
+                
+                span{
+                
+                    &:hover{
+                        opacity: 1;
+                        filter: invert(80%) drop-shadow(2px 2px gray);
+                        transition: .2s ease-in-out;
+                    }
+
+                    &:hover::after{
+                        content: '';
+                        position: absolute;
+                        top: 40%;
+                        left: 0;   
+                        animation: name-strike 1s ease 1 forwards;
+                        background: white; 
+                    }
+                    
+                    
+                    @keyframes name-strike {
+                        0% { width: 0; height: 2px;}
+                        50% { width: 10%; height: 2px;}
+                        75% { width: 85%; height: 2px;}
+                        100% { width: 0%; height: 2px;}
+                    } 
+                }
+            }
+
+            
         }
 
         &__list{
@@ -248,10 +305,11 @@
             display: inline-block;
             // top: 115em;
             // right: 3.5em;
-            width: 50%;
-            height: 30em;
+            width: 25em;
+            height: 25em;
             filter: grayscale(100%);
             transition: .5s ease-in-out;
+            margin-left: 5em;
             // text-align: left;
             padding: 2em;
             margin-top: 20em;
@@ -262,6 +320,8 @@
                 position: absolute;
                 font-size: 5em;
                 opacity: .5;
+                top: -0.5em;
+                left: -0.7em;
             }
 
             &:hover{
@@ -274,8 +334,9 @@
             background-size: cover;
             background-blend-mode: saturation;
             display: inline-block;
-            width: 49%;
-            height: 30em;
+            width: 25em;
+            height: 25em;
+            margin-left: 15em;
             filter: grayscale(100%);
             transition: .5s ease-in-out;
             text-align: left;
@@ -287,8 +348,9 @@
                 font-size: 5em;
                 opacity: .5;
                 text-align: right;
-                bottom: 0;
-                padding-right: 0.5em;
+                bottom: -1.3em;
+                // padding-right: -25em;
+                right: -1em;
                 
             }
 

@@ -26,11 +26,17 @@
     src: url('../../fonts/valery/ValeryRegular.otf');
 }
 
+@font-face {
+    font-family: New York;
+    src: url('../../fonts/newyork/NewYork.otf');
+}
+
 $backGroundTextFont: Appears;
 // $sideBarFont: 'Epilogue', sans-serif;
 $sideBarFont: Seraya;
 $navBarFont: Valery;
 $bodyTextFont: Valery;
+$discographyfont: New York;
 // $bodyTextFont: 'Asap', sans-serif;
 
 

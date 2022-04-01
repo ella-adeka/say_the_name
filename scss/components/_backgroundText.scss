@@ -2,9 +2,10 @@
     position: absolute;
     top: 0;
     right: .3em;
-    font-size: 8em;
+    font-size: 6em;
     z-index: -1;
     opacity: .1;
-    font-family: $backGroundTextFont;
+    // font-family: $navBarFont;
+    font-family: $discographyfont;
     text-align: center;
 }

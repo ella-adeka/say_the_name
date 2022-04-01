@@ -23,8 +23,8 @@
             top: -8px;
             width: 32px;
             height: 3px;
-            background: dimgray;      
-            // backdrop-filter:invert(70%) ;
+            // background: dimgray;      
+            backdrop-filter:invert(100%) ;
             transition: 2s ease-in-out;
 
         }
@@ -35,8 +35,8 @@
             top: 5px;
             width: 20px;
             height: 3px;
-            background: dimgray;      
-            // backdrop-filter:invert(70%);
+            // background: dimgray;      
+            backdrop-filter:invert(100%);
             transition: 2s ease-in-out;
 
         }
@@ -155,8 +155,6 @@
             }
         }
 
-        
-
         &.dark{
             background-color: black;
             color: white;
@@ -179,11 +177,16 @@
     left: 0.5em;
     bottom: 0;
 
+    a:visited{
+        // color: dimgray;
+        filter: invert(100%);
+    }
     .glitch{
         font-family: $sideBarFont;
         font-size: 2.5em;
         writing-mode: vertical-lr;
         text-orientation: upright;
+        
 
         &::before, &::after{
             content: 'SVT';
@@ -275,35 +278,14 @@
         a{
             text-decoration: none;
             // color: inherit;
+
+            &:visited{
+                // color: dimgray;
+                filter: invert(100%);
+            }
         }
+
+        
     }
     
 }
-// nav {
-    
-//     ul{
-//         right: 2em;
-//         // height: 30px;
-//         // padding: 1.5em;
-        
-//         li{
-//             list-style: none;
-//             display: inline;
-//             padding: 1.8em;
-//             vertical-align: middle;
-//             // transition: 2s ease-in;
-
-//             a{
-//                 text-decoration: none;
-//                 color: inherit;
-//                 cursor: pointer;                
-//             }
-
-//             &:hover{
-//                 border-bottom: 1px solid white;
-//                 // transition: 2s ease-in;
-//             }
-//         }
-//     }
-// }
-

@@ -6,12 +6,21 @@
     width: 80%;
     height: 80%;
     padding-top: 2em;
+    font-family: $discographyfont;
 
     &__dets{
         position: relative;
         height: 80vh;
-        // padding: 0 0 5em 0;
         padding-bottom: -1em;
+
+        &__number{
+            position: absolute;
+            // content: "Name";
+            font-size: 3em;
+            opacity: 0.1;
+            left:35%;
+            top: 35%;
+        }
 
         &__imageDiv{
             position: absolute;
@@ -27,7 +36,6 @@
 
             &:hover img{
                 transform: scale(1.4) rotate(20deg);
-                // transform-origin: 50% 50%;
             }
 
             &__image{
@@ -39,13 +47,30 @@
     
         &__info{
             position: absolute;
-            width: 430px;
+            width: 490px;
             left: 6em;
             top: 40%;
             text-align: right;
+            background-color: #000;
+            background-image: linear-gradient(90deg, #000 77.5%, #fff 10%);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+        
+            &.dark{
+                // background-color: #fff;
+                // background-image: linear-gradient(90deg, #fff 77.5%, #000 10%);  
+                background-color: #fff;
+                background-image: linear-gradient(90deg, #fff 100%, #000 10%);  
+                
+            }
+
+            
 
             &__label{
-                // font-size: 1.2em;
                 font-style: oblique;
                 font-weight: 800;
             }
@@ -53,8 +78,11 @@
             &__name{
                 font-size: 5em;
 
+               
+
                 span{
                     font-size: .3em;
+
                 }
             }
     
@@ -66,7 +94,6 @@
             &__birth_name{
                 margin-top: 2em;
             }
-            
         }
     }
 }

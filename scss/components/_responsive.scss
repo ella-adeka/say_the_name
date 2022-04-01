@@ -1,85 +1,21 @@
 @include media-sm {
-    .mainMembers{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 80%;
-        background-color: plum;
-        padding-top: 2em;
     
-        &__dets{
-            position: relative;
-            height: 80vh;
-            // padding: 0 0 5em 0;
-            padding-bottom: -1em;
-    
-            &__imageDiv{
-                position: absolute;
-                display: inline-block;
-                overflow: hidden;
-                height: 550px;
-                right: 20%;
-                margin: 2em;
-    
-                img{
-                    transition: transform .5s ease;
-                }
-    
-                &:hover img{
-                    transform: scale(1.4) rotate(20deg);
-                    // transform-origin: 50% 50%;
-                }
-    
-                
-                &__image{
-                    width: 410px;
-                    height: 550px;
-                    object-fit: cover; 
-                } 
-            }
-        
-            &__info{
-                position: absolute;
-                width: 430px;
-                left: 6em;
-                top: 40%;
-                text-align: right;
-    
-                &__label{
-                    // font-size: 1.2em;
-                    font-style: oblique;
-                    font-weight: 800;
-                }
-    
-                &__name{
-                    font-size: 3em;
-    
-                    span{
-                        font-size: .3em;
-                    }
-                }
-        
-                &__subunit{
-                    margin-top: -0.4em;
-                    font-size: 1.3em;
-                }
-    
-                &__position{
-                    margin-top: 2em;
-                    
-                }
-                
-            }
-        }
-    }
 }
 
 @include media-md {
+    // CURSOR
+    #cursor{
+        width: 30px;
+        height: 30px;
+    }
+
+    #cursor.dark{
+        width: 30px;
+        height: 30px;
+    }
     // BACKGROUND TEXT
     .backgroundText{
-        font-size: 6em;
+        font-size: 3em;
     }
     // NAVBAR
     .nav{
@@ -93,6 +29,133 @@
         }
     }
 
+    // HOME 
+    .mainHome{
+        
+        width: 70vw;
+    
+        &__paragraph{
+            margin-top: 7em;
+            width: 100vw;
+            height: 100%;
+            // position: fixed;
+
+            &__topic{
+                position: absolute;
+                content: "Name";
+                font-size: 1em;
+                opacity: 0.2;
+                margin-top: -0.2em;
+            }
+            
+            &__title{
+                // position: fixed;
+                width: 70%;
+                font-size: 4em;
+                
+                
+            }
+            &__subtitle{
+                // position: fixed;
+                top:6em;
+                right: 0;
+                font-size: 0.6em;
+                padding: 3em 1em;
+                width: 75px;
+    
+                &::before{
+                    position: absolute;
+                    content: "";
+                    border: 1px solid silver;
+                    border-radius: 50%;
+                    padding: 3.6em;
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    border: 1px solid silver;
+                    border-radius: 50%;
+                    padding: 3.6em;
+                    top: -0.1em;
+                    left: 0.2em;
+                }
+            }
+    
+            &__description{
+                // position: fixed;
+                // top: 50%;
+                font-size: 0.7em;
+                margin-bottom: 1em;
+                
+            }
+    
+            &__images{
+                display: block;
+                width: 70%;
+
+                &__image1Div{
+                    height: 200px;
+                    &__image1{
+                        width: 100%;
+                        height: 250px;
+                        object-fit: contain;
+                        object-position: center;
+                        backdrop-filter: invert(90%);
+                    }
+                }
+                &__image2Div{
+                    &__image2{
+                        // width: 100%;
+                        // height: 50px;
+                        // object-fit: contain;
+                        // object-position: left;
+
+                        display: none;
+                    }
+                }
+            }
+    
+            &__imagesOutside{
+                &__image3{
+                    // position: absolute;
+                    // top: -20em;
+                    // width: 50%;
+                    // height: 50%;
+                    // z-index: -1;
+                    // object-fit: cover;
+                    // object-position: center -50%;
+                    // border-radius: 10%;
+                    // filter: brightness(60%) grayscale(100%) opacity(0.5);
+                    display: none;
+                }
+    
+                &__image4{
+                    position: absolute;
+                    bottom: -20em;
+                    width: 60%;
+                    height: 50%;
+                    z-index: -1;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    filter: brightness(40%) grayscale(100%);
+                }
+                &__image5{
+                    position: absolute;
+                    right: 0;
+                    bottom: -21em;
+                    width: 35%;
+                    height: 50%;
+                    z-index: -1;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    filter: brightness(60%) grayscale(100%);
+                }
+            }
+        }
+    }
     // MEMBERS
     .mainMembers{
         padding-top: 0em;
@@ -102,25 +165,32 @@
             margin-bottom: 5em;
     
             &__imageDiv{
-                height: 80vh;
+                // height: 80vh;
                 left: 0;
                 width: 90%;
 
                 &:hover img{
-                    transform: scale(1.6);
+                    transform: scale(1.1);
                 }
                 
                 &__image{
                     width: 350px;
-                    height: 500px;
+                    height: 100%;
                 } 
             }
         
             &__info{
-                width: 100%;
+                width: 90%;
                 left: 0;
                 top: 60%;
                 text-align: left;
+                background-image: linear-gradient(90deg, #000 9%, #fff 10%);  
+
+                &.dark{
+                    background-color: #fff;
+                    background-image: linear-gradient(90deg, #fff 9%, #000 10%);  
+                    // background-image: linear-gradient(90deg, #fff 100%, #000 10%);  
+                }
     
     
                 &__name{
@@ -146,13 +216,13 @@
                 
 
                 &::before{
-                    font-size: 5em;
+                    font-size: 3.5em;
                     margin: -1em 0 0 -0.5em;
                 }
             }
 
             &__debut{
-                margin-left: 2.5em;
+                margin-left: 25%;
                 width: 100%;
                 background-size: contain;
                 height: 20em;
@@ -162,6 +232,7 @@
                 &::before{
                     margin: -1em 0 0 1em;
                     left: 0;
+                    font-size: 3.5em;
                 }
             }
 
@@ -170,17 +241,33 @@
                 right: 0;
                 width: 100%;
                 height: 100%;
-                text-align: left;
+                text-align: center;
+                display: block;
     
                 &::before{
-                    font-size: 5em;
-                    margin: -1em 0 0 -0.5em;
+                    font-size: 3.5em;
+                    left: 1em;
                 }
+
+                &__image{
+                    width: 100%;
+                    filter: grayscale(0%);
+                }
+    
+                &__names{
+                    text-align: center;
+                    font-size: 1.6em;
+                    width: 100%;
+                    // background-color: #000;
+                    // background-image: none;  
+                }
+    
             }
 
             &__list{
+                margin-top: 15em;
                 &::before{
-                    font-size: 5em;
+                    font-size: 3.5em;
                     left: 0;
                 }
             }
@@ -233,24 +320,234 @@
                 display: block;
                 background-size: contain;
                 width: 100%;
+                height: 100%;
                 filter: grayscale(0%);
                 padding: 2em;
                 margin-top: 8em;
-    
+                margin-left: 5%;
+                
+                &::before{
+                    top: 0;
+                    left: 0;
+                    font-size: 3.5em;
+                }
             }
 
             &__morecontents{
                 display: block;
                 background-size: contain;
                 width: 100%;
+                height: 100%;
+                margin-left: 0;
                 filter: grayscale(0%);
                 text-align: left;
                 margin-bottom: 0;
+                margin-left: 5%;
     
                 &::before{
                     text-align: right;
-                    top: 1em;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 3.5em;
+                }
+            }
+        }
+    }
+
+    // DISCOGRAPHY
+    .listen-link{
+        position: absolute;
+        text-decoration: underline;
+        font-size: 1em;
+        top: 41%;
+        right: 30%;
+        border: none;
+        padding: 0;
+
+        &:hover{
+            backdrop-filter: invert(0%);
+
+            &::before{
+                display: none;
+            }
+
+            &::after{
+                display: none;
+            }
+        }  
+    }
+    .watch-link{
+        position: absolute;
+        text-decoration: underline;
+        font-size: 1em;
+        top: 41%;
+        right: 50%;
+        border: none;
+        padding: 0;
+
+        &:hover{
+            backdrop-filter: invert(0%);
+
+            &::before{
+                display: none;
+            }
+
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .previous{
+        // position: absolute;
+        top: -0.05px;
+        // top: 0;
+        left: 50%;
+        padding: 8px;
+    }
+    .next{
+        bottom: -0.05px;
+        left: 50%;
+        padding: 8px;
+    }
+
+    .mainDiscography{
+        justify-content: center;
+        width: 85%;
+        overflow: hidden;
+        margin-bottom: 2em;
+        
+
+        &__discography{
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            vertical-align: middle;
+            overflow-y: scroll;
+            padding-bottom: 5em;
+
+            &__dets{
+                // top: 0;
+                
+                overflow-y: scroll;
+                // margin-bottom: 2em;
+
+                &__album_category{
+                    font-size: 1em;
+                    top: 0;
+                    left: 0;
+                }
+                
                     
+                &__album_name{
+                    width: 100%;
+                    font-size: 1.9em;
+                }
+
+                &__title_track{
+                    font-size: 2em;
+                    position: absolute;
+                    top: 2em;
+                    left: 0;
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
+                    // height: 100%;
+                    &::after{
+                        font-size: 0.3em;
+                        top: 0.5em;
+                        margin-left: -0.2em;
+                    }
+                }
+
+                &__details{
+                    display: inline-block;
+                    text-align: right;
+                    width: 100%;
+                    &__imageDiv{
+                        width: 100%;
+                        z-index: -1;
+                        margin: 1em 0 0 0;
+                        text-align: center;
+                        
+            
+                        &__image{
+                            width: 200px;
+                            height: 200px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &__paragraph{
+                        margin-top: 0;
+
+                        &__album_detail{
+                            margin-top: -0.5em;
+                            font-size: 2em; 
+                            margin-bottom: .5em;
+                            // text-align: center;
+                        }
+
+                        &__artist_name{
+                            // text-align: center;
+                            font-size: 1.5em; 
+                            margin-bottom: 0.5em;
+    
+                            &::before{
+                                font-size: 0.5em;
+                                margin-top: -0.2em;
+                                margin-left: -1.7em;
+                            }
+                        }
+
+                        &__release_date{
+                            // position: absolute;
+                            // text-align: center;
+                            font-size: 1.5em;
+                            margin-bottom: 0.5em;
+    
+                            &::before{
+                                font-size: 0.5em;
+                                // top: 1.8em;
+                                margin-top: -0.2em;
+                                margin-left: -1.7em;
+                            }
+                        }
+
+                        &__track_list{
+                            // text-align: right;
+                            width: 100%;
+                            font-size: 2em;
+                            // bottom: 2em;
+
+                            &__ol{
+                                &__li{
+                                    list-style: none;
+
+                                    &:nth-child(1){
+                                        &::before{
+                                
+                                            font-size: 0.9em;
+                                            opacity: .3;
+                                            // top: 1.8em;
+                                            margin-top: -0.5em;
+                                            margin-left: -1em;
+                                        }
+                                    }
+                                }
+
+                                
+                            }
+    
+                            
+                        }  
+                    }
+                }
+                &__id{
+                    top: 3em;
+                    right: 0;
+                    opacity: .1;
+                    font-size: 2em;
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
                 }
             }
         }

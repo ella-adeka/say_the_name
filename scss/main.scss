@@ -13,9 +13,11 @@
 
 a{
     color: inherit;
+    
 }
 a:visited{
-    color: dimgray;
+    // color: dimgray;
+    filter: invert(100%);
 }
 
 
