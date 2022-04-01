@@ -83,7 +83,7 @@ const membersData = [
         birth_name: 'Xu, Ming Hao (徐明浩)',
         image: 'minghao_attacca_op1',
         sub_unit: 'Performance Team',
-        position: 'Vocal Team Leader, Lead Vocalist, Producer',
+        position: 'Lead Dancer, Sub Vocalist, Sub Rapper',
         birthday: 'November 7, 1997',
         zodiac_sign: 'Scorpio'
     },
