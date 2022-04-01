@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet">    
     <title>SEVENTEEN - DISCOGRAPHY</title>
 </head>
-<body>
+<body  onload="showAlbums()">
     <header>
         <div id="cursor"></div>
         <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div>
@@ -37,16 +37,17 @@
         </nav> 
     </header> 
 
+    
     <main class="mainDiscography">
-        <!-- <p>DISCOGRAPHY PAGE</p> -->
-        <img class="image" src="images/discography/17CARAT.jpg" alt="17_Carat" width="200px" height="200px">
-        <h1>Tracks</h1>
-        <p>1.Shining Diamond</p>
-        <p>2. Ah Yeah</p>
-        <p>3. 20</p>
-        <p>4. Adore U</p>
-        <p>5. Jam Jam</p>
+    
+        <div class="mainDiscography__discography"></div>
+        
+        <i class="fa-solid fa-arrow-up-long previous"></i>
+        <i class="fa-solid fa-arrow-down-long next"></i>
+        <a class="listen-link" target="_blank">Listen</a>
+        <a class="watch-link" target="_blank">Watch MV</a>
     </main> 
+    
 
     <footer>
         <div class="pledis">
@@ -55,7 +56,7 @@
         <div class="bar"></div>
         <div class="icons">
             <a class="icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fa-solid fa-heart"></i></i></a>
-            <a class="icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fab fa-spotify"></i></i></a>
+            <a class="icons__links link" href="https://open.spotify.com/artist/7nqOGRxlXj7N2JYbgNEjYH" target="_blank"><i class="fab fa-spotify"></i></i></a>
             <a class="icons__links link" href="https://twitter.com/pledis_17"><i class="fa-brands fa-twitter"></i></a>
             <a class="icons__links link" href="https://www.facebook.com/seventeennews"><i class="fa-brands fa-facebook-f"></i></a>
             <a class="icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
@@ -63,12 +64,13 @@
         </div>
     </footer>
 
-    <div class="backgroundText">Discography</div>
-    <!-- <div class="imageDiv">
-        <img class="image" src="images/seventeen_logo.png" alt="">
-    </div> -->
+    <div class="backgroundText" style="opacity: .03;">Discography</div>
+  
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/app.js"></script>
+    <script src="/javascript/data/discography_data.js"></script>
+    <script src="/javascript/pages/discography.js"></script>
+  
     <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
 
 </body>
