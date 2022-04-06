@@ -3,31 +3,33 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     padding-top: 2em;
     font-family: $discographyfont;
 
     &__dets{
-        position: relative;
-        height: 80vh;
-        padding-bottom: -1em;
+        // position: relative;
+        height: 90vh;
+        padding-bottom: 1em;
 
-        &__number{
-            position: absolute;
-            // content: "Name";
-            font-size: 3em;
-            opacity: 0.1;
-            left:35%;
-            top: 35%;
-        }
+            &__number{
+                // position: absolute;
+                width: 100%;
+                text-align: right;
+                margin-right: 0;
+                margin-top: 25%;
+                font-size: 5em;
+                opacity: 0.1;
+            }
+        
 
         &__imageDiv{
             position: absolute;
             display: inline-block;
             overflow: hidden;
-            height: 550px;
-            right: 20%;
+            height: 600px;
+            right: 30%;
             margin: 2em;
 
             img{
@@ -35,22 +37,22 @@
             }
 
             &:hover img{
-                transform: scale(1.4) rotate(20deg);
+                transform: scale(1.2);
             }
 
             &__image{
                 width: 410px;
-                height: 550px;
+                height: 600px;
                 object-fit: cover; 
             } 
         }
     
         &__info{
-            position: absolute;
-            width: 490px;
-            left: 6em;
-            top: 40%;
-            text-align: right;
+            position: relative;
+            width: 100%;
+            // left: 4em;
+            // top: 40%;
+            text-align: left;
             background-color: #000;
             background-image: linear-gradient(90deg, #000 77.5%, #fff 10%);
             background-size: 100%;
