@@ -1,10 +1,48 @@
 // DISPLAY THE NAME "SEVENTEEN" ON SCROLL
+const mainProfile = document.querySelector(".mainProfile");
+const groupName = document.querySelector(".mainProfile__paragraph__name");
 const seventeen = document.querySelector(".mainProfile__seventeen__name");
-// seventeen.setAttribute("style", "right:-100%");
 
-document.addEventListener("scroll", () => {
-    seventeen.setAttribute("style", "right:"+ scrollY);
-})
+
+// seventeen.setAttribute("style", "margin-left: 500px;");
+// let x = 0;
+mainProfile.addEventListener("scroll", () => {
+    let i = mainProfile.scrollTop;
+    // groupName.setAttribute("style", "height:80em");
+    // if (i < 41) {
+    //     groupName.setAttribute("style", "height: " + (i.toFixed()) + "em;");
+
+    //     if (i === 0) {
+    //         groupName.setAttribute("style", "height: 20em;");
+    //     }
+    // } 
+    if (i < 60) {
+        groupName.setAttribute("style", "height: " + (i.toFixed()) + "em; transition: .5s ease-in;width:100vw");
+
+        if (i === 0) {
+            groupName.setAttribute("style", "height: 20em; transition: .5s ease-in;");
+        }
+    } 
+    
+    
+
+    // LET NAME MOVE ACROSS THE X AXIS ON SCROLL
+    // if (i == 400) {
+        seventeen.setAttribute("style", "margin-left: -" + (i.toFixed()) + "px;");
+        // seventeen.setAttribute("style", "opacity:0;");
+        // if (i === 100) {
+        //     seventeen.setAttribute("style", "opacity:0;");
+        // }
+
+        // if (i === 0) {
+        //     seventeen.setAttribute("style", "margin-left: 0;");
+        // }
+    // }
+    
+});
+
+
+
 
 
 // DISPLAY MEMBERS NAMES IN MEMBER SECTION OF PROFILE
@@ -22,7 +60,7 @@ profileMembersData.forEach(profileMember => {
 
     // let profileMemberName = `${profileMember.name}`
 
-    namesSpan.addEventListener("mouseover", () => {
+    namesSpan.addEventListener("click", () => {
         profileMembersImage.setAttribute("src", `images/members/${profileMember.image}.jpg`); 
         profileMembersImage.style.cssText = "filter: grayscale(0%)";
     });
@@ -34,3 +72,5 @@ namesParagraph.addEventListener("mouseleave", () => {
         profileMembersImage.style.cssText = "filter: grayscale(100%)";
     }, 1000);
 });
+
+
