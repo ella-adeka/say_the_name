@@ -6,12 +6,10 @@ membersData.forEach(member => {
     const image = 'images/members/'+member.image+".jpg";
     
     dets.innerHTML = `
-        <p class="mainMembers__dets__number">
-            ${member.id}
-        </p>
         <div class="mainMembers__dets__imageDiv">
             <img class="mainMembers__dets__imageDiv__image" src='${image}' />
         </div>
+        
         <div class="mainMembers__dets__info">
             <p class="mainMembers__dets__info__name">${member.stage_name}<span>${member.korean_stage_name}</span></p>
             <p class="mainMembers__dets__info__subunit">${member.sub_unit}</p>
@@ -21,6 +19,9 @@ membersData.forEach(member => {
             <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${member.birthday}</p>
             <p class="mainMembers__dets__info__zodiac"><span class="mainMembers__dets__info__label">Zodiac Sign:</span> ${member.zodiac_sign}</p>
         </div>   
+        <p class="mainMembers__dets__number">
+            ${member.id}
+        </p>
         `;
     main.append(dets);
 });
