@@ -29,6 +29,38 @@
         }
     }
 
+    #colorMode, .menu_btn {
+        display: inline-block;
+    }
+
+    // FOOTER
+    .footer {
+        width: 100%;
+        height: 50px;
+        // margin-bottom: 1em;
+        // background-color: transparent;
+        backdrop-filter: invert(20%);
+
+        &__pledis{
+            display: none;
+        }
+
+        &__bar{
+            display: none;
+        }
+
+        &__icons{
+            margin-top: 1em;
+    
+            &__links{
+                display: inline;
+                padding: 1.3em;
+                
+                
+            }
+        }
+    }
+
     // HOME 
     .mainHome{
         
@@ -158,37 +190,55 @@
     }
     // MEMBERS
     .mainMembers{
-        padding-top: 0em;
+        padding-top: 1em;
+        width: 80%;
+        // height: 90%;
         
     
         &__dets{
             margin-bottom: 5em;
+            height: 85vh;
+
+            &__number{
+                right: 0;
+                margin-top: -49.9%;
+                opacity: 0.5;
+                position: absolute;
+                // margin-top: 0;
+            }
     
             &__imageDiv{
                 // height: 80vh;
                 left: 0;
                 width: 90%;
+                // position: absolute;
+                // display: inline-block;
+                // overflow: hidden;
+                // height: 600px;
+                // right: 30%;
 
                 &:hover img{
                     transform: scale(1.1);
                 }
                 
                 &__image{
-                    width: 350px;
+                    width: 100%;
                     height: 100%;
+                    // object-position: center;
                 } 
             }
         
             &__info{
+                // position: absolute;
                 width: 90%;
                 left: 0;
                 top: 60%;
                 text-align: left;
-                background-image: linear-gradient(90deg, #000 9%, #fff 10%);  
+                background-image: linear-gradient(90deg, #000 8%, #fff 8%);  
 
                 &.dark{
                     background-color: #fff;
-                    background-image: linear-gradient(90deg, #fff 9%, #000 10%);  
+                    background-image: linear-gradient(90deg, #fff 8%, #000 8%);  
                     // background-image: linear-gradient(90deg, #fff 100%, #000 10%);  
                 }
     
