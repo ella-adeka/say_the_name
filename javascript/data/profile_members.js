@@ -3,7 +3,7 @@
 const profileMembersData = [
     {
         id: "01",
-        name: "&#183; S.Coups",
+        name: "S.Coups",
         image: "scoups_attacca_op1"
     },
     {
