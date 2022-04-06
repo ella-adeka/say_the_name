@@ -278,7 +278,7 @@ const discographyData = [
         album_detail: 'Single',
         album_link: "https://open.spotify.com/album/5IIk4i6IkmsnF8UtRBMAeI?si=iN8HyXPOTsu4cpugQW9Urg",
         youtube_link: 'https://youtu.be/F9CrRG6j2SM',
-        category: "Single",
+        category: "Digital Single",
         title_track: "HIT",
         image: "hit.jpeg",
         tracks: [
@@ -463,5 +463,20 @@ const discographyData = [
             "Snap Shoot (Japanese ver.)",
         ],
         release_date: "08 December, 2021",
+    },
+    {
+        id: "24",
+        artist_name: "Seventeen",
+        album_name: "Darl + ing",
+        album_detail: 'Digital Single',
+        album_link: "https://open.spotify.com/album/3fqYnHqWRVePkZzPQpxclM?si=MdtaVGI2QrOX-jHnhjtHPw",
+        youtube_link: 'https://youtu.be/E0Z9_pz9Wd8',
+        category: "Digital Single",
+        title_track: "Darl + ling",
+        image: "darling.jpeg",
+        tracks: [
+            "Darl + ling"
+        ],
+        release_date: "15 April, 2022",
     },
 ];
