@@ -1,3 +1,8 @@
+header{
+    width: 55px;
+    height: 100%;  
+}
+
 .menu_btn{
     position: absolute;
     z-index: 1;
@@ -23,8 +28,8 @@
             top: -8px;
             width: 32px;
             height: 3px;
-            // background: dimgray;      
-            backdrop-filter:invert(100%) ;
+            background: dimgray;      
+            // backdrop-filter:invert(100%) ;
             transition: 2s ease-in-out;
 
         }
@@ -35,8 +40,8 @@
             top: 5px;
             width: 20px;
             height: 3px;
-            // background: dimgray;      
-            backdrop-filter:invert(100%);
+            background: dimgray;      
+            // backdrop-filter:invert(100%);
             transition: 2s ease-in-out;
 
         }
