@@ -1,6 +1,6 @@
 .backgroundText{
     position: absolute;
-    top: 0;
+    // top: 0;
     right: .3em;
     font-size: 6em;
     z-index: -1;
@@ -8,4 +8,5 @@
     // font-family: $navBarFont;
     font-family: $discographyfont;
     text-align: center;
+    top: -0.5em;
 }
