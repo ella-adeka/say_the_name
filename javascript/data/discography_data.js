@@ -275,10 +275,10 @@ const discographyData = [
         id: "14",
         artist_name: "Seventeen",
         album_name: "HIT",
-        album_detail: 'Single',
+        album_detail: 'Digital Single',
         album_link: "https://open.spotify.com/album/5IIk4i6IkmsnF8UtRBMAeI?si=iN8HyXPOTsu4cpugQW9Urg",
         youtube_link: 'https://youtu.be/F9CrRG6j2SM',
-        category: "Digital Single",
+        category: "Single",
         title_track: "HIT",
         image: "hit.jpeg",
         tracks: [
@@ -471,11 +471,11 @@ const discographyData = [
         album_detail: 'Digital Single',
         album_link: "https://open.spotify.com/album/3fqYnHqWRVePkZzPQpxclM?si=MdtaVGI2QrOX-jHnhjtHPw",
         youtube_link: 'https://youtu.be/E0Z9_pz9Wd8',
-        category: "Digital Single",
-        title_track: "Darl + ling",
+        category: "Single",
+        title_track: "Darl+ing",
         image: "darling.jpeg",
         tracks: [
-            "Darl + ling"
+            "Darl + ing"
         ],
         release_date: "15 April, 2022",
     },
