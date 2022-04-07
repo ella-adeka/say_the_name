@@ -7,11 +7,13 @@
     height: 90%;
     padding-top: 2em;
     font-family: $discographyfont;
+    // overflow: auto;
 
     &__dets{
         // position: relative;
         height: 90vh;
-        padding-bottom: 1em;
+        padding-bottom: 0;
+        overflow: hidden;
 
             &__number{
                 // position: absolute;
@@ -51,7 +53,7 @@
             position: relative;
             width: 100%;
             // left: 4em;
-            // top: 40%;
+            top: 1em;
             text-align: left;
             background-color: #000;
             background-image: linear-gradient(90deg, #000 77.5%, #fff 10%);

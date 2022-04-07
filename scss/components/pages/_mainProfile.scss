@@ -232,7 +232,10 @@
                     padding: 2em;
                     margin-bottom: 2em;
                     
-                    
+                    &__names{
+                        font-size: 1.2em;
+                        color: white;
+                    }
         
                     &::before{
                         content: "Hip-Hop";
@@ -266,6 +269,11 @@
                     text-align: right;
                     padding: 2em;
                     margin-bottom: 2em;
+
+                    &__names{
+                        font-size: 1.2em;
+                        color: black;
+                    }
         
                     &::before{
                         content: "Vocal";
@@ -293,7 +301,10 @@
                     padding: 2em;
                     margin-bottom: 2em;
                     
-                    
+                    &__names{
+                        font-size: 1.2em;
+                        color: white;
+                    }
         
                     &::before{
                         content: "Performance";
