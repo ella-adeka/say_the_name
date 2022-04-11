@@ -72,7 +72,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    opacity: 0.98;
+    opacity: 1;
     visibility: hidden;
 
     &.open {
@@ -117,35 +117,148 @@ header{
                 transition: 1s ease-in-out;
             }
 
-            li{
-                list-style: none;
-                text-transform: uppercase;
-                font-size: 6rem;
-                width: 100%;
-                transition: .2s ease-in;     
+            ul{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                // justify-content: center;
+                // background-color: pink;
+                // text-align: center;
+                li{
+                    list-style: none;
+                    text-transform: uppercase;
+                    font-size: 6rem;
+                    width: 100%;
+                    // transition: 2s ease-in;  
+                    
+                    &:nth-child(1){
+                        // transition: 2s ease-in 10s; 
+                        width: 80%;
+                        text-align: left;
+                        margin-left: 3em;
+                        z-index: 1;
 
-                a{
-                    position: relative;
-                    // color: inherit;
-                    font-family: $navBarFont;
-                    animation: strike 2s linear 1 alternate;             
+                        &::after{
+                            content: "01";
+                            position: absolute;
+                            font-size: 0.15em;
+                            margin-top: -3em;
+                            margin-left: 0.5em;
+                            font-family: $discographyfont;
+                        }
 
-                    &:hover::after{
-                        content: '';
-                        position: absolute;
-                        top: 40%;
-                        left: 0;
-                        // transition: .2s ease-in;   
-                        animation: strike 2s ease 1 forwards;
-                        background: white;   
-                    }                  
+                        &:hover{
+                            background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+                            background-size: 600px;
+                            transition: 2s ease-in; 
+                            // animation: navItemOneBackground 2s ease 1 forwards;
+                            
+                        }
+
+                        // &:hover::after{
+                        //     background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+                        //     background-size: 600px;
+                        //     animation: navItemBackground 2s ease 1 backwards;
+                        // }
+                    }
+
+                    &:nth-child(2){
+                        // text-align: right;
+                        // margin-left: 2em;
+
+                        &::before{
+                            content: "02";
+                            position: absolute;
+                            font-size: 0.15em;
+                            margin-top: -3em;
+                            margin-left: -1.5em;
+                            font-family: $discographyfont;
+                        }
+                        &:hover{
+                            background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+                            background-size: cover;
+                            // transition: 2s ease-in; 
+                            animation: navItemTwoBackground 2s ease 1 backwards;
+                        }
+                    }
+    
+                    &:nth-child(3){
+                        text-align: left;
+                        margin-left: 0.5em;
+
+                        &::after{
+                            content: "03";
+                            position: absolute;
+                            font-size: 0.15em;
+                            margin-top: -3em;
+                            margin-left: 0.5em;
+                            font-family: $discographyfont;
+                        }
+
+                        &:hover{
+                            background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
+                            background-size: 700px;
+                            transition: 2s ease-in; 
+                            // animation: navItemOneBackground 2s ease 1 forwards;
+                        }
+                    }
+    
+                    &:nth-child(4){
+                        // text-align: right;
+                        position: relative;
+                        z-index: 10;
+                        margin-left: 2em;
+
+                        &::before{
+                            content: "04";
+                            position: absolute;
+                            font-size: 0.15em;
+                            margin-top: -3em;
+                            margin-left: -1.5em;
+                            font-family: $discographyfont;
+                        }
+                        &:hover{
+                            
+                            background: url("../../../images/members/joshua_attacca_op1.jpg") no-repeat fixed left;
+                            background-size: 500px;
+                            transition: 2s ease-in; 
+                        }
+                    }
+
+                    @keyframes navItemOneBackground {
+                        0% {background-size: 0;}
+                        100% { background-size: 700px;}  
+                    } 
+                    @keyframes navItemTwoBackground {
+                        0% {background-size: 10%;}
+                        100% { background-size: 100%;}  
+                    } 
+    
+                    a{
+                        position: relative;
+                        // color: inherit;
+                        font-family: $navBarFont;
+                        animation: strike 2s linear 1 alternate;             
+    
+                        &:hover::after{
+                            content: '';
+                            position: absolute;
+                            top: 40%;
+                            left: 0;
+                            // transition: .2s ease-in;   
+                            animation: strike 2s ease 1 forwards;
+                            background: white;   
+                        }                  
+                    }
+    
+                    @keyframes strike {
+                        0% { width: 0; height: 2px;}
+                        100% { width: 100%; height: 2px;}
+                    } 
+    
                 }
-
-                @keyframes strike {
-                    0% { width: 0; height: 2px;}
-                    100% { width: 100%; height: 2px;}
-                } 
-
             }
 
         }
