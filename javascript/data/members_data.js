@@ -8,7 +8,9 @@ const membersData = [
         sub_unit: 'Hip-Hop Team, SVT Leaders',
         position: 'Leader, Hip-Hop Team Leader, Rapper, Sub Vocalist',
         birthday: 'August 8, 1995',
-        zodiac_sign: 'Leo'
+        zodiac_sign: 'Leo',
+        nationality: "Korean",
+        pronunciation: "es &#183 coups"
     },
     {
         id: "02",
@@ -19,29 +21,37 @@ const membersData = [
         sub_unit: 'Vocal Team',
         position: 'Lead Vocalist, Visual',
         birthday: 'October 4, 1995',
-        zodiac_sign: 'Libra'
+        zodiac_sign: 'Libra',
+        nationality: "Korean",
+        pronunciation: "jong &#183 han"
     },
     {
         id: "03",
         stage_name: 'Joshua',
         korean_stage_name: '(조슈아)',
-        birth_name: 'Hong, Ji Soo (홍지수)',
+        birth_name: 'Hong, Joshua',
+        korean_name: 'Hong, Ji Soo (홍지수)',
         image: 'joshua_attacca_op1',
         sub_unit: 'Vocal Team',
         position: 'Lead Vocalist, Visual',
         birthday: 'December 30, 1995',
-        zodiac_sign: 'Capricorn'
+        zodiac_sign: 'Capricorn',
+        nationality: "Korean-American",
+        pronunciation: "jo &#183 shu &#183 uh"
     },
     {
         id: "04",
         stage_name: 'Jun',
         korean_stage_name: '(준)',
-        birth_name: 'Moon, Jun Hwi (문준휘)',
+        birth_name: 'Wen Junhui (文俊辉)',
+        korean_name: " Moon Jun Hwi (문준휘)",
         image: 'jun_attacca_op1',
         sub_unit: 'Performance Team',
         position: 'Lead Dancer, Sub Vocalist',
         birthday: 'June 10, 1996',
-        zodiac_sign: 'Gemini'
+        zodiac_sign: 'Gemini',
+        nationality: "Chinese",
+        pronunciation: "joo &#183 n"
     },
     {
         id: "05",
@@ -52,7 +62,9 @@ const membersData = [
         sub_unit: 'Performance Team, SVT Leaders, BooSeokSoon',
         position: 'Performance Team Leader, Main Dancer, Lead Vocalist, Sub Rapper',
         birthday: 'June 15, 1996',
-        zodiac_sign: 'Gemini'
+        zodiac_sign: 'Gemini', 
+        nationality: "Korean",
+        pronunciation: "hoe &#183 shee"
     },
     {
         id: "06",
@@ -63,7 +75,9 @@ const membersData = [
         sub_unit: 'Hip-Hop Team',
         position: 'Rapper, Sub Vocalist',
         birthday: 'July 17, 1996',
-        zodiac_sign: 'Cancer'
+        zodiac_sign: 'Cancer',
+        nationality: "Korean",
+        pronunciation: "won &#183 u"
     },
     {
         id: "07",
@@ -74,18 +88,23 @@ const membersData = [
         sub_unit: 'Vocal Team, SVT Leaders',
         position: 'Vocal Team Leader, Lead Vocalist, Producer',
         birthday: 'November 22, 1996',
-        zodiac_sign: 'Scorpio/Sagittarius cusp'
+        zodiac_sign: 'Scorpio/Sagittarius cusp',
+        nationality: "Korean",
+        pronunciation: "woo &#183 zee"
     },
     {
         id: "08",
         stage_name: 'The8',
         korean_stage_name: '(디에잇)',
         birth_name: 'Xu, Ming Hao (徐明浩)',
+        korean_name: 'Seo Myung Ho (서명호)',
         image: 'minghao_attacca_op1',
         sub_unit: 'Performance Team',
         position: 'Lead Dancer, Sub Vocalist, Sub Rapper',
         birthday: 'November 7, 1997',
-        zodiac_sign: 'Scorpio'
+        zodiac_sign: 'Scorpio',
+        nationality: "Chinese",
+        pronunciation: "the &#183 eight"
     },
     {
         id: "09",
@@ -96,18 +115,22 @@ const membersData = [
         sub_unit: 'Hip-Hop Team',
         position: 'Rapper, Sub Vocalist, Visual, Face of the Group',
         birthday: 'April 6, 1997',
-        zodiac_sign: 'Aries'
+        zodiac_sign: 'Aries',
+        nationality: "Korean",
+        pronunciation: "min &#183 gyu"
     },
     {
         id: "10",
-        stage_name: 'DK',
+        stage_name: 'DK/Dokyeom',
         korean_stage_name: '(도겸)',
         birth_name: 'Lee, Seok Min (이석민)',
         image: 'dk_attacca_op1',
         sub_unit: 'Vocal Team, BooSeokSoon',
         position: 'Main Vocalist',
         birthday: 'February 18, 1997',
-        zodiac_sign: 'Aquarius/Pisces Cusp'
+        zodiac_sign: 'Aquarius/Pisces Cusp',
+        nationality: "Korean",
+        pronunciation: "dee &#183 kay"
     },
     {
         id: "11",
@@ -118,7 +141,9 @@ const membersData = [
         sub_unit: 'Vocal Team, BooSeokSoon',
         position: 'Main Vocalist, Face of the Group',
         birthday: 'January 16, 1998',
-        zodiac_sign: 'Capricorn'
+        zodiac_sign: 'Capricorn',
+        nationality: "Korean",
+        pronunciation: "sung &#183 kwon"
     },
     {
         id: "12",
@@ -129,7 +154,9 @@ const membersData = [
         sub_unit: 'Hip-Hop Team',
         position: 'Rapper, Sub Vocalist, Visual, Face of the Group',
         birthday: 'February 18, 1998',
-        zodiac_sign: 'Aquarius/Pisces Cusp'
+        zodiac_sign: 'Aquarius/Pisces Cusp',
+        nationality: "Korean-American",
+        pronunciation: "vurr &#183 nun"
     },
     {
         id: "13",
@@ -140,7 +167,9 @@ const membersData = [
         sub_unit: 'Performance Team',
         position: 'Main Dancer, Sub Vocalist, Sub Rapper, Maknae',
         birthday: 'February 11, 1999',
-        zodiac_sign: 'Aquarius'
+        zodiac_sign: 'Aquarius',
+        nationality: "Korean",
+        pronunciation: "dee &#183 no"
     },
 ]
 
