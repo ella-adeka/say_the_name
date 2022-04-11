@@ -372,7 +372,7 @@
     // PROFILE
     .mainProfile{
         width: 80%;
-        padding: 7em 0;
+        padding: 0 0;
         // width: 75%;
 
         &__seventeen__name{
@@ -452,7 +452,7 @@
 
             &__list{
                 position: relative;
-                margin-top: 15em;
+                margin-top: 3em;
                 &::before{
                     font-size: 3.5em;
                     left: 0;
@@ -539,7 +539,8 @@
                 background-size: contain;
                 width: 100%;
                 height: 100%;
-                margin-left: 2em;
+                right:0;
+                // margin-left: 2em;
                 filter: grayscale(0%);
                 text-align: left;
                 margin-bottom: 0;
@@ -547,8 +548,8 @@
     
                 &::before{
                     text-align: right;
-                    bottom: 0;
-                    right: 1em;
+                    bottom: 3.2em;
+                    right: 0;
                     font-size: 3.5em;
                 }
             }
@@ -615,7 +616,7 @@
         padding: 8px;
     }
     .next{
-        bottom: 0;
+        bottom: 1em;
         left: 50%;
         padding: 8px;
     }
@@ -623,7 +624,7 @@
     .mainDiscography{
         justify-content: center;
         width: 70%;
-        height: 85%;
+        height: 86%;
         overflow: hidden;
         margin-top: 0;
         margin-right: 5%;

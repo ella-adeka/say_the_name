@@ -218,7 +218,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0.98;
+  opacity: 1;
   visibility: hidden;
 }
 
@@ -265,23 +265,148 @@ header {
   transition: 1s ease-in-out;
 }
 
-.nav .navbar__item li {
+.nav .navbar__item ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.nav .navbar__item ul li {
   list-style: none;
   text-transform: uppercase;
   font-size: 6rem;
   width: 100%;
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
 }
 
-.nav .navbar__item li a {
+.nav .navbar__item ul li:nth-child(1) {
+  width: 80%;
+  text-align: left;
+  margin-left: 3em;
+  z-index: 1;
+}
+
+.nav .navbar__item ul li:nth-child(1)::after {
+  content: "01";
+  position: absolute;
+  font-size: 0.15em;
+  margin-top: -3em;
+  margin-left: 0.5em;
+  font-family: New York;
+}
+
+.nav .navbar__item ul li:nth-child(1):hover {
+  background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+  background-size: 600px;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+}
+
+.nav .navbar__item ul li:nth-child(2)::before {
+  content: "02";
+  position: absolute;
+  font-size: 0.15em;
+  margin-top: -3em;
+  margin-left: -1.5em;
+  font-family: New York;
+}
+
+.nav .navbar__item ul li:nth-child(2):hover {
+  background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+  background-size: cover;
+  -webkit-animation: navItemTwoBackground 2s ease 1 backwards;
+          animation: navItemTwoBackground 2s ease 1 backwards;
+}
+
+.nav .navbar__item ul li:nth-child(3) {
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.nav .navbar__item ul li:nth-child(3)::after {
+  content: "03";
+  position: absolute;
+  font-size: 0.15em;
+  margin-top: -3em;
+  margin-left: 0.5em;
+  font-family: New York;
+}
+
+.nav .navbar__item ul li:nth-child(3):hover {
+  background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
+  background-size: 700px;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+}
+
+.nav .navbar__item ul li:nth-child(4) {
+  position: relative;
+  z-index: 10;
+  margin-left: 2em;
+}
+
+.nav .navbar__item ul li:nth-child(4)::before {
+  content: "04";
+  position: absolute;
+  font-size: 0.15em;
+  margin-top: -3em;
+  margin-left: -1.5em;
+  font-family: New York;
+}
+
+.nav .navbar__item ul li:nth-child(4):hover {
+  background: url("../../../images/members/joshua_attacca_op1.jpg") no-repeat fixed left;
+  background-size: 500px;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
+}
+
+@-webkit-keyframes navItemOneBackground {
+  0% {
+    background-size: 0;
+  }
+  100% {
+    background-size: 700px;
+  }
+}
+
+@keyframes navItemOneBackground {
+  0% {
+    background-size: 0;
+  }
+  100% {
+    background-size: 700px;
+  }
+}
+
+@-webkit-keyframes navItemTwoBackground {
+  0% {
+    background-size: 10%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes navItemTwoBackground {
+  0% {
+    background-size: 10%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+.nav .navbar__item ul li a {
   position: relative;
   font-family: Valery;
   -webkit-animation: strike 2s linear 1 alternate;
           animation: strike 2s linear 1 alternate;
 }
 
-.nav .navbar__item li a:hover::after {
+.nav .navbar__item ul li a:hover::after {
   content: '';
   position: absolute;
   top: 40%;
@@ -672,7 +797,7 @@ header {
           transform: translate(-50%, -50%);
   width: 90%;
   height: 100%;
-  padding: 7em 2em;
+  padding: 2.5em 2em;
   overflow-x: hidden;
 }
 
@@ -688,15 +813,14 @@ header {
 
 .mainProfile__paragraph {
   position: relative;
-  height: 40%;
-  margin: 5em 0 10em 0;
-  display: inline-block;
+  margin: 0 0 10em 0;
 }
 
 .mainProfile__paragraph__name {
   background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed;
   background-size: contain;
   background-blend-mode: saturation;
+  width: 100%;
   height: 20em;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -722,7 +846,7 @@ header {
   background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
-  margin-top: 5em;
+  margin-top: 20em;
   margin-left: 80%;
   width: 20em;
   height: 20em;
@@ -740,6 +864,7 @@ header {
   font-size: 5em;
   opacity: .5;
   right: 3.5em;
+  margin-top: -1em;
 }
 
 .mainProfile__paragraph__debut:hover {
@@ -747,6 +872,12 @@ header {
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
+}
+
+.mainProfile__paragraph__debutdate {
+  font-size: 7em;
+  font-family: New York;
+  margin-top: -1em;
 }
 
 .mainProfile__paragraph__members {
@@ -1013,14 +1144,13 @@ header {
   background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
-  display: inline-block;
   width: 25em;
   height: 25em;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  margin-left: 5em;
+  margin-left: 2em;
   padding: 2em;
   margin-top: 20em;
   margin-bottom: 2em;
@@ -1043,10 +1173,11 @@ header {
 }
 
 .mainProfile__paragraph__morecontents {
+  position: absolute;
+  right: 5em;
   background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
-  display: inline-block;
   width: 25em;
   height: 25em;
   margin-left: 15em;
@@ -1055,7 +1186,8 @@ header {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
-  padding: 2em;
+  padding: 1em;
+  margin-top: 5em;
 }
 
 .mainProfile__paragraph__morecontents::before {
@@ -1092,11 +1224,28 @@ header {
   padding-bottom: 0;
 }
 
+.mainMembers__dets__pronunciation {
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: right;
+  margin-right: 9.8em;
+  margin-top: -30%;
+  font-size: 2.5em;
+  opacity: 0.65;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
+  z-index: -1;
+}
+
 .mainMembers__dets__number {
   width: 100%;
   text-align: right;
   margin-right: 0;
-  margin-top: 25%;
+  margin-top: 22%;
   font-size: 5em;
   opacity: 0.1;
 }
@@ -1154,6 +1303,7 @@ header {
 .mainMembers__dets__info__label {
   font-style: oblique;
   font-weight: 800;
+  margin-right: 0.5em;
 }
 
 .mainMembers__dets__info__name {
@@ -1763,7 +1913,7 @@ header {
   }
   .mainProfile {
     width: 80%;
-    padding: 7em 0;
+    padding: 0 0;
   }
   .mainProfile__seventeen__name {
     position: absolute;
@@ -1827,7 +1977,7 @@ header {
   }
   .mainProfile__paragraph__list {
     position: relative;
-    margin-top: 15em;
+    margin-top: 3em;
   }
   .mainProfile__paragraph__list::before {
     font-size: 3.5em;
@@ -1899,7 +2049,7 @@ header {
     background-size: contain;
     width: 100%;
     height: 100%;
-    margin-left: 2em;
+    right: 0;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
     text-align: left;
@@ -1907,8 +2057,8 @@ header {
   }
   .mainProfile__paragraph__morecontents::before {
     text-align: right;
-    bottom: 0;
-    right: 1em;
+    bottom: 3.2em;
+    right: 0;
     font-size: 3.5em;
   }
   .listen-link {
@@ -1965,7 +2115,7 @@ header {
     padding: 8px;
   }
   .next {
-    bottom: 0;
+    bottom: 1em;
     left: 50%;
     padding: 8px;
   }
@@ -1974,7 +2124,7 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     width: 70%;
-    height: 85%;
+    height: 86%;
     overflow: hidden;
     margin-top: 0;
     margin-right: 5%;
