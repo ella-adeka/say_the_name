@@ -6,6 +6,7 @@ const seventeen = document.querySelector(".mainProfile__seventeen__name");
 
 // seventeen.setAttribute("style", "margin-left: 500px;");
 // let x = 0;
+// let i = 0;
 mainProfile.addEventListener("scroll", () => {
     let i = mainProfile.scrollTop;
     // groupName.setAttribute("style", "height:80em");
@@ -16,8 +17,10 @@ mainProfile.addEventListener("scroll", () => {
     //         groupName.setAttribute("style", "height: 20em;");
     //     }
     // } 
-    if (i < 60) {
-        groupName.setAttribute("style", "height: " + (i.toFixed()) + "em; transition: .5s ease-in;width:100vw");
+    // i++;
+    if (i <60) {
+        groupName.setAttribute("style", "height: " + (i.toFixed()) + "em; transition: .5s ease-in;");
+        // groupName.setAttribute("style", "height: 30em; transition: .5s ease-in;width:100%");
 
         if (i === 0) {
             groupName.setAttribute("style", "height: 20em; transition: .5s ease-in;");
