@@ -344,7 +344,7 @@ header {
 .nav .navbar__item ul li:nth-child(4) {
   position: relative;
   z-index: 10;
-  margin-left: 2em;
+  margin-left: 2.5em;
 }
 
 .nav .navbar__item ul li:nth-child(4)::before {
@@ -358,7 +358,7 @@ header {
 
 .nav .navbar__item ul li:nth-child(4):hover {
   background: url("../../../images/members/joshua_attacca_op1.jpg") no-repeat fixed left;
-  background-size: 500px;
+  background-size: 600px;
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
 }
@@ -799,16 +799,26 @@ header {
   height: 100%;
   padding: 2.5em 2em;
   overflow-x: hidden;
+  font-family: New York;
 }
 
 .mainProfile__seventeen__name {
   position: absolute;
   font-size: 10em;
-  font-family: New York;
   -webkit-filter: invert(50%);
           filter: invert(50%);
   opacity: 0.5;
   margin-left: 0;
+}
+
+.mainProfile .backgroundSVTText {
+  position: absolute;
+  font-size: 5em;
+  z-index: -1;
+  opacity: .1;
+  font-family: New York;
+  text-align: center;
+  top: 15em;
 }
 
 .mainProfile__paragraph {
@@ -842,12 +852,26 @@ header {
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__debut {
+.mainProfile__paragraph__definition {
+  margin-top: 30em;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 2em;
+}
+
+.mainProfile__paragraph__debutDiv {
+  height: 20em;
+  margin-top: 15em;
+}
+
+.mainProfile__paragraph__debutDiv__debut {
   background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
-  background-size: cover;
+  background-size: 300px;
   background-blend-mode: saturation;
-  margin-top: 20em;
-  margin-left: 80%;
+  margin-left: auto;
+  margin-right: 0;
   width: 20em;
   height: 20em;
   -webkit-filter: grayscale(100%);
@@ -855,10 +879,10 @@ header {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
-  padding: 2em;
+  padding: 0;
 }
 
-.mainProfile__paragraph__debut::before {
+.mainProfile__paragraph__debutDiv__debut::before {
   content: "Debut";
   position: absolute;
   font-size: 5em;
@@ -867,21 +891,117 @@ header {
   margin-top: -1em;
 }
 
-.mainProfile__paragraph__debut:hover {
+.mainProfile__paragraph__debutDiv__debut:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
+  -webkit-animation: debut 2s ease 1 forwards;
+          animation: debut 2s ease 1 forwards;
+}
+
+@-webkit-keyframes debut {
+  0% {
+    height: 20em;
+  }
+  100% {
+    height: 0em;
+  }
+}
+
+@keyframes debut {
+  0% {
+    height: 20em;
+  }
+  100% {
+    height: 0em;
+  }
 }
 
 .mainProfile__paragraph__debutdate {
-  font-size: 7em;
-  font-family: New York;
-  margin-top: -1em;
+  margin-top: -10em;
+  width: 60%;
+}
+
+.mainProfile__paragraph__debutdate__date {
+  font-size: 3em;
+}
+
+.mainProfile__paragraph__debutdate__album {
+  font-size: 3em;
+}
+
+.mainProfile__paragraph__debutdate__title_track {
+  font-size: 3em;
+}
+
+.mainProfile__paragraph__debutImages {
+  height: 20em;
+  margin-top: 15em;
+}
+
+.mainProfile__paragraph__debutImages__para {
+  white-space: nowrap;
+  margin: 5px 0;
+}
+
+.mainProfile__paragraph__debutImages__para__image {
+  z-index: -10;
+  position: relative;
+  padding: 1em;
+  width: 40em;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainProfile__paragraph__debutImages__debutImages > img {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-color: firebrick;
+  margin: 10px;
+}
+
+.mainProfile__paragraph__fandom {
+  margin-top: 29em;
+  background: url("../../../images/members/hoshi_attacca_op1.jpg") no-repeat fixed;
+  background-size: cover;
+  height: 20em;
+  width: 20em;
+}
+
+.mainProfile__paragraph__fandom::before {
+  content: "Fandom";
+  position: absolute;
+  font-size: 5em;
+  opacity: .5;
+  margin-top: -0.5em;
+  left: 0;
+  z-index: 1;
+}
+
+.mainProfile__paragraph__colors {
+  margin-top: 10em;
+  margin-left: 50%;
+  background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
+  background-size: cover;
+  height: 20em;
+  width: 20em;
+}
+
+.mainProfile__paragraph__colors::before {
+  content: "Fan Colors";
+  position: absolute;
+  font-size: 5em;
+  opacity: .5;
+  margin-top: -0.7em;
+  margin-left: -1em;
+  z-index: 1;
 }
 
 .mainProfile__paragraph__members {
-  margin-top: 18em;
+  margin-top: 15em;
   width: 100%;
   text-align: right;
   display: -ms-grid;
@@ -899,7 +1019,7 @@ header {
   position: absolute;
   font-size: 5em;
   opacity: .5;
-  margin-top: -0.5em;
+  margin-top: -0.7em;
   left: 0;
   z-index: 1;
 }
@@ -922,7 +1042,7 @@ header {
 
 .mainProfile__paragraph__members__names {
   z-index: 1;
-  font-size: 3em;
+  font-size: 3.3em;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
@@ -983,7 +1103,7 @@ header {
   }
 }
 
-.mainProfile__paragraph__list {
+.mainProfile__paragraph__sub_units_list {
   background-size: cover;
   background-blend-mode: saturation;
   margin-top: 7em;
@@ -996,7 +1116,7 @@ header {
   padding: 2em;
 }
 
-.mainProfile__paragraph__list::before {
+.mainProfile__paragraph__sub_units_list::before {
   content: "Sub-Units";
   position: absolute;
   font-size: 5em;
@@ -1006,7 +1126,7 @@ header {
   text-align: center;
 }
 
-.mainProfile__paragraph__list:hover {
+.mainProfile__paragraph__sub_units_list:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
@@ -1140,7 +1260,34 @@ header {
   background-size: cover;
 }
 
-.mainProfile__paragraph__contents {
+.mainProfile__paragraph__filmography {
+  margin-top: 4em;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  text-align: center;
+  padding: 2em;
+}
+
+.mainProfile__paragraph__filmography::before {
+  content: "Filmography";
+  position: absolute;
+  font-size: 5em;
+  opacity: .5;
+  left: 1.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.mainProfile__paragraph__filmography:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+}
+
+.mainProfile__paragraph__television {
   background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
@@ -1152,55 +1299,90 @@ header {
   transition: .5s ease-in-out;
   margin-left: 2em;
   padding: 2em;
-  margin-top: 20em;
-  margin-bottom: 2em;
+  margin-top: 8em;
 }
 
-.mainProfile__paragraph__contents::before {
-  content: "Contents";
+.mainProfile__paragraph__television div {
+  padding-top: 1em;
+}
+
+.mainProfile__paragraph__television::before {
+  content: "Television";
   position: absolute;
   font-size: 5em;
   opacity: .5;
-  top: -0.5em;
+  top: -0.7em;
   left: -0.7em;
 }
 
-.mainProfile__paragraph__contents:hover {
+.mainProfile__paragraph__television:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__morecontents {
+.mainProfile__paragraph__onlineshows {
   position: absolute;
-  right: 5em;
-  background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+  right: 4em;
+  background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
   width: 25em;
   height: 25em;
-  margin-left: 15em;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
   padding: 1em;
-  margin-top: 5em;
 }
 
-.mainProfile__paragraph__morecontents::before {
-  content: "More Contents";
+.mainProfile__paragraph__onlineshows::before {
+  content: "Online Shows";
   position: absolute;
   font-size: 5em;
   opacity: .5;
   text-align: right;
   bottom: -1.3em;
-  right: -1em;
+  right: 0;
 }
 
-.mainProfile__paragraph__morecontents:hover {
+.mainProfile__paragraph__onlineshows:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+}
+
+.mainProfile__paragraph__film {
+  left: 1em;
+  background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+  background-size: cover;
+  background-blend-mode: saturation;
+  width: 25em;
+  height: 25em;
+  margin-left: 5em;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  text-align: left;
+  padding: 1em;
+  margin-top: 20em;
+}
+
+.mainProfile__paragraph__film::before {
+  content: "Film";
+  position: absolute;
+  font-size: 5em;
+  opacity: .5;
+  text-align: right;
+  bottom: -0.5em;
+  right: -0.5em;
+}
+
+.mainProfile__paragraph__film:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
@@ -2028,7 +2210,7 @@ header {
     font-size: 2em;
     right: 0.4em;
   }
-  .mainProfile__paragraph__contents {
+  .mainProfile__paragraph__television {
     display: block;
     background-size: contain;
     width: 100%;
@@ -2039,12 +2221,12 @@ header {
     margin-top: 8em;
     margin-left: 2em;
   }
-  .mainProfile__paragraph__contents::before {
+  .mainProfile__paragraph__television::before {
     top: -0.5em;
     left: -0.5em;
     font-size: 3.5em;
   }
-  .mainProfile__paragraph__morecontents {
+  .mainProfile__paragraph__onlineshows {
     display: block;
     background-size: contain;
     width: 100%;
@@ -2053,9 +2235,25 @@ header {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
     text-align: left;
+  }
+  .mainProfile__paragraph__onlineshows::before {
+    text-align: right;
+    bottom: 3.2em;
+    right: 0;
+    font-size: 3.5em;
+  }
+  .mainProfile__paragraph__film {
+    display: block;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+    text-align: left;
     margin-bottom: 0;
   }
-  .mainProfile__paragraph__morecontents::before {
+  .mainProfile__paragraph__film::before {
     text-align: right;
     bottom: 3.2em;
     right: 0;
