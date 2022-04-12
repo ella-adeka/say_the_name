@@ -2,10 +2,11 @@
 const mainProfile = document.querySelector(".mainProfile");
 const groupName = document.querySelector(".mainProfile__paragraph__name");
 const seventeen = document.querySelector(".mainProfile__seventeen__name");
+const debutImages = document.querySelector(".mainProfile__paragraph__debutImages");
 
 
 // seventeen.setAttribute("style", "margin-left: 500px;");
-// let x = 0;
+let x = 0;
 // let i = 0;
 mainProfile.addEventListener("scroll", () => {
     let i = mainProfile.scrollTop;
@@ -32,6 +33,11 @@ mainProfile.addEventListener("scroll", () => {
     // LET NAME MOVE ACROSS THE X AXIS ON SCROLL
     // if (i == 400) {
         seventeen.setAttribute("style", "margin-left: -" + (i.toFixed()) + "px;");
+    //    if (i == 100) {
+        debutImages.setAttribute("style", "margin-left: -" + (i.toFixed()) + "px;");
+    //    }
+        
+
         // seventeen.setAttribute("style", "opacity:0;");
         // if (i === 100) {
         //     seventeen.setAttribute("style", "opacity:0;");
