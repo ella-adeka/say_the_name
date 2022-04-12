@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet"> 
     <title>SEVENTEEN - MEMBERS</title>
 </head>
-<body onload="showMembers()">
+<body onload="members()">
     <header>
         <div id="cursor"></div>
         <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div>
@@ -63,9 +63,9 @@
         const main = document.querySelector('.mainMembers');
         const dets = document.createElement('div');
 
-        function showMembers() {
-            members();
-        }
+        // function showMembers() {
+        //     members();
+        // }
 
         let i = 0;
         // main.addEventListener("scroll", () => {
@@ -112,10 +112,10 @@
                         
                         <p class="mainMembers__dets__info__birth_name"><span class="mainMembers__dets__info__label">Birth Name:</span> ${membersData[i].birth_name}</p>
                         <p class="mainMembers__dets__info__korean_name" ><span class="mainMembers__dets__info__label">Korean Name:</span> ${membersData[i].korean_name}</p>
-            <p class="mainMembers__dets__info__nationality"><span class="mainMembers__dets__info__label">Nationality:</span> ${membersData[i].nationality}</p>
-            <p class="mainMembers__dets__info__position"><span class="mainMembers__dets__info__label">Position:</span> ${membersData[i].position}</p>
-            <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${membersData[i].birthday}</p>
-            <p class="mainMembers__dets__info__zodiac"><span class="mainMembers__dets__info__label">Zodiac Sign:</span> ${membersData[i].zodiac_sign}</p>
+                        <p class="mainMembers__dets__info__nationality"><span class="mainMembers__dets__info__label">Nationality:</span> ${membersData[i].nationality}</p>
+                        <p class="mainMembers__dets__info__position"><span class="mainMembers__dets__info__label">Position:</span> ${membersData[i].position}</p>
+                        <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${membersData[i].birthday}</p>
+                        <p class="mainMembers__dets__info__zodiac"><span class="mainMembers__dets__info__label">Zodiac Sign:</span> ${membersData[i].zodiac_sign}</p>
                     </div>   
                     <p class="mainMembers__dets__number">
                         ${membersData[i].id}
