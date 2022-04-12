@@ -134,7 +134,7 @@ header{
                     // transition: 2s ease-in;  
                     
                     &:nth-child(1){
-                        // transition: 2s ease-in 10s; 
+                        // transition-delay: 3s; 
                         width: 80%;
                         text-align: left;
                         margin-left: 3em;
@@ -153,6 +153,8 @@ header{
                             background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
                             background-size: 600px;
                             transition: 2s ease-in; 
+
+                           
                             // animation: navItemOneBackground 2s ease 1 forwards;
                             
                         }
@@ -209,7 +211,7 @@ header{
                         // text-align: right;
                         position: relative;
                         z-index: 10;
-                        margin-left: 2em;
+                        margin-left: 2.5em;
 
                         &::before{
                             content: "04";
@@ -222,7 +224,7 @@ header{
                         &:hover{
                             
                             background: url("../../../images/members/joshua_attacca_op1.jpg") no-repeat fixed left;
-                            background-size: 500px;
+                            background-size: 600px;
                             transition: 2s ease-in; 
                         }
                     }
@@ -235,6 +237,8 @@ header{
                         0% {background-size: 10%;}
                         100% { background-size: 100%;}  
                     } 
+
+                    
     
                     a{
                         position: relative;
