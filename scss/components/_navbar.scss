@@ -169,6 +169,9 @@ header{
                     &:nth-child(2){
                         // text-align: right;
                         // margin-left: 2em;
+                        // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+                        // background-size: cover;
+                        // opacity: 0;
 
                         &::before{
                             content: "02";
@@ -181,8 +184,9 @@ header{
                         &:hover{
                             background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
                             background-size: cover;
+                            // opacity: 0.5;
                             // transition: 2s ease-in; 
-                            animation: navItemTwoBackground 2s ease 1 backwards;
+                            animation: navItemTwoBackground 2s ease 1 forwards;
                         }
                     }
     
@@ -230,10 +234,14 @@ header{
                     }
 
                     @keyframes navItemOneBackground {
-                        0% {background-size: 0;}
-                        100% { background-size: 700px;}  
+                        // 0% {width: 0px;}
+                        // 100% { width: 700px;}  
+                        0% {background-size: 0px 0px;}
+                        100% { background-size: 600px }  
                     } 
                     @keyframes navItemTwoBackground {
+                        // 0% {width: 10%;}
+                        // 100% { width: 100%;}  
                         0% {background-size: 10%;}
                         100% { background-size: 100%;}  
                     } 
