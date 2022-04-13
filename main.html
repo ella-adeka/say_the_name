@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet">    
 <title>SEVENTEEN </title>
 </head>
-<!-- <body >  -->
-<body onload="homePageNews()"> 
+<body > 
+<!-- <body onload="homePageNews()">  -->
     <!-- background-color: #f7cac9; color: #92a8d1; -->
 
     <!-- HEADER -->
@@ -31,8 +31,11 @@
             <div class="navbar">
                 <div class="navbar__item">
                     <ul class="navbar__ul">
-                        <li><a class="link" href="main.html">Home</a></li>
-                        <li><a class="link" href="profile.html">Profile</a></li>
+                        <li class="home_link">
+                            <a class="link" href="main.html">Home</a> 
+                            <!-- <img class="image"  src="images/members/woozi_attacca_op1.jpg" alt=""> -->
+                        </li>
+                        <li class="profile_link"><a class="link" href="profile.html">Profile</a></li>
                         <li><a class="link" href="discography.html">Discography</a></li>
                         <li><a class="link" href="members.html">Members</a></li>
                     </ul>
@@ -44,10 +47,11 @@
     <!-- END OF HEADER -->
 
     <!-- MAINHOME -->
-    <main class="mainHome"> <!--  class=" observable" contenteditable="false" -->
-        <div class="mainHome__paragraph">
+    <!-- <main class="mainHome">  -->
+        <!--  class=" observable" contenteditable="false" -->
+        <!-- <div class="mainHome__paragraph"> -->
             <!-- Initialize homeData values -->
-            <h1 class="mainHome__paragraph__topic">Say The Name</h1>
+            <!-- <h1 class="mainHome__paragraph__topic">Say The Name</h1>
             <h1 class="mainHome__paragraph__title" onload="mainAnimation()">This Is Seventeen</h1>
             <a class="mainHome__paragraph__subtitle" href="profile.html">View Profile</a>  
             <p class="mainHome__paragraph__description">SEVENTEEN is a huge idol group, with 13 members and 3 sub-units forming one team. The 3 different sub-units (Hip-hop Team, Vocal Team and Performance Team) also actively participate in album production.</p>
@@ -63,9 +67,9 @@
                 <img class="mainHome__paragraph__imagesOutside__image3" src="images/home_page/attacca/attacca_group_photo_1.jpeg" alt="">
                 <img class="mainHome__paragraph__imagesOutside__image4" src="images/home_page/attacca/attacca_group_photo_2.jpeg" alt="">
                 <img class="mainHome__paragraph__imagesOutside__image5" src="images/home_page/attacca/attacca_group_photo_2.jpeg" alt="">
-            </div>
-        </div>
-    </main>
+            </div> -->
+        <!-- </div> -->
+    <!-- </main> -->
     <!-- END OF MAINHOME -->
 
     <!-- FOOTER -->
@@ -94,7 +98,8 @@
     <!-- MAIN JAVASCRIPT FILES -->
     <script type="module" src="/app.js"></script>
     <script src="/javascript/data/home_data.js"></script>
-    <script src="/javascript/pages/main.js"></script>
+    <!-- <script src="/javascript/navbar.js"></script> -->
+    <!-- <script src="/javascript/pages/main.js"></script> -->
     <!-- END OF JAVASCRIPT RELATED -->
 </body>
 </html>
