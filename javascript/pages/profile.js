@@ -18,15 +18,15 @@ mainProfile.addEventListener("scroll", () => {
     //         groupName.setAttribute("style", "height: 20em;");
     //     }
     // } 
-    // i++;
-    if (i <60) {
-        groupName.setAttribute("style", "height: " + (i.toFixed()) + "em; transition: .5s ease-in;");
-        // groupName.setAttribute("style", "height: 30em; transition: .5s ease-in;width:100%");
+    // // i++;
+    // if (i <60) {
+    //     groupName.setAttribute("style", "height: " + (i.toFixed()) + "em; transition: .5s ease-in;");
+    //     // groupName.setAttribute("style", "height: 30em; transition: .5s ease-in;width:100%");
 
-        if (i === 0) {
-            groupName.setAttribute("style", "height: 20em; transition: .5s ease-in;");
-        }
-    } 
+    //     if (i === 0) {
+    //         groupName.setAttribute("style", "height: 20em; transition: .5s ease-in;");
+    //     }
+    // } 
     
     
 
