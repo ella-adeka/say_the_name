@@ -284,7 +284,7 @@ header {
 .nav .navbar__item ul li:nth-child(1) {
   width: 80%;
   text-align: left;
-  margin-left: 3em;
+  margin-left: 2em;
   z-index: 1;
 }
 
@@ -344,7 +344,7 @@ header {
 .nav .navbar__item ul li:nth-child(4) {
   position: relative;
   z-index: 10;
-  margin-left: 2.5em;
+  margin-left: 3em;
 }
 
 .nav .navbar__item ul li:nth-child(4)::before {
@@ -453,6 +453,18 @@ header {
 .nav .navbar.dark {
   background-color: black;
   color: white;
+}
+
+.nav .credits {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.nav .credits:hover {
+  color: palegoldenrod;
 }
 
 #colorMode, .menu_btn {
@@ -804,11 +816,17 @@ header {
 
 .mainProfile__seventeen__name {
   position: absolute;
-  font-size: 10em;
+  white-space: nowrap;
+  font-size: 16em;
   -webkit-filter: invert(50%);
           filter: invert(50%);
+  margin-top: -0.03em;
   opacity: 0.5;
   margin-left: 0;
+}
+
+.mainProfile__seventeen__name span {
+  width: 100%;
 }
 
 .mainProfile .backgroundSVTText {
@@ -827,7 +845,7 @@ header {
 }
 
 .mainProfile__paragraph__name {
-  background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+  background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center;
   background-size: cover;
   background-blend-mode: saturation;
   height: 80%;
@@ -1174,6 +1192,7 @@ header {
           writing-mode: vertical-lr;
   text-orientation: upright;
   right: -0.5em;
+  margin-top: -0.15em;
 }
 
 .mainProfile__paragraph__units__unit__hhu:hover {
@@ -1213,6 +1232,7 @@ header {
           writing-mode: vertical-lr;
   text-orientation: upright;
   right: -0.6em;
+  margin-top: -0.15em;
 }
 
 .mainProfile__paragraph__units__unit__vu:hover {
@@ -1250,6 +1270,7 @@ header {
           writing-mode: vertical-lr;
   text-orientation: upright;
   right: -0.1em;
+  margin-top: -0.15em;
 }
 
 .mainProfile__paragraph__units__unit__pu:hover {
@@ -1325,7 +1346,7 @@ header {
 .mainProfile__paragraph__onlineshows {
   position: absolute;
   right: 4em;
-  background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
+  background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
   width: 25em;
@@ -1357,7 +1378,7 @@ header {
 
 .mainProfile__paragraph__film {
   left: 1em;
-  background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+  background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
   width: 25em;
@@ -1791,6 +1812,34 @@ header {
   right: 0;
   opacity: .1;
   font-size: 5em;
+}
+
+.mainCredits {
+  font-family: New York;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50%;
+  overflow: hidden;
+}
+
+.mainCredits__bio {
+  padding: 2em;
+}
+
+.mainCredits__bio h3 {
+  font-size: 1.5em;
+}
+
+.mainCredits__allCredits {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1em;
+  text-align: center;
+  width: 100%;
 }
 
 .footer {
