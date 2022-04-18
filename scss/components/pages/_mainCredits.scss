@@ -1,0 +1,28 @@
+.mainCredits{
+    font-family: $discographyfont;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50%;
+    overflow: hidden;
+    
+    // background-color: rgba(128, 128, 128, 0.612);
+
+    &__bio{
+        padding: 2em;
+        h3{
+            font-size: 1.5em;
+        }
+    }
+
+    &__allCredits{
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 1em;
+        text-align: center;
+        width: 100%;
+        // background-color: aqua;
+    }
+}
