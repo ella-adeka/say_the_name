@@ -137,7 +137,7 @@ header{
                         // transition-delay: 3s; 
                         width: 80%;
                         text-align: left;
-                        margin-left: 3em;
+                        margin-left: 2em;
                         z-index: 1;
 
                         &::after{
@@ -172,6 +172,7 @@ header{
                         // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
                         // background-size: cover;
                         // opacity: 0;
+                        // width: 90%;
 
                         &::before{
                             content: "02";
@@ -215,7 +216,7 @@ header{
                         // text-align: right;
                         position: relative;
                         z-index: 10;
-                        margin-left: 2.5em;
+                        margin-left: 3em;
 
                         &::before{
                             content: "04";
@@ -292,6 +293,20 @@ header{
 
         
         
+    }
+
+    .credits{
+        position: absolute;
+        bottom: 0;
+        // bottom: -0.5em;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+        
+        &:hover{
+            // animation: strike 2s ease 1 forwards;
+            color: palegoldenrod;
+        }
     }
 
     
