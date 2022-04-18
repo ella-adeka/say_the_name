@@ -11,15 +11,22 @@
 
     &__seventeen__name{
         position: absolute;
+        white-space: nowrap;
         // z-index: 1;
         // font-size: 8em;
-        font-size: 10em;
+        font-size: 16em;
+        
+        // font-size: 10em;
         filter: invert(50%);
-        // margin-top: -1em;
+        margin-top: -0.03em;
         opacity: 0.5;
         margin-left: 0;
+        // text-align: center;
         // background: ;
 
+        span{
+            width: 100%;
+        }
         
     }
 
@@ -57,7 +64,8 @@
             // transition: .5s ease-in-out;
             // text-align: right;
             // padding: 2em;
-            background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+            // background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+            background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center;
             background-size: cover;
             background-blend-mode: saturation;
             // width: 30em;
@@ -395,6 +403,7 @@
                         writing-mode: vertical-lr;
                         text-orientation: upright;
                         right: -0.5em;
+                        margin-top: -0.15em;
                         
                     }
 
@@ -433,6 +442,7 @@
                         writing-mode: vertical-lr;
                         text-orientation: upright;
                         right: -0.6em;
+                        margin-top: -0.15em;
                     }
 
                     &:hover{
@@ -464,6 +474,7 @@
                         writing-mode: vertical-lr;
                         text-orientation: upright;
                         right: -0.1em;
+                        margin-top: -0.15em;
                     }
 
                     &:hover{
@@ -554,7 +565,7 @@
         &__onlineshows{
             position: absolute;
             right: 4em;
-            background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
+            background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed;
             background-size: cover;
             background-blend-mode: saturation;
             // display: inline-block;
@@ -589,7 +600,7 @@
         &__film{
             // position: absolute;
             left: 1em;
-            background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+            background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
             background-size: cover;
             background-blend-mode: saturation;
             // display: inline-block;
