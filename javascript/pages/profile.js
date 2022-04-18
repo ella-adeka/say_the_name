@@ -4,6 +4,11 @@ const groupName = document.querySelector(".mainProfile__paragraph__name");
 const seventeen = document.querySelector(".mainProfile__seventeen__name");
 const debutImages = document.querySelector(".mainProfile__paragraph__debutImages");
 
+const hhu = document.querySelector(".mainProfile__paragraph__units__unit__hhu");
+
+const scoups = document.querySelector(".scoups");
+const wonwoo = document.querySelector(".wonwoo");
+
 
 // seventeen.setAttribute("style", "margin-left: 500px;");
 let x = 0;
@@ -83,3 +88,22 @@ namesParagraph.addEventListener("mouseleave", () => {
 });
 
 
+scoups.addEventListener("mouseover", () => {
+    hhu.style.cssText = "background: url('/images/members/scoups_attacca_op1.jpg') no-repeat fixed; background-size: cover;";
+});
+
+scoups.addEventListener("mouseout", () => {
+    hhu.style.cssText = "background: url('/images/units/hhu_2.jpg') no-repeat fixed; background-size: cover;";
+})
+
+wonwoo.addEventListener("mouseover", () => {
+    hhu.style.cssText = "background: url('/images/members/wonwoo_attacca_op1.jpg') no-repeat fixed; background-size: cover;";
+})
+
+// hhu.addEventListener("mouseout", () => {
+//     hhu.style.cssText = "background: url('/images/units/hhu_2.jpg') no-repeat fixed; background-size: cover;";
+// })
+
+// hhu.addEventListener("mouseover", () => {
+//     hhu.style.cssText = "background: url('/images/units/hhu_3.jpeg') no-repeat fixed; background-size: cover;";
+// })
