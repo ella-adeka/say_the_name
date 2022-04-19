@@ -6,6 +6,8 @@
     width: 90%;
     height: 100%;
     padding: 0 2em;
+    margin-left: auto;
+    margin-right: auto;
     overflow-x: hidden;
     font-family: $discographyfont;
 
@@ -588,7 +590,7 @@
                 text-align: right;
                 bottom: -1.3em;
                 // padding-right: -25em;
-                right: 0;
+                right: -0.5em;
                 
             }
 
