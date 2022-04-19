@@ -20,8 +20,8 @@ membersData.forEach(member => {
             <p class="mainMembers__dets__info__name">${member.stage_name}<span>${member.korean_stage_name}</span></p>
             <p class="mainMembers__dets__info__subunit">${member.sub_unit}</p>
             
-            <p class="mainMembers__dets__info__birth_name"><span class="mainMembers__dets__info__label">Birth Name:</span> ${member.birth_name}</p>
-            <p class="mainMembers__dets__info__korean_name" ><span class="mainMembers__dets__info__label">Korean Name:</span> ${member.korean_name}</p>
+            <p class="mainMembers__dets__info__birth_name"><span class="mainMembers__dets__info__label">Name:</span> ${member.birth_name}</p>
+            
             <p class="mainMembers__dets__info__nationality"><span class="mainMembers__dets__info__label">Nationality:</span> ${member.nationality}</p>
             <p class="mainMembers__dets__info__position"><span class="mainMembers__dets__info__label">Position:</span> ${member.position}</p>
             <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${member.birthday}</p>
@@ -42,3 +42,5 @@ membersData.forEach(member => {
     }
     main.append(dets);
 });
+
+// <p class="mainMembers__dets__info__korean_name" ><span class="mainMembers__dets__info__label">Korean Name:</span> ${member.korean_name}</p>
