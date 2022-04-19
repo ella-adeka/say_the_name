@@ -6,45 +6,51 @@ header{
 .menu_btn{
     position: absolute;
     z-index: 1;
-    top: 2rem;
-    left: .5em;
-    width: 28px;
-    height: 18px;
+    top: 0;
+    left: 0;
+    // top: -0.5em;
+    // left: -0.5em;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
 
     
     &__burger{
         position: absolute;
-        top: 1rem;
+        top: 0;
+        // top: -0.5em;
         right: 0;
-        width: 28px;
-        height: 3px;
+        width: 80px;
+        height: 80px;
         transition: 2s ease-in-out;
-        // background: white;        
+        background: white;   
+        border: 1px solid transparent;
+        border-radius: 50%;   
 
         &::before{
-            content: '';
+            content: 'menu';
             position: absolute;
-            top: -8px;
+            top: 2em;
+            left: 1em;
             width: 32px;
             height: 3px;
-            background: dimgray;      
+            color: dimgray;      
             // backdrop-filter:invert(100%) ;
             transition: 2s ease-in-out;
 
         }
 
-        &::after{
-            content: '';
-            position: absolute;
-            top: 5px;
-            width: 20px;
-            height: 3px;
-            background: dimgray;      
-            // backdrop-filter:invert(100%);
-            transition: 2s ease-in-out;
+        // &::after{
+        //     content: '';
+        //     position: absolute;
+        //     top: 5px;
+        //     width: 20px;
+        //     height: 3px;
+        //     background: dimgray;      
+        //     // backdrop-filter:invert(100%);
+        //     transition: 2s ease-in-out;
 
-        }
+        // }
 
         &.open {
             // @include transition-ease;
@@ -55,7 +61,8 @@ header{
             &::before {
                 transition: 2s ease-in-out;
                 // width: 28px;
-                transform: rotate(45deg) translate(5px, 8px);
+                content: 'close';
+                transform: rotate(0deg) translate(5px, 8px);
             }
 
             &::after {
@@ -172,7 +179,7 @@ header{
                         // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
                         // background-size: cover;
                         // opacity: 0;
-                        // width: 90%;
+                        // width: 80%;
 
                         &::before{
                             content: "02";
