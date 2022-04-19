@@ -37,7 +37,7 @@
 
 .backgroundText {
   position: absolute;
-  right: .3em;
+  right: 0;
   font-size: 6em;
   z-index: -1;
   opacity: .1;
@@ -152,41 +152,34 @@ header {
 .menu_btn {
   position: absolute;
   z-index: 1;
-  top: 2rem;
-  left: .5em;
-  width: 28px;
-  height: 18px;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
 }
 
 .menu_btn__burger {
   position: absolute;
-  top: 1rem;
+  top: 0;
   right: 0;
-  width: 28px;
-  height: 3px;
+  width: 80px;
+  height: 80px;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 50%;
 }
 
 .menu_btn__burger::before {
-  content: '';
+  content: 'menu';
   position: absolute;
-  top: -8px;
+  top: 2em;
+  left: 1em;
   width: 32px;
   height: 3px;
-  background: dimgray;
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
-}
-
-.menu_btn__burger::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  width: 20px;
-  height: 3px;
-  background: dimgray;
+  color: dimgray;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
 }
@@ -202,8 +195,9 @@ header {
 .menu_btn__burger.open::before {
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
-  -webkit-transform: rotate(45deg) translate(5px, 8px);
-          transform: rotate(45deg) translate(5px, 8px);
+  content: 'close';
+  -webkit-transform: rotate(0deg) translate(5px, 8px);
+          transform: rotate(0deg) translate(5px, 8px);
 }
 
 .menu_btn__burger.open::after {
@@ -810,6 +804,8 @@ header {
   width: 90%;
   height: 100%;
   padding: 0 2em;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: hidden;
   font-family: New York;
 }
@@ -1366,7 +1362,7 @@ header {
   opacity: .5;
   text-align: right;
   bottom: -1.3em;
-  right: 0;
+  right: -0.5em;
 }
 
 .mainProfile__paragraph__onlineshows:hover {
@@ -1420,9 +1416,12 @@ header {
   height: 90%;
   padding-top: 2em;
   font-family: New York;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mainMembers__dets {
+  width: 100%;
   height: 80vh;
   padding-bottom: 0;
 }
@@ -1461,6 +1460,12 @@ header {
   height: 600px;
   right: 30%;
   margin: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .mainMembers__dets__imageDiv img {
@@ -1473,6 +1478,10 @@ header {
 .mainMembers__dets__imageDiv:hover img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .mainMembers__dets__imageDiv__image {
@@ -1480,6 +1489,27 @@ header {
   height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.mainMembers__dets__imageDiv:hover {
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  width: 100%;
+  right: 0;
+}
+
+.mainMembers__dets__imageDiv:hover img {
+  width: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .mainMembers__dets__info {
@@ -1814,6 +1844,10 @@ header {
   font-size: 5em;
 }
 
+.loading {
+  display: none;
+}
+
 .mainCredits {
   font-family: New York;
   position: absolute;
@@ -1830,8 +1864,12 @@ header {
   padding: 2em;
 }
 
-.mainCredits__bio h3 {
-  font-size: 1.5em;
+.mainCredits__bio__iAm {
+  font-size: 2em;
+}
+
+.mainCredits__bio__name {
+  font-size: 0.8em;
 }
 
 .mainCredits__allCredits {
@@ -1840,6 +1878,19 @@ header {
   padding-bottom: 1em;
   text-align: center;
   width: 100%;
+}
+
+.mainCredits__allCredits__fansite {
+  font-size: 0.8em;
+  background-color: #000;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #f7cac9), to(#92a8d1));
+  background-image: linear-gradient(to bottom, #f7cac9 40%, #92a8d1);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 .footer {
