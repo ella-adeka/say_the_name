@@ -38,6 +38,18 @@
         }
     }
 
+    &__photos{
+        padding: 2em;
+
+        &__from{
+            font-size: 2em;
+        }
+
+        &__source{
+            font-size: 0.8em;
+        }
+    }
+
     &__allCredits{
         position: absolute;
         bottom: 0;
