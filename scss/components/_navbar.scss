@@ -173,30 +173,30 @@ header{
                         // }
                     }
 
-                    &:nth-child(2){
-                        // text-align: right;
-                        // margin-left: 2em;
-                        // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
-                        // background-size: cover;
-                        // opacity: 0;
-                        // width: 80%;
+                    // &:nth-child(2){
+                    //     // text-align: right;
+                    //     // margin-left: 2em;
+                    //     // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+                    //     // background-size: cover;
+                    //     // opacity: 0;
+                    //     // width: 80%;
 
-                        &::before{
-                            content: "02";
-                            position: absolute;
-                            font-size: 0.15em;
-                            margin-top: -3em;
-                            margin-left: -1.5em;
-                            font-family: $discographyfont;
-                        }
-                        &:hover{
-                            background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
-                            background-size: cover;
-                            // opacity: 0.5;
-                            // transition: 2s ease-in; 
-                            animation: navItemTwoBackground 2s ease 1 forwards;
-                        }
-                    }
+                    //     &::before{
+                    //         content: "02";
+                    //         position: absolute;
+                    //         font-size: 0.15em;
+                    //         margin-top: -3em;
+                    //         margin-left: -1.5em;
+                    //         font-family: $discographyfont;
+                    //     }
+                    //     &:hover{
+                    //         background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+                    //         background-size: cover;
+                    //         // opacity: 0.5;
+                    //         // transition: 2s ease-in; 
+                    //         animation: navItemTwoBackground 2s ease 1 forwards;
+                    //     }
+                    // }
     
                     &:nth-child(3){
                         text-align: left;
