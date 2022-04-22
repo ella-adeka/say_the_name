@@ -479,4 +479,19 @@ const discographyData = [
         ],
         release_date: "15 April, 2022",
     },
+    {
+        id: "25",
+        artist_name: "Seventeen",
+        album_name: "Face The Sun",
+        album_detail: '4th Full Album',
+        album_link: "https://open.spotify.com/album/3fqYnHqWRVePkZzPQpxclM?si=MdtaVGI2QrOX-jHnhjtHPw",
+        youtube_link: 'https://youtu.be/E0Z9_pz9Wd8',
+        category: "Album",
+        title_track: "Darl+ing",
+        image: "darling.jpeg",
+        tracks: [
+            "Darl + ing"
+        ],
+        release_date: "27 May, 2022",
+    },
 ];
