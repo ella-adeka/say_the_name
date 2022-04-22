@@ -80,8 +80,8 @@ body.dark {
 
 #cursor {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 10px;
+  height: 10px;
   border: 1px solid transparent;
   border-radius: 50%;
   -webkit-transition-duration: 200ms;
@@ -95,8 +95,8 @@ body.dark {
 
 #cursor.dark {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 10px;
+  height: 10px;
   border: 1px solid transparent;
   border-radius: 50%;
   -webkit-transition-duration: 200ms;
@@ -296,22 +296,6 @@ header {
   background-size: 600px;
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
-}
-
-.nav .navbar__item ul li:nth-child(2)::before {
-  content: "02";
-  position: absolute;
-  font-size: 0.15em;
-  margin-top: -3em;
-  margin-left: -1.5em;
-  font-family: New York;
-}
-
-.nav .navbar__item ul li:nth-child(2):hover {
-  background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
-  background-size: cover;
-  -webkit-animation: navItemTwoBackground 2s ease 1 forwards;
-          animation: navItemTwoBackground 2s ease 1 forwards;
 }
 
 .nav .navbar__item ul li:nth-child(3) {
@@ -895,6 +879,12 @@ header {
   padding: 0;
 }
 
+.mainProfile__paragraph__debutDiv__debut__debut {
+  position: absolute;
+  margin-top: -4.5em;
+  margin-left: -12em;
+}
+
 .mainProfile__paragraph__debutDiv__debut::before {
   content: "Debut";
   position: absolute;
@@ -1054,10 +1044,10 @@ header {
 }
 
 .mainProfile__paragraph__members__names {
-  z-index: 1;
   font-size: 3.3em;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  display: block;
 }
 
 .mainProfile__paragraph__members__names span:hover {
@@ -1400,6 +1390,30 @@ header {
 }
 
 .mainProfile__paragraph__film:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+}
+
+.mainProfile__paragraph__concerts {
+  margin-top: 20em;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  padding: 2em;
+  text-align: left;
+}
+
+.mainProfile__paragraph__concerts::before {
+  content: "Concerts";
+  position: absolute;
+  font-size: 5em;
+  opacity: .5;
+}
+
+.mainProfile__paragraph__concerts:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
@@ -1872,6 +1886,18 @@ header {
   font-size: 0.8em;
 }
 
+.mainCredits__photos {
+  padding: 2em;
+}
+
+.mainCredits__photos__from {
+  font-size: 2em;
+}
+
+.mainCredits__photos__source {
+  font-size: 0.8em;
+}
+
 .mainCredits__allCredits {
   position: absolute;
   bottom: 0;
@@ -1992,26 +2018,20 @@ header {
 
 @media screen and (max-width: 768px) {
   #cursor {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
   }
   #cursor.dark {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
   }
   .backgroundText {
     font-size: 3em;
     left: 0;
   }
-  header {
-    width: 100%;
-    height: 70px;
-    display: inline;
-  }
   .menu_btn {
     top: 1.5rem;
     right: 3em;
-    left: 93%;
   }
   #colorMode {
     top: 10em;
@@ -2020,13 +2040,23 @@ header {
   .nav .navbar__item {
     padding: 7em 0 0 0;
   }
-  .nav .navbar__item li {
+  .nav .navbar__item li:nth-child(1) {
+    font-size: 3em;
+  }
+  .nav .navbar__item li:nth-child(2) {
+    font-size: 3em;
+  }
+  .nav .navbar__item li:nth-child(3) {
+    font-size: 3em;
+  }
+  .nav .navbar__item li:nth-child(4) {
     font-size: 3em;
   }
   #group {
+    display: none;
     position: absolute;
     left: 0.5em;
-    top: 1.5em;
+    top: 5.5em;
   }
   .footer {
     width: 100%;
@@ -2414,7 +2444,7 @@ header {
     padding: 8px;
   }
   .next {
-    bottom: 1em;
+    bottom: 2em;
     left: 50%;
     padding: 8px;
   }
@@ -2423,7 +2453,7 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     width: 70%;
-    height: 86%;
+    height: 93%;
     overflow: hidden;
     margin-top: 0;
     margin-right: 5%;
@@ -2529,6 +2559,30 @@ header {
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
     text-orientation: upright;
+  }
+  .mainCredits {
+    width: 70vw;
+  }
+  .mainCredits__bio {
+    padding: 0.5em;
+  }
+  .mainCredits__bio__iAm {
+    font-size: 1.5em;
+  }
+  .mainCredits__bio__name {
+    font-size: 0.6em;
+  }
+  .mainCredits__photos {
+    padding: 0.5em;
+  }
+  .mainCredits__photos__from {
+    font-size: 1.5em;
+  }
+  .mainCredits__photos__source {
+    font-size: 0.6em;
+  }
+  .mainCredits__allCredits__fansite {
+    font-size: 0.8em;
   }
 }
 
