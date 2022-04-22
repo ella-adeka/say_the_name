@@ -1,22 +1,22 @@
 #cursor{
     position: absolute;
     // cursor: none;
-    width: 60px;
-    height: 60px;
+    width: 10px;
+    height: 10px;
     border: 1px solid transparent;
     border-radius: 50%;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
     // animation: cursorAnimation .5s infinite alternate;
     pointer-events: none;
-    backdrop-filter: invert(80%)
+    backdrop-filter: invert(80%);
 }
 
 #cursor.dark{
     position: absolute;
     // cursor: none;
-    width: 60px;
-    height: 60px;
+    width: 10px;
+    height: 10px;
     border: 1px solid transparent;
     border-radius: 50%;
     transition-duration: 200ms;
