@@ -34,12 +34,12 @@ membersData.forEach(member => {
     `;
 
     // function doNotShow() {
-        if (member.korean_name === undefined) {
+        // if (member.korean_name === undefined) {
             // koreanName.style.display = "none";
-            console.log("no")
+            // console.log("no")
             // koreanName.setAttribute("style", "display:none");
         // }
-    }
+    // }
     main.append(dets);
 });
 
