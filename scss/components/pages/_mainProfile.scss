@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 95%;
     height: 100%;
     padding: 0 2em;
     margin-left: auto;
@@ -11,7 +11,7 @@
     overflow-x: hidden;
     font-family: $discographyfont;
 
-    &__seventeen__name{
+    &__seventeen_name{
         position: absolute;
         white-space: nowrap;
         // z-index: 1;
@@ -26,9 +26,12 @@
         // text-align: center;
         // background: ;
 
+        
         span{
-            width: 100%;
+            width: 100vw;
+            padding: 0.2em;
         }
+        
         
     }
 
@@ -199,6 +202,7 @@
             height: 20em;
             // width: auto;
             margin-top: 15em;
+            // padding: 30em;
             // z-index: -1;
             
                 // margin-left: 80%;
