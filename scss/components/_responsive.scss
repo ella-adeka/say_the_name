@@ -84,49 +84,91 @@
     // }
     .menu_btn{
         // position: absolute;
-        top: 1.5rem;
-        right: 3em;
+        top: 1em;
+        // right: 3em;
         // left: 28em;
         // left: 93%;
         // backdrop-filter: grayscale(100%);
         // width: 530px;
     }
 
-    #colorMode {
-        // position: absolute;
-        // width: 25px;
-        // height: 25px;
-        // border: 1px solid black;
-        // background-image: linear-gradient(90deg, #ffffff 50%, #000000 50%);
-        // // conic-gradient(from 45deg, #ffffff 33.3%, #000 33.3%, #f7cac9 60%);
-        // border-radius: 20px;
-        // z-index: 1;
-        // display: none;
-        top: 10em;
-        // top: 1.7em;
-        left: 0.5;
-        // width: 32px;
-    }
+    // #colorMode {
+    //     // position: absolute;
+    //     // width: 25px;
+    //     // height: 25px;
+    //     // border: 1px solid black;
+    //     // background-image: linear-gradient(90deg, #ffffff 50%, #000000 50%);
+    //     // // conic-gradient(from 45deg, #ffffff 33.3%, #000 33.3%, #f7cac9 60%);
+    //     // border-radius: 20px;
+    //     // z-index: 1;
+    //     // display: none;
+    //     top: 10em;
+    //     // top: 1.7em;
+    //     left: 0.5;
+    //     // width: 32px;
+    // }
     .nav{
         .navbar{
             &__item{
-                padding: 7em 0 0 0;
+                padding: 1em 0 0 0;
+                line-height: 5rem;
                 
-                li{
-                    &:nth-child(1){
-                        font-size: 3em;
-                    }
-                    &:nth-child(2){
-                        font-size: 3em;
-                    }
-                    &:nth-child(3){
-                        font-size: 3em;
-                    }
-                    &:nth-child(4){
-                        font-size: 3em;
+                ul{
+                    li{
+                    
+                        &:nth-child(1){
+                            font-size: 3.5em;
+                            text-align: center;
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                        &:nth-child(2){
+                            font-size: 3.5em;
+                            text-align: center;
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                        &:nth-child(3){
+                            font-size: 3.5em;
+                            text-align: center;
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                        &:nth-child(4){
+                            font-size: 3.5em;
+                            text-align: center;
+                            width: 100%;
+                            margin-left: 0;
+                        }
                     }
                 }
             }
+        }
+
+        .credits{
+            // bottom: 3em;
+            text-align: center;
+            font-size: 1em;
+            // text-transform: uppercase;
+            // font-family: $discographyfont;
+            
+            span{
+                // display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                // height: 25px;
+                // text-align: center;
+                // background-color: chocolate;
+    
+               
+    
+                &:hover{
+                    // animation: strike 2s ease 1 forwards;
+                    color: inherit;
+                }
+            }
+            
         }
     }
 
@@ -651,7 +693,7 @@
         padding: 8px;
     }
     .next{
-        bottom: 2em;
+        bottom: 0;
         left: 50%;
         padding: 8px;
     }
@@ -659,7 +701,7 @@
     .mainDiscography{
         justify-content: center;
         width: 70%;
-        height: 93%;
+        height: 95%;
         overflow: hidden;
         margin-top: 0;
         margin-right: 5%;
