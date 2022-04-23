@@ -1,7 +1,7 @@
 // DISPLAY THE NAME "SEVENTEEN" ON SCROLL
 const mainProfile = document.querySelector(".mainProfile");
 const groupName = document.querySelector(".mainProfile__paragraph__name");
-const seventeen = document.querySelector(".mainProfile__seventeen__name");
+const seventeen = document.querySelector(".mainProfile__seventeen_name");
 const debutImages = document.querySelector(".mainProfile__paragraph__debutImages");
 
 const hhu = document.querySelector(".mainProfile__paragraph__units__unit__hhu");
