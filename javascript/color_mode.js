@@ -1,5 +1,6 @@
 
 let colorModeToggle = false;
+// const body = document.querySelector("body");
 const body = document.querySelector("body");
 const cursor = document.querySelector("#cursor");
 const navBar = document.querySelector(".navbar");
@@ -18,6 +19,7 @@ function toggleMode() {
         cursor.classList.add('dark');
         navBar.classList.add('dark');
         colorMode.style.borderColor = "white";
+        colorMode.textContent = "Face The Sun";
         body.style.transition = "2s ease-in";
         localStorage.setItem('mode', 'dark');
         colorModeToggle = true;
@@ -38,6 +40,7 @@ function toggleMode() {
         cursor.classList.remove('dark');
         navBar.classList.remove('dark');
         colorMode.style.borderColor = "black";
+        colorMode.textContent = "Fear The Sun";
         body.style.transition = "2s ease-in";
         localStorage.setItem('mode', 'light');
         colorModeToggle = false;
@@ -50,6 +53,7 @@ if (localStorage.getItem("mode") === "dark") {
     cursor.classList.add('dark');
     navBar.classList.add('dark');
     colorMode.style.borderColor = "white";
+    colorMode.textContent = "Face The Sun";
 } 
 
 // if (localStorage.getItem("mode") === "fandomColor"){
