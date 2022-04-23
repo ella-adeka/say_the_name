@@ -23,9 +23,11 @@ header{
         width: 80px;
         height: 80px;
         transition: 2s ease-in-out;
-        background: white;   
+        // background: white;   
         border: 1px solid transparent;
         border-radius: 50%;   
+        writing-mode: vertical-lr;
+        text-orientation: upright;
 
         &::before{
             content: 'menu';
@@ -54,15 +56,17 @@ header{
 
         &.open {
             // @include transition-ease;
-            transition: 2s ease-in-out;
-            transform: rotate(720deg);
+            // transition: 2s ease-in-out 3s; 
+            // transform: rotate(720deg);
             background: transparent;
+            // transition: .2s ease-in 3s;
 
             &::before {
-                transition: 2s ease-in-out;
+                transition: 2s ease-in-out 3s;
                 // width: 28px;
                 content: 'close';
-                transform: rotate(0deg) translate(5px, 8px);
+                // transition: all .2s ease-in 3s;
+                // transform: rotate(0deg) translate(5px, 8px);
             }
 
             &::after {
@@ -85,6 +89,31 @@ header{
     &.open {
         visibility: visible;
     }
+   
+    .colorModeDiv{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+
+        span {
+            
+            font-size: 1em;
+            font-family: $discographyfont;
+            text-transform: uppercase;
+            cursor: pointer;
+            // left: 1em;
+            // width: 25px;
+            // height: 25px;
+            // border: 1px solid black;
+            // background-image: linear-gradient(90deg, #ffffff 50%, #000000 50%);
+            // conic-gradient(from 45deg, #ffffff 33.3%, #000 33.3%, #f7cac9 60%);
+            // border-radius: 20px;
+            // z-index: 1;
+        }
+    }
+    
+    
     
     .navbar { 
         // padding-left: 5rem; 
@@ -111,7 +140,7 @@ header{
         
 
         &__item {
-            padding: 8em 0 0 0;
+            // padding: 1em 0 0 0;
             // line-height: 2.2rem;
             // display: inline;
             line-height: 8rem;
@@ -130,12 +159,13 @@ header{
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 90%;
+                font-family: $discographyfont;
                 // justify-content: center;
                 // background-color: pink;
                 // text-align: center;
                 li{
                     list-style: none;
-                    text-transform: uppercase;
+                    // text-transform: uppercase;
                     font-size: 6rem;
                     width: 100%;
                     // transition: 2s ease-in;  
@@ -156,15 +186,15 @@ header{
                             font-family: $discographyfont;
                         }
 
-                        &:hover{
-                            background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
-                            background-size: 600px;
-                            transition: 2s ease-in; 
+                        // &:hover{
+                        //     background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+                        //     background-size: 600px;
+                        //     transition: 2s ease-in; 
 
                            
-                            // animation: navItemOneBackground 2s ease 1 forwards;
+                        //     // animation: navItemOneBackground 2s ease 1 forwards;
                             
-                        }
+                        // }
 
                         // &:hover::after{
                         //     background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
@@ -173,34 +203,34 @@ header{
                         // }
                     }
 
-                    // &:nth-child(2){
-                    //     // text-align: right;
-                    //     // margin-left: 2em;
-                    //     // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
-                    //     // background-size: cover;
-                    //     // opacity: 0;
-                    //     // width: 80%;
+                    &:nth-child(2){
+                        // text-align: right;
+                        margin-left: 2em;
+                        // background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+                        // background-size: cover;
+                        // opacity: 0;
+                        // width: 80%;
 
-                    //     &::before{
-                    //         content: "02";
-                    //         position: absolute;
-                    //         font-size: 0.15em;
-                    //         margin-top: -3em;
-                    //         margin-left: -1.5em;
-                    //         font-family: $discographyfont;
-                    //     }
-                    //     &:hover{
-                    //         background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
-                    //         background-size: cover;
-                    //         // opacity: 0.5;
-                    //         // transition: 2s ease-in; 
-                    //         animation: navItemTwoBackground 2s ease 1 forwards;
-                    //     }
-                    // }
+                        &::before{
+                            content: "02";
+                            position: absolute;
+                            font-size: 0.15em;
+                            margin-top: -3em;
+                            margin-left: -1.5em;
+                            font-family: $discographyfont;
+                        }
+                        // &:hover{
+                        //     background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+                        //     background-size: cover;
+                        //     // opacity: 0.5;
+                        //     // transition: 2s ease-in; 
+                        //     animation: navItemTwoBackground 2s ease 1 forwards;
+                        // }
+                    }
     
                     &:nth-child(3){
                         text-align: left;
-                        margin-left: 0.5em;
+                        margin-left: 1em;
 
                         &::after{
                             content: "03";
@@ -211,19 +241,19 @@ header{
                             font-family: $discographyfont;
                         }
 
-                        &:hover{
-                            background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
-                            background-size: 700px;
-                            transition: 2s ease-in; 
-                            // animation: navItemOneBackground 2s ease 1 forwards;
-                        }
+                        // &:hover{
+                        //     background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
+                        //     background-size: 700px;
+                        //     transition: 2s ease-in; 
+                        //     // animation: navItemOneBackground 2s ease 1 forwards;
+                        // }
                     }
     
                     &:nth-child(4){
-                        // text-align: right;
+                        text-align: right;
                         position: relative;
                         z-index: 10;
-                        margin-left: 3em;
+                        margin-left: -1em;
 
                         &::before{
                             content: "04";
@@ -233,12 +263,12 @@ header{
                             margin-left: -1.5em;
                             font-family: $discographyfont;
                         }
-                        &:hover{
+                        // &:hover{
                             
-                            background: url("../../../images/members/joshua_attacca_op1.jpg") no-repeat fixed left;
-                            background-size: 600px;
-                            transition: 2s ease-in; 
-                        }
+                        //     background: url("../../../images/members/joshua_attacca_op1.jpg") no-repeat fixed left;
+                        //     background-size: 600px;
+                        //     transition: 2s ease-in; 
+                        // }
                     }
 
                     @keyframes navItemOneBackground {
@@ -259,7 +289,7 @@ header{
                     a{
                         position: relative;
                         // color: inherit;
-                        font-family: $navBarFont;
+                        // font-family: $discographyfont;
                         animation: strike 2s linear 1 alternate;             
     
                         &:hover::after{
@@ -307,21 +337,34 @@ header{
         bottom: 0;
         // bottom: -0.5em;
         width: 100%;
+        
         text-align: center;
         font-size: 1.2em;
+        text-transform: uppercase;
+        font-family: $discographyfont;
         
-        &:hover{
-            // animation: strike 2s ease 1 forwards;
-            color: palegoldenrod;
+        span{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+            // text-align: center;
+           
+
+            &:hover{
+                // animation: strike 2s ease 1 forwards;
+                color: inherit;
+            }
         }
+        
     }
 
     
 }
 
-#colorMode, .menu_btn {
-    display: block;
-}
+// #colorMode, .menu_btn {
+//     display: block;
+// }
 
 
 #group{
