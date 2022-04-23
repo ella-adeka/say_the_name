@@ -20,9 +20,9 @@
     <!-- HEADER -->
     <header>
         <div id="cursor"></div>
-        <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div>
+        <!-- <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div> -->
         
-        <span id="colorMode"></span>
+        <!-- <span id="colorMode"></span> -->
         <div class="menu_btn">
             <span class="menu_btn__burger"></span>
         </div>
@@ -30,16 +30,17 @@
         <nav class="nav">
             <div class="navbar">
                 <div class="navbar__item">
+                    <div class="colorModeDiv">
+                        <span id="colorMode">Fear The Sun</span>
+                    </div>
+                   
                     <ul class="navbar__ul">
-                        <li class="home_link">
-                            <a class="link" href="main.html">Home</a> 
-                            <!-- <img class="image"  src="images/members/woozi_attacca_op1.jpg" alt=""> -->
-                        </li>
-                        <li class="profile_link"><a class="link" href="profile.html">Profile</a></li>
+                        <li><a class="link" href="main.html">Home</a></li>
+                        <li><a class="link" href="profile.html">Profile</a></li>
                         <li><a class="link" href="discography.html">Discography</a></li>
                         <li><a class="link" href="members.html">Members</a></li>
                     </ul>
-                    <div class="credits"><a href="credits.html">Credits</a></div>
+                    <div class="credits"><span><a href="credits.html">Credits</a></span><span><a href="socials.html">Socials</a></span></div>
                 </div>
                 
             </div>
@@ -72,20 +73,20 @@
         <!-- </div> -->
     <!-- </main> -->
     <!-- END OF MAINHOME -->
-
+    <div class="socialsDiv">
+        <p class="socialsDiv__socials">socials</p>
+    </div>
     <!-- FOOTER -->
     <footer class="footer">
-        <!-- <div class="footer__pledis">
-            <p class="footer__pledis__paragraph">pledis entertainment</p>
-        </div> -->
-        <!-- <div class="footer__bar"></div> -->
-        <div class="footer__icons">
-            <a class="footer__icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fa-solid fa-heart"></i></i></a>
-            <a class="footer__icons__links link" href="https://open.spotify.com/artist/7nqOGRxlXj7N2JYbgNEjYH" target="_blank"><i class="fab fa-spotify"></i></i></a>
-            <a class="footer__icons__links link" href="https://twitter.com/pledis_17"><i class="fa-brands fa-twitter"></i></a>
-            <a class="footer__icons__links link" href="https://www.facebook.com/seventeennews"><i class="fa-brands fa-facebook-f"></i></a>
-            <a class="footer__icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
-            <a class="footer__icons__links link" href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
+        <div class="footerBar">
+            <div class="footerBar__icons">
+                <a class="footerBar__icons__links link" href="https://cafe.daum.net/pledis-17" target="_blank"><i class="fa-solid fa-heart"></i></i></a>
+                <a class="footerBar__icons__links link" href="https://open.spotify.com/artist/7nqOGRxlXj7N2JYbgNEjYH" target="_blank"><i class="fab fa-spotify"></i></i></a>
+                <a class="footerBar__icons__links link" href="https://twitter.com/pledis_17"><i class="fa-brands fa-twitter"></i></a>
+                <a class="footerBar__icons__links link" href="https://www.facebook.com/seventeennews"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="footerBar__icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
+                <a class="footerBar__icons__links link" href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
     <!-- END OF FOOTER -->
@@ -95,10 +96,12 @@
    
     <!-- JAVASCRIPT RELATED -->
     <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
     <!-- MAIN JAVASCRIPT FILES -->
     <script type="module" src="/app.js"></script>
     <script src="/javascript/data/home_data.js"></script>
+    <script src="/javascript/footer.js"></script>
     <!-- <script src="/javascript/navbar.js"></script> -->
     <!-- <script src="/javascript/pages/main.js"></script> -->
     <!-- END OF JAVASCRIPT RELATED -->
