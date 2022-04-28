@@ -75,6 +75,11 @@
         left: 0;  
     }
 
+    .menuBackgroundText{
+        font-size: 4em;
+        // left: 0;  
+    }
+
     // NAVBAR
     // header{
     //     width: 100%;
@@ -121,24 +126,95 @@
                             text-align: center;
                             width: 100%;
                             margin-left: 0;
+                            background-size: cover;
+
+                            &:hover{
+                                animation: none;
+                            }
+
+                            span{
+                                &:nth-child(1){
+                                    margin-left: 0;
+                                    width: 100%;
+                                }
+                                &:nth-child(2){
+                                    display: none;
+                                }
+                            }
                         }
                         &:nth-child(2){
                             font-size: 3.5em;
                             text-align: center;
                             width: 100%;
                             margin-left: 0;
+                            background-size: cover;
+
+                            &:hover{
+                                animation: none;
+                            }
+
+                            span{
+                                &:nth-child(1){
+                                    display: none;
+                                }
+                                &:nth-child(2){
+                                    margin-left: 0;
+                                    width: 100%;
+                                }
+                            }
+
+                            
                         }
                         &:nth-child(3){
                             font-size: 3.5em;
                             text-align: center;
                             width: 100%;
                             margin-left: 0;
+                            background-size: cover;
+                            &:hover{
+                                animation: none;
+                            }
+
+                            .discography-project-preview-wrapper{
+                                display: none;
+                            }
+
+                            span{
+                                &:nth-child(1){
+                                    margin-left: 0;
+                                    width: 100%;
+                                }
+                                &:nth-child(2){
+                                    display: none;
+                                }
+                            }
                         }
                         &:nth-child(4){
                             font-size: 3.5em;
                             text-align: center;
                             width: 100%;
                             margin-left: 0;
+
+                            &:hover{
+                                background-size: cover;
+                                animation: none;
+                            }
+                            
+                            // .members-project-preview-wrapper{
+                            //     display: none;
+                            // }
+
+                            span{
+
+                                &:nth-child(1){
+                                    display: none;
+                                }
+
+                                &:nth-child(2){
+                                    margin-left: 0;
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
                 }
