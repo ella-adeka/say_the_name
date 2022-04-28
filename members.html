@@ -30,14 +30,34 @@
                     </div>
                    
                     <ul class="navbar__ul">
-                        <li><a class="link" href="main.html">Home</a></li>
-                        <li><a class="link" href="profile.html">Profile</a></li>
-                        <li><a class="link" href="discography.html">Discography</a></li>
-                        <li><a class="link" href="members.html">Members</a></li>
+                        <li>
+                            <span><a class="link homeLink" href="main.html" data-text="Home">Home</a></span>
+                            <span class="home-project-preview-wrapper">
+                                <div class="home-project-preview"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="profile-project-preview-wrapper">
+                                <div class="profile-project-preview"></div>
+                            </span>
+                            <span><a class="link profileLink" href="profile.html" data-text="Profile">Profile</a></span>
+                        </li>
+                        <li>
+                            <span><a class="link discographyLink" href="discography.html" data-text="Discography">Discography</a></span>
+                            <span class="discography-project-preview-wrapper">
+                                <div class="discography-project-preview"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="members-project-preview-wrapper">
+                                <div class="members-project-preview"></div>
+                            </span>
+                            <span><a class="link membersLink" href="members.html" data-text="Members">Members</a></span>
+                        </li>
                     </ul>
                     <div class="credits"><span><a href="credits.html">Credits</a></span><span><a href="socials.html">Socials</a></span></div>
                 </div>
-                
+                <div class="menuBackgroundText">Menu </div>
             </div>
         </nav> 
     </header> 
@@ -58,15 +78,21 @@
                 <a class="footerBar__icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
                 <a class="footerBar__icons__links link" href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
             </div>
+            <div class="footerBackgroundText">Socials </div>
         </div>
     </footer>
 
     <div class="backgroundText">Members</div>
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
+
     <script src="/javascript/data/members_data.js"></script>
     <script type="module" src="app.js"></script>
+    <script src="/javascript/navbar.js"></script>
     <script src="/javascript/footer.js"></script>
     <script src="/javascript/pages/members.js"></script>
-    <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
-</body>
+   </body>
 </html>

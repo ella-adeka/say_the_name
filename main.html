@@ -16,13 +16,13 @@
 <body > 
 <!-- <body onload="homePageNews()">  -->
     <!-- background-color: #f7cac9; color: #92a8d1; -->
-
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
     <!-- HEADER -->
     <header>
         <div id="cursor"></div>
-        <!-- <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div> -->
         
-        <!-- <span id="colorMode"></span> -->
         <div class="menu_btn">
             <span class="menu_btn__burger"></span>
         </div>
@@ -33,46 +33,49 @@
                     <div class="colorModeDiv">
                         <span id="colorMode">Fear The Sun</span>
                     </div>
-                   
                     <ul class="navbar__ul">
-                        <li><a class="link" href="main.html">Home</a></li>
-                        <li><a class="link" href="profile.html">Profile</a></li>
-                        <li><a class="link" href="discography.html">Discography</a></li>
-                        <li><a class="link" href="members.html">Members</a></li>
+                        <li>
+                            <span><a class="link homeLink" href="main.html" data-text="Home">Home</a></span>
+                            <span class="home-project-preview-wrapper">
+                                <div class="home-project-preview"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="profile-project-preview-wrapper">
+                                <div class="profile-project-preview"></div>
+                            </span>
+                            <span><a class="link profileLink" href="profile.html" data-text="Profile">Profile</a></span>
+                        </li>
+                        <li>
+                            <span><a class="link discographyLink" href="discography.html" data-text="Discography">Discography</a></span>
+                            <span class="discography-project-preview-wrapper">
+                                <div class="discography-project-preview"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="members-project-preview-wrapper">
+                                <div class="members-project-preview"></div>
+                            </span>
+                            <span><a class="link membersLink" href="members.html" data-text="Members">Members</a></span>
+                        </li>
                     </ul>
                     <div class="credits"><span><a href="credits.html">Credits</a></span><span><a href="socials.html">Socials</a></span></div>
                 </div>
-                
+                <div class="menuBackgroundText">Menu </div>
             </div>
         </nav> 
     </header> 
     <!-- END OF HEADER -->
 
     <!-- MAINHOME -->
-    <!-- <main class="mainHome">  -->
-        <!--  class=" observable" contenteditable="false" -->
-        <!-- <div class="mainHome__paragraph"> -->
-            <!-- Initialize homeData values -->
-            <!-- <h1 class="mainHome__paragraph__topic">Say The Name</h1>
-            <h1 class="mainHome__paragraph__title" onload="mainAnimation()">This Is Seventeen</h1>
-            <a class="mainHome__paragraph__subtitle" href="profile.html">View Profile</a>  
-            <p class="mainHome__paragraph__description">SEVENTEEN is a huge idol group, with 13 members and 3 sub-units forming one team. The 3 different sub-units (Hip-hop Team, Vocal Team and Performance Team) also actively participate in album production.</p>
-            <div class="mainHome__paragraph__images">
-                <div class="mainHome__paragraph__images__image1Div">
-                    <img class="mainHome__paragraph__images__image1Div__image1" src="images/home_page/attacca/attacca_group_photo_2.jpeg" alt="">
-                </div>
-                <div class="mainHome__paragraph__images__image2Div">
-                    <img class="mainHome__paragraph__images__image2Div__image2" src="images/home_page/attacca/attacca_group_photo_1.jpeg" alt="">
-                </div>
-            </div>
-            <div class="mainHome__paragraph__imagesOutside">
-                <img class="mainHome__paragraph__imagesOutside__image3" src="images/home_page/attacca/attacca_group_photo_1.jpeg" alt="">
-                <img class="mainHome__paragraph__imagesOutside__image4" src="images/home_page/attacca/attacca_group_photo_2.jpeg" alt="">
-                <img class="mainHome__paragraph__imagesOutside__image5" src="images/home_page/attacca/attacca_group_photo_2.jpeg" alt="">
-            </div> -->
-        <!-- </div> -->
-    <!-- </main> -->
+    <main class="mainHome"> 
+        <div class="mainHome__paragraph">
+         <h1 style="font-size: 5em;">Attacca</h1>
+         <h1>Say The Name</h1>
+        </div>
+    </main>
     <!-- END OF MAINHOME -->
+    
     <div class="socialsDiv">
         <p class="socialsDiv__socials">socials</p>
     </div>
@@ -87,6 +90,7 @@
                 <a class="footerBar__icons__links link" href="https://www.youtube.com/user/pledis17"><i class="fa-brands fa-youtube"></i></a>
                 <a class="footerBar__icons__links link" href="https://www.instagram.com/saythename_17"><i class="fa-brands fa-instagram"></i></a>
             </div>
+            <div class="footerBackgroundText">Socials </div>
         </div>
     </footer>
     <!-- END OF FOOTER -->
@@ -96,12 +100,20 @@
    
     <!-- JAVASCRIPT RELATED -->
     <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- MAIN JAVASCRIPT FILES -->
     <script type="module" src="/app.js"></script>
     <script src="/javascript/data/home_data.js"></script>
+    <script src="/javascript/navbar.js"></script>
     <script src="/javascript/footer.js"></script>
+    <!-- <script>
+        
+
+
+    </script> -->
     <!-- <script src="/javascript/navbar.js"></script> -->
     <!-- <script src="/javascript/pages/main.js"></script> -->
     <!-- END OF JAVASCRIPT RELATED -->
