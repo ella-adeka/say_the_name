@@ -126,16 +126,18 @@
         &__debutDiv{
             height: 20em;
             margin-top: 15em;
+            // margin-right: 0;
+            // position: absolute;
             
             &__debut{
                 background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
                 background-size: 300px;
                 background-blend-mode: saturation;
                 // top: 20em;
-                margin-left: auto;
+                // margin-left: auto;
                 margin-right: 0;
                 // margin-left: 80%;
-                width: 20em;
+                // width: 20em;
                 height: 20em;
                 filter: grayscale(100%);
                 transition: .5s ease-in-out;
@@ -161,14 +163,14 @@
                 &:hover{
                     filter: grayscale(0%);
                     transition: .5s ease-in;
-                    animation: debut 2s ease 1 forwards;
+                    // animation: debut 2s ease 1 forwards;
                 }
             }
         }
 
         @keyframes debut {
-            0% {height: 20em;}
-            100% { height: 0em;}  
+            0% {width: 0em;}
+            100% { width: 20em;}  
         } 
 
         &__debutdate{
@@ -231,7 +233,7 @@
         }
 
         &__fandom{
-            margin-top: 29em;
+            margin-top: 35em;
             background: url("../../../images/members/hoshi_attacca_op1.jpg") no-repeat fixed;
             background-size: cover;
             height: 20em;
@@ -249,7 +251,7 @@
         }
 
         &__colors{
-            margin-top: 10em;
+            margin-top: 20em;
             margin-left: 50%;
             background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
             background-size: cover;
@@ -273,7 +275,7 @@
             width: 100%;
             text-align: right;
             display: grid;
-            grid-template-columns: 40% 60%;
+            grid-template-columns: 45% 55%;
             transition: .5s ease-in-out;
             filter: grayscale(100%);
 
@@ -307,7 +309,7 @@
             }
 
             &__names{
-                // z-index: 1;
+                z-index: 1;
                 font-size: 3.3em;
                 transition: .2s ease-in-out;
                 display: block;
@@ -349,7 +351,7 @@
             // background: url("../../../images/attacca_group_photo_3.jpg") no-repeat fixed;
             background-size: cover;
             background-blend-mode: saturation;
-            margin-top: 7em;
+            margin-top: 20em;
             margin-bottom: 3em;
             // right: 3em;
             // width: 30em;
@@ -646,28 +648,55 @@
             }
         }
 
-        &__concerts{
-            margin-top: 20em;
-            // margin-bottom: 3em;
-            // right: 3em;
-            // width: 30em;
-            // height: 40em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
-            // text-align: center;
-            padding: 2em;
-            // margin-left: auto;
-            // margin-right: auto;
-            text-align: left;
+        // &__concerts{
+        //     display: none;
+        //     margin-top: 20em;
+        //     // margin-bottom: 3em;
+        //     // right: 3em;
+        //     // width: 30em;
+        //     // height: 40em;
+        //     filter: grayscale(100%);
+        //     transition: .5s ease-in-out;
+        //     // text-align: center;
+        //     padding-bottom: 2em;
+        //     // margin-left: auto;
+        //     // margin-right: auto;
+        //     text-align: left;
+        //     z-index: 10;
+            
                 
             
+        //     &::before{
+        //         content: "Concerts";
+        //         position: absolute;
+        //         font-size: 5em;
+        //         opacity: .5;
+        //         // margin-left: -2em;
+        //         margin-top: -0.3em;
+        //     }
+
+        //     // &:hover{
+        //     //     filter: grayscale(0%);
+        //     //     transition: .5s ease-in;
+        //     // }
+        // }
+
+        &__concerts{
+            margin-top: 20em;
+            // position: absolute;
+            background: url("../../../images/home_page/attacca/attacca_group_photo_2.jpeg") no-repeat fixed center;
+            background-size: cover;
+            height: 80%;
+            filter: grayscale(100%);
+            transition: .5s ease-in;
+
             &::before{
                 content: "Concerts";
                 position: absolute;
                 font-size: 5em;
                 opacity: .5;
                 // margin-left: -2em;
-                // margin-top: -0.3em;
+                margin-top: -0.7em;
             }
 
             &:hover{
