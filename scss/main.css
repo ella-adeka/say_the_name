@@ -46,6 +46,29 @@
   top: -0.5em;
 }
 
+.menuBackgroundText {
+  position: absolute;
+  right: 0;
+  font-size: 8em;
+  z-index: -1;
+  opacity: .1;
+  -webkit-filter: invert(30%);
+          filter: invert(30%);
+  font-family: New York;
+  text-align: center;
+  top: -0.3em;
+}
+
+.footerBackgroundText {
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+  font-size: 8em;
+  z-index: -1;
+  opacity: .1;
+  font-family: New York;
+}
+
 body {
   background-color: white;
   color: black;
@@ -163,32 +186,63 @@ header {
 }
 
 .menu_btn__burger::before {
-  content: 'menu';
+  content: '';
   position: absolute;
   top: 2em;
-  left: 1em;
-  width: 32px;
-  height: 3px;
-  color: dimgray;
+  left: 0.5em;
+  width: 35px;
+  height: 2px;
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
 }
 
+.menu_btn__burger::after {
+  content: '';
+  position: absolute;
+  top: 2.5em;
+  left: 1.5em;
+  width: 35px;
+  height: 2px;
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+
+.menu_btn__burger:hover::before {
+  left: 1em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.menu_btn__burger:hover::after {
+  left: 1em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
 .menu_btn__burger.open {
   background: transparent;
+  -webkit-transition: 2s ease-in;
+  transition: 2s ease-in;
 }
 
 .menu_btn__burger.open::before {
-  -webkit-transition: 2s ease-in-out 3s;
-  transition: 2s ease-in-out 3s;
-  content: 'close';
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  left: 1em;
+  -webkit-transform: rotate(45deg) translate(2px, 10px);
+          transform: rotate(45deg) translate(2px, 10px);
 }
 
 .menu_btn__burger.open::after {
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
-  -webkit-transform: rotate(-45deg) translate(3px, -7px);
-          transform: rotate(-45deg) translate(3px, -7px);
+  left: 1em;
+  -webkit-transform: rotate(-45deg) translate(-7px, -5px);
+          transform: rotate(-45deg) translate(-7px, -5px);
 }
 
 .nav {
@@ -219,7 +273,6 @@ header {
 }
 
 .nav .navbar {
-  top: 25%;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -269,17 +322,27 @@ header {
 .nav .navbar__item ul li {
   list-style: none;
   font-size: 6rem;
-  width: 100%;
 }
 
 .nav .navbar__item ul li:nth-child(1) {
   width: 80%;
   text-align: left;
-  margin-left: 2em;
+  margin-left: 3em;
   z-index: 1;
 }
 
-.nav .navbar__item ul li:nth-child(1)::after {
+.nav .navbar__item ul li:nth-child(1) span {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.nav .navbar__item ul li:nth-child(1) span:nth-child(1) {
+  width: 25%;
+}
+
+.nav .navbar__item ul li:nth-child(1) span:nth-child(1)::after {
   content: "01";
   position: absolute;
   font-size: 0.15em;
@@ -288,11 +351,55 @@ header {
   font-family: New York;
 }
 
-.nav .navbar__item ul li:nth-child(2) {
-  margin-left: 2em;
+.nav .navbar__item ul li:nth-child(1) span:nth-child(2) {
+  width: 50%;
+  position: fixed;
+  z-index: -1;
 }
 
-.nav .navbar__item ul li:nth-child(2)::before {
+.nav .navbar__item ul li:nth-child(1) span:nth-child(2) .home-project-preview {
+  position: fixed;
+  width: 0%;
+  height: 120px;
+  background: url("../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.nav .navbar__item ul li:nth-child(2) {
+  text-align: right;
+  margin-right: 3em;
+  z-index: 1;
+}
+
+.nav .navbar__item ul li:nth-child(2) span {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.nav .navbar__item ul li:nth-child(2) span:nth-child(1) {
+  width: 70%;
+  -webkit-filter: opacity(0.3) grayscale(100%);
+          filter: opacity(0.3) grayscale(100%);
+}
+
+.nav .navbar__item ul li:nth-child(2) span:nth-child(1) .profile-project-preview {
+  width: 0%;
+  height: 120px;
+  background: url("../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.nav .navbar__item ul li:nth-child(2) span:nth-child(2) {
+  width: 25%;
+  z-index: 1;
+  margin-left: -1em;
+}
+
+.nav .navbar__item ul li:nth-child(2) span:nth-child(2)::before {
   content: "02";
   position: absolute;
   font-size: 0.15em;
@@ -306,7 +413,18 @@ header {
   margin-left: 1em;
 }
 
-.nav .navbar__item ul li:nth-child(3)::after {
+.nav .navbar__item ul li:nth-child(3) span {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.nav .navbar__item ul li:nth-child(3) span:nth-child(1) {
+  width: 45%;
+}
+
+.nav .navbar__item ul li:nth-child(3) span:nth-child(1)::after {
   content: "03";
   position: absolute;
   font-size: 0.15em;
@@ -315,14 +433,64 @@ header {
   font-family: New York;
 }
 
-.nav .navbar__item ul li:nth-child(4) {
-  text-align: right;
-  position: relative;
-  z-index: 10;
-  margin-left: -1em;
+.nav .navbar__item ul li:nth-child(3) span:nth-child(2) {
+  width: 55%;
+  position: fixed;
+  z-index: -1;
+  margin-left: -2em;
 }
 
-.nav .navbar__item ul li:nth-child(4)::before {
+.nav .navbar__item ul li:nth-child(3) span:nth-child(2) .discography-project-preview {
+  position: fixed;
+  width: 0%;
+  height: 120px;
+  background: url("../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.nav .navbar__item ul li:nth-child(3) span:nth-child(2):hover .project-preview {
+  -webkit-animation: navItemTwoBackground 2s ease 1 forwards;
+          animation: navItemTwoBackground 2s ease 1 forwards;
+}
+
+.nav .navbar__item ul li:nth-child(4) {
+  text-align: right;
+  margin-left: 1em;
+  width: 80%;
+  z-index: 1;
+}
+
+.nav .navbar__item ul li:nth-child(4) span {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.nav .navbar__item ul li:nth-child(4) span:nth-child(1) {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+}
+
+.nav .navbar__item ul li:nth-child(4) span:nth-child(1) .members-project-preview {
+  position: fixed;
+  width: 0%;
+  height: 120px;
+  background: url("../../images/members/joshua_attacca_op1.jpg") no-repeat fixed center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.nav .navbar__item ul li:nth-child(4) span:nth-child(2) {
+  width: 25%;
+  z-index: 1;
+}
+
+.nav .navbar__item ul li:nth-child(4) span:nth-child(2)::before {
   content: "04";
   position: absolute;
   font-size: 0.15em;
@@ -331,46 +499,8 @@ header {
   font-family: New York;
 }
 
-@-webkit-keyframes navItemOneBackground {
-  0% {
-    background-size: 0px 0px;
-  }
-  100% {
-    background-size: 600px;
-  }
-}
-
-@keyframes navItemOneBackground {
-  0% {
-    background-size: 0px 0px;
-  }
-  100% {
-    background-size: 600px;
-  }
-}
-
-@-webkit-keyframes navItemTwoBackground {
-  0% {
-    background-size: 10%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
-
-@keyframes navItemTwoBackground {
-  0% {
-    background-size: 10%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
-
 .nav .navbar__item ul li a {
   position: relative;
-  -webkit-animation: strike 2s linear 1 alternate;
-          animation: strike 2s linear 1 alternate;
 }
 
 .nav .navbar__item ul li a:hover::after {
@@ -378,8 +508,8 @@ header {
   position: absolute;
   top: 40%;
   left: 0;
-  -webkit-animation: strike 2s ease 1 forwards;
-          animation: strike 2s ease 1 forwards;
+  -webkit-animation: strike 1s cubic-bezier(0.1, 0.7, 1, 0.1) 1 forwards;
+          animation: strike 1s cubic-bezier(0.1, 0.7, 1, 0.1) 1 forwards;
   background: white;
 }
 
@@ -411,10 +541,18 @@ header {
   transition: 1.5s ease-in;
 }
 
-.nav .navbar a:hover {
+.nav .navbar a::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
   color: inherit;
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
+  overflow: hidden;
+  -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.nav .navbar a:hover::before {
+  width: 100%;
 }
 
 .nav .navbar.dark {
@@ -437,10 +575,14 @@ header {
   margin-left: auto;
   margin-right: auto;
   width: 30%;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
 }
 
-.nav .credits span:hover {
+.nav .credits span a:hover {
   color: inherit;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
 }
 
 #group {
@@ -623,6 +765,27 @@ header {
 #group .glitch a:visited {
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4bedc2;
+  width: 100%;
+  height: 0%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .mainHome {
@@ -862,9 +1025,7 @@ header {
   background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
   background-size: 300px;
   background-blend-mode: saturation;
-  margin-left: auto;
   margin-right: 0;
-  width: 20em;
   height: 20em;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -894,25 +1055,23 @@ header {
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
-  -webkit-animation: debut 2s ease 1 forwards;
-          animation: debut 2s ease 1 forwards;
 }
 
 @-webkit-keyframes debut {
   0% {
-    height: 20em;
+    width: 0em;
   }
   100% {
-    height: 0em;
+    width: 20em;
   }
 }
 
 @keyframes debut {
   0% {
-    height: 20em;
+    width: 0em;
   }
   100% {
-    height: 0em;
+    width: 20em;
   }
 }
 
@@ -962,7 +1121,7 @@ header {
 }
 
 .mainProfile__paragraph__fandom {
-  margin-top: 29em;
+  margin-top: 35em;
   background: url("../../../images/members/hoshi_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   height: 20em;
@@ -980,7 +1139,7 @@ header {
 }
 
 .mainProfile__paragraph__colors {
-  margin-top: 10em;
+  margin-top: 20em;
   margin-left: 50%;
   background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
@@ -1004,8 +1163,8 @@ header {
   text-align: right;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   -webkit-filter: grayscale(100%);
@@ -1039,6 +1198,7 @@ header {
 }
 
 .mainProfile__paragraph__members__names {
+  z-index: 1;
   font-size: 3.3em;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
@@ -1104,7 +1264,7 @@ header {
 .mainProfile__paragraph__sub_units_list {
   background-size: cover;
   background-blend-mode: saturation;
-  margin-top: 7em;
+  margin-top: 20em;
   margin-bottom: 3em;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -1393,12 +1553,13 @@ header {
 
 .mainProfile__paragraph__concerts {
   margin-top: 20em;
+  background: url("../../../images/home_page/attacca/attacca_group_photo_2.jpeg") no-repeat fixed center;
+  background-size: cover;
+  height: 80%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  padding: 2em;
-  text-align: left;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
 }
 
 .mainProfile__paragraph__concerts::before {
@@ -1406,6 +1567,7 @@ header {
   position: absolute;
   font-size: 5em;
   opacity: .5;
+  margin-top: -0.7em;
 }
 
 .mainProfile__paragraph__concerts:hover {
@@ -1865,6 +2027,7 @@ header {
   width: 50vw;
   height: 50%;
   overflow: hidden;
+  text-align: center;
 }
 
 .mainCredits__bio {
@@ -1978,7 +2141,8 @@ header {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  -webkit-backdrop-filter: invert(20%) blur(20px);
+          backdrop-filter: invert(20%) blur(20px);
   overflow: hidden;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
@@ -2021,6 +2185,11 @@ header {
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
   opacity: 1;
+}
+
+.footer .footerBar.dark {
+  -webkit-backdrop-filter: invert(20%) blur(20px);
+          backdrop-filter: invert(20%) blur(20px);
 }
 
 @media screen and (max-width: 300px) {
@@ -2072,6 +2241,9 @@ header {
     font-size: 3em;
     left: 0;
   }
+  .menuBackgroundText {
+    font-size: 4em;
+  }
   .menu_btn {
     top: 1em;
   }
@@ -2084,24 +2256,75 @@ header {
     text-align: center;
     width: 100%;
     margin-left: 0;
+    background-size: cover;
+  }
+  .nav .navbar__item ul li:nth-child(1):hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .nav .navbar__item ul li:nth-child(1) span:nth-child(1) {
+    margin-left: 0;
+    width: 100%;
+  }
+  .nav .navbar__item ul li:nth-child(1) span:nth-child(2) {
+    display: none;
   }
   .nav .navbar__item ul li:nth-child(2) {
     font-size: 3.5em;
     text-align: center;
     width: 100%;
     margin-left: 0;
+    background-size: cover;
+  }
+  .nav .navbar__item ul li:nth-child(2):hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .nav .navbar__item ul li:nth-child(2) span:nth-child(1) {
+    display: none;
+  }
+  .nav .navbar__item ul li:nth-child(2) span:nth-child(2) {
+    margin-left: 0;
+    width: 100%;
   }
   .nav .navbar__item ul li:nth-child(3) {
     font-size: 3.5em;
     text-align: center;
     width: 100%;
     margin-left: 0;
+    background-size: cover;
+  }
+  .nav .navbar__item ul li:nth-child(3):hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .nav .navbar__item ul li:nth-child(3) .discography-project-preview-wrapper {
+    display: none;
+  }
+  .nav .navbar__item ul li:nth-child(3) span:nth-child(1) {
+    margin-left: 0;
+    width: 100%;
+  }
+  .nav .navbar__item ul li:nth-child(3) span:nth-child(2) {
+    display: none;
   }
   .nav .navbar__item ul li:nth-child(4) {
     font-size: 3.5em;
     text-align: center;
     width: 100%;
     margin-left: 0;
+  }
+  .nav .navbar__item ul li:nth-child(4):hover {
+    background-size: cover;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .nav .navbar__item ul li:nth-child(4) span:nth-child(1) {
+    display: none;
+  }
+  .nav .navbar__item ul li:nth-child(4) span:nth-child(2) {
+    margin-left: 0;
+    width: 100%;
   }
   .nav .credits {
     text-align: center;
