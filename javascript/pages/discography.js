@@ -61,8 +61,8 @@ function showAlbums() {
             }
             track+= "</ol>";
 
-            listenLink.setAttribute('href',`${discographyData[i].album_link}`);
-            watchLink.setAttribute('href',`${discographyData[i].youtube_link}`);
+            // listenLink.setAttribute('href',`${discographyData[i].album_link}`);
+            // watchLink.setAttribute('href',`${discographyData[i].youtube_link}`);
 
             dets.innerHTML = `
                 <p class="mainDiscography__discography__dets__album_category">${discographyData[i].category}</p>
