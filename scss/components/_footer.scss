@@ -25,7 +25,8 @@
         text-align: center;
         width: 100vw;
         height: 100vh;
-        background-color: white;
+        // background-color: white;
+        backdrop-filter: invert(20%) blur(20px);
         overflow: hidden;
         transition: 2s ease-in-out;
         transform: translateY(100%);
@@ -59,6 +60,11 @@
                     } 
                 }  
             }
+        }
+
+        &.dark{
+            // background-color: black;
+            backdrop-filter: invert(20%) blur(20px);
         }
     }
 }
