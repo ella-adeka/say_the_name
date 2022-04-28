@@ -4,6 +4,7 @@ let colorModeToggle = false;
 const body = document.querySelector("body");
 const cursor = document.querySelector("#cursor");
 const navBar = document.querySelector(".navbar");
+const footerBar = document.querySelector(".footerBar");
 const membersInfo = document.querySelectorAll(".mainMembers__dets__info");
 
 const colorMode = document.querySelector("#colorMode");
@@ -18,6 +19,7 @@ function toggleMode() {
         membersInfo.forEach(el => { el.classList.add('dark')});
         cursor.classList.add('dark');
         navBar.classList.add('dark');
+        footerBar.classList.add('dark');
         colorMode.style.borderColor = "white";
         colorMode.textContent = "Face The Sun";
         body.style.transition = "2s ease-in";
@@ -39,6 +41,7 @@ function toggleMode() {
         membersInfo.forEach(el => { el.classList.remove('dark')});
         cursor.classList.remove('dark');
         navBar.classList.remove('dark');
+        footerBar.classList.remove('dark');
         colorMode.style.borderColor = "black";
         colorMode.textContent = "Fear The Sun";
         body.style.transition = "2s ease-in";
@@ -52,6 +55,7 @@ if (localStorage.getItem("mode") === "dark") {
     membersInfo.forEach(el => { el.classList.add('dark')});
     cursor.classList.add('dark');
     navBar.classList.add('dark');
+    // footerBar.classList.add('dark');
     colorMode.style.borderColor = "white";
     colorMode.textContent = "Face The Sun";
 } 
