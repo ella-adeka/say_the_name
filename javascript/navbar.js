@@ -32,33 +32,36 @@ const homeLink = document.querySelector(".homeLink");
 const profileLink = document.querySelector(".profileLink");
 const discographyLink = document.querySelector(".discographyLink");
 const membersLink = document.querySelector(".membersLink");
-var tl = gsap.timeline();
+var homeTl = gsap.timeline();
+var profileTl = gsap.timeline();
+var discographyTl = gsap.timeline();
+var membersTl = gsap.timeline();
 
 homeLink.addEventListener("mouseover", () =>{
-    tl.to(".home-project-preview", {duration: 2, width: "50%",ease: "Expo.easeInOut"});
+    homeTl.to(".home-project-preview", {duration: 1.6, width: "50%",ease: "Cubic.easeInOut"});
 });
 homeLink.addEventListener("mouseout", () =>{
-    tl.to(".home-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
+    homeTl.to(".home-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
 });
 
 profileLink.addEventListener("mouseover", () =>{
-    tl.to(".profile-project-preview", {duration: 1.2, width: "100%",ease: "Expo.easeInOut"});
+    profileTl.to(".profile-project-preview", {duration: 1.8, width: "100%",ease: "Cubic.easeInOut"});
 });
 profileLink.addEventListener("mouseout", () =>{
-    tl.to(".profile-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
+    profileTl.to(".profile-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
 });
 
 discographyLink.addEventListener("mouseover", () =>{
-    tl.to(".discography-project-preview", {duration: 1.2, width: "55%",ease: "Expo.easeInOut"});
+    discographyTl.to(".discography-project-preview", {duration: 1.8, width: "55%",ease: "Cubic.easeInOut"});
 });
 discographyLink.addEventListener("mouseout", () =>{
-    tl.to(".discography-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
+    discographyTl.to(".discography-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
 });
 
 membersLink.addEventListener("mouseover", () =>{
-    tl.to(".members-project-preview", {duration: 1.2, width: "60%",ease: "Expo.easeInOut"});
+    membersTl.to(".members-project-preview", {duration: 1.8, width: "60%",ease: "Cubic.easeInOut"});
 });
 membersLink.addEventListener("mouseout", () =>{
-    tl.to(".members-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
+    membersTl.to(".members-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
 });
 // END OF NAVBAR ANIMATION
