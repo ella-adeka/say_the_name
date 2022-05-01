@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet">    
     <title>SEVENTEEN - PROFILE</title>
 </head>
-<body>
+<body data-barba="wrapper">
     <header>
         <div id="cursor"></div>
         <!-- <div id="group"><span class="glitch"><a href="main.html">SVT</a></span></div> -->
@@ -32,7 +32,7 @@
                    
                     <ul class="navbar__ul">
                         <li>
-                            <span><a class="link homeLink" href="main.html" data-text="Home">Home</a></span>
+                            <span><a class="link homeLink animate-this" href="main.html" data-text="Home">Home</a></span>
                             <span class="home-project-preview-wrapper">
                                 <div class="home-project-preview"></div>
                             </span>
@@ -41,10 +41,10 @@
                             <span class="profile-project-preview-wrapper">
                                 <div class="profile-project-preview"></div>
                             </span>
-                            <span><a class="link profileLink" href="profile.html" data-text="Profile">Profile</a></span>
+                            <span><a class="link profileLink animate-this" href="profile.html" data-text="Profile">Profile</a></span>
                         </li>
                         <li>
-                            <span><a class="link discographyLink" href="discography.html" data-text="Discography">Discography</a></span>
+                            <span><a class="link discographyLink animate-this" href="discography.html" data-text="Discography">Discography</a></span>
                             <span class="discography-project-preview-wrapper">
                                 <div class="discography-project-preview"></div>
                             </span>
@@ -53,7 +53,7 @@
                             <span class="members-project-preview-wrapper">
                                 <div class="members-project-preview"></div>
                             </span>
-                            <span><a class="link membersLink" href="members.html" data-text="Members">Members</a></span>
+                            <span><a class="link membersLink animate-this" href="members.html" data-text="Members">Members</a></span>
                         </li>
                     </ul>
                     <div class="credits"><span><a href="credits.html">Credits</a></span><span><a href="socials.html">Socials</a></span></div>
@@ -63,14 +63,19 @@
         </nav> 
     </header> 
 
-    <main class="mainProfile">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+    
+    <main class="mainProfile" data-barba="container" data-barba-namespace="profile">
         <!-- <p>PROFILE PAGE</p> -->
         <div class="mainProfile__paragraph__name">
             <!-- <p>Seventeen</p> -->
         </div>
         <div class="mainProfile__seventeen_name">
             <!-- <p>Seventeen&#183Seventeen&#183Seventeen&#183Seventeen&#183Seventeen</p> -->
-            <span>Seventeen</span>&#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213;
+            <!-- <span>Seventeen</span> - &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; Seventeen &#8213; -->
+            <span>Seventeen</span> - Seventeen - Seventeen - Seventeen - Seventeen - Seventeen - Seventeen - Seventeen - Seventeen -
         </div>
         <div class="mainProfile__paragraph__definition">
             <!-- <p class="backgroundSVTText">13+3+1=17</p> -->
@@ -87,7 +92,8 @@
             </div>
         </div>
         <div class="mainProfile__paragraph__debutdate">
-            <p class="mainProfile__paragraph__debutdate__date">2015 05 26</p>
+            <p class="mainProfile__paragraph__debutdate__date">26.05.15</p>
+            <!-- <p class="mainProfile__paragraph__debutdate__date">2015 05 26</p> -->
             <!-- <p>Seventeen debuted on <span class="mainProfile__paragraph__debutdate__date">26th of May, 2015</span> with their mini-album <span class="mainProfile__paragraph__debutdate__album">17 Carat</span> including title track <span class="mainProfile__paragraph__debutdate__title_track">Adore U</span>.</p> -->
             <!-- <p>Seventeen debuted with their mini-album <span class="mainProfile__paragraph__debutdate__album">17 Carat</span> including title track <span class="mainProfile__paragraph__debutdate__title_track">Adore U</span>.</p> -->
             <p>Seventeen debuted on 26<sup>th</sup> May, 2015 with their mini-album 17 Carat including title track Adore U.</p>
@@ -107,7 +113,7 @@
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/svt_attacca_half_group_2.jpeg" alt="">
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/svt_attacca_half_group_1.jpeg" alt="">
             </p>
-            <p class="mainProfile__paragraph__debutImages__para"> 
+            <!-- <p class="mainProfile__paragraph__debutImages__para"> 
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/svt_attacca_half_group_1.jpeg" alt="">
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/svt_attacca_half_group_2.jpeg" alt="">
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/attacca_group_photo_3.jpg" alt="">
@@ -118,18 +124,24 @@
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/attacca_group_photo_3.jpg" alt="">
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/svt_attacca_half_group_2.jpeg" alt="">
                 <img class="mainProfile__paragraph__debutImages__para__image"  src="images/svt_attacca_half_group_1.jpeg" alt="">
-            </p>
+            </p> -->
         </div>
         <div class="mainProfile__paragraph__fandom">
             <p>Carat</p>
         </div>
-        <div class="mainProfile__paragraph__colors">
+        <div class="mainProfile__paragraph__colorsDiv">
+            <div class="mainProfile__paragraph__colorsDiv__colors">Fan Colors</div>
             <!-- <p>Official Fan Colors: Rose Quartz and Serenity</p> -->
-            <p>Rose Quartz and Serenity</p>
+            <div class="mainProfile__paragraph__colorsDiv__theColors"> <p class="roseQuartz">Rose Quartz</p> <p class="serenity">Serenity</p></div>
+            
         </div>
         <div class="mainProfile__paragraph__members">
             <img class="mainProfile__paragraph__members__image"  src="images/attacca_group_photo_3.jpg" alt="">
-            <p class="mainProfile__paragraph__members__names"></p>
+
+            <div class="mainProfile__paragraph__members__membersNameDiv">
+                <p class="mainProfile__paragraph__members__membersNameDiv__names"></p>
+            </div>
+            
         </div>
         <div class="mainProfile__paragraph__sub_units_list">
             <h4>Sub-units</h4> 
@@ -166,44 +178,46 @@
                 <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20"></feDisplacementMap>
             </filter>
         </svg>
+        
+        <h4 style="text-align: right;">Filmography</h4> 
+        <div class="mainProfile__paragraph__filmRelated">
+            <div class="mainProfile__paragraph__filmRelated__filmography">
+                <h4>Filmography</h4> 
+            </div>
     
-        <div class="mainProfile__paragraph__filmography">
-            <h4>Filmography</h4> 
-        </div>
-
-        <div class="mainProfile__paragraph__television">
-            <!-- <h4>Contents</h4>  -->
-            <div class="mainProfile__paragraph__onlineshows_div">
-                <p style="margin-bottom: .6em;font-size: 1.2em;">Seventeen Project: Debut Big Plan</p>
-                <p style="margin-bottom: .6em;font-size: 1.2em;">Seventeen's One Fine Day</p>
-                <p style="margin-bottom: .6em;font-size: 1.2em;">SVT Club</p>
-                <p style="font-size: 1.2em;">and more ...</p>
-            </div>
-           
-        </div>
-        <div class="mainProfile__paragraph__onlineshows">
-            <!-- <h4>More Contents</h4>  -->
-            <!-- <p>IF, Snapshoot, Dawn is hotter than day</p> -->
-            <div class="mainProfile__paragraph__onlineshows_div">
-                <p style="margin-bottom: .6em;font-size: 1.2em;">IF Seventeen</p>
-                <p style="margin-bottom: .6em;font-size: 1.2em;">Snapshoot</p>
-                <p style="margin-bottom: .6em;font-size: 1.2em;">Inside Seventeen</p>
-                <p style="margin-bottom: .6em; font-size: 1.2em;">Seventeen: Hit The Road</p>
-                <p style="font-size: 1.2em;">and more ...</p>
-            </div>
-        </div>
-        <div class="mainProfile__paragraph__film">
-            <!-- <h4>More Contents</h4>  -->
-            <!-- <p>IF, Snapshoot, Dawn is hotter than day</p> -->
-            <!-- <div class="mainProfile__paragraph__morecontents_div"> -->
-            <div>
-                <p style="margin-bottom: .6em;font-size: 1.2em;">Seventeen Power of Love: The Movie</p>
+            <div class="mainProfile__paragraph__filmRelated__filmsInFilmography">
+                <div class="mainProfile__paragraph__filmRelated__filmsInFilmography__television">
+                    <!-- <h4>Contents</h4>  -->
+                    <div class="mainProfile__paragraph__filmRelated__onlineshows_div">
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">Seventeen Project: Debut Big Plan</p>
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">Seventeen's One Fine Day</p>
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">SVT Club</p>
+                        <p style="font-size: 1.2em;">and more ...</p>
+                    </div>
+                   
+                </div>
+                <div class="mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows">
+                    <!-- <h4>More Contents</h4>  -->
+                    <!-- <p>IF, Snapshoot, Dawn is hotter than day</p> -->
+                    <div class="mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows_div">
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">IF Seventeen</p>
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">Snapshoot</p>
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">Inside Seventeen</p>
+                        <p style="margin-bottom: .6em; font-size: 1.2em;">Seventeen: Hit The Road</p>
+                        <p style="font-size: 1.2em;">and more ...</p>
+                    </div>
+                </div>
+                <div class="mainProfile__paragraph__filmRelated__filmsInFilmography__film">
+                    <div>
+                        <p style="margin-bottom: .6em;font-size: 1.2em;">Seventeen Power of Love: The Movie</p>
+                    </div>
+                </div>
             </div>
         </div>
 
 
         <div class="mainProfile__paragraph__concerts">
-            <h4>Concerts</h4> 
+            <!-- <h4>Concerts</h4>  -->
         </div>
 
         
@@ -233,14 +247,23 @@
 
     <div class="backgroundText">Profile</div>
 
+    <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- BARVA.JS -->
+        <!-- unpkg -->
+        <script src="https://unpkg.com/@barba/core"></script>
+
+        <!-- jsdelivr -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+    <!-- END OF BARBA.JS -->
+
     <script type="module" src="/app.js"></script>
     <script src="/javascript/navbar.js"></script>
     <script src="/javascript/footer.js"></script>
     <script src="/javascript/data/profile_members.js"></script>
     <script src="/javascript/pages/profile.js"></script>
-    <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    
 </body>
 </html>
