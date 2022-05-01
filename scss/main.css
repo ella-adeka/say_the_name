@@ -172,17 +172,10 @@ header {
 .menu_btn__burger {
   position: absolute;
   top: 0;
-  right: 0;
   width: 80px;
   height: 80px;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  text-orientation: upright;
 }
 
 .menu_btn__burger::before {
@@ -224,7 +217,6 @@ header {
 }
 
 .menu_btn__burger.open {
-  background: transparent;
   -webkit-transition: 2s ease-in;
   transition: 2s ease-in;
 }
@@ -233,16 +225,18 @@ header {
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
   left: 1em;
-  -webkit-transform: rotate(45deg) translate(2px, 10px);
-          transform: rotate(45deg) translate(2px, 10px);
+  width: 28px;
+  -webkit-transform: rotate(15deg) translate(-1px, 5px);
+          transform: rotate(15deg) translate(-1px, 5px);
 }
 
 .menu_btn__burger.open::after {
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
   left: 1em;
-  -webkit-transform: rotate(-45deg) translate(-7px, -5px);
-          transform: rotate(-45deg) translate(-7px, -5px);
+  width: 28px;
+  -webkit-transform: rotate(-15deg) translate(-4px, -5px);
+          transform: rotate(-15deg) translate(-4px, -5px);
 }
 
 .nav {
@@ -361,6 +355,8 @@ header {
   position: fixed;
   width: 0%;
   height: 120px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   background: url("../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
   background-size: cover;
   overflow: hidden;
@@ -381,8 +377,8 @@ header {
 
 .nav .navbar__item ul li:nth-child(2) span:nth-child(1) {
   width: 70%;
-  -webkit-filter: opacity(0.3) grayscale(100%);
-          filter: opacity(0.3) grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .nav .navbar__item ul li:nth-child(2) span:nth-child(1) .profile-project-preview {
@@ -410,7 +406,6 @@ header {
 
 .nav .navbar__item ul li:nth-child(3) {
   text-align: left;
-  margin-left: 1em;
 }
 
 .nav .navbar__item ul li:nth-child(3) span {
@@ -510,7 +505,7 @@ header {
   left: 0;
   -webkit-animation: strike 1s cubic-bezier(0.1, 0.7, 1, 0.1) 1 forwards;
           animation: strike 1s cubic-bezier(0.1, 0.7, 1, 0.1) 1 forwards;
-  background: white;
+  background: black;
 }
 
 @-webkit-keyframes strike {
@@ -585,209 +580,6 @@ header {
   transition: .2s ease-in;
 }
 
-#group {
-  position: absolute;
-  left: 0.5em;
-  bottom: 0;
-}
-
-#group a:visited {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-#group .glitch {
-  font-family: Seraya;
-  font-size: 2.5em;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  text-orientation: upright;
-}
-
-#group .glitch::before, #group .glitch::after {
-  content: 'SVT';
-  top: 0;
-  position: absolute;
-  overflow: hidden;
-}
-
-#group .glitch::before {
-  right: 4px;
-  text-shadow: 2px 0px #f7cac9;
-  -webkit-animation: effect 3s infinite linear;
-          animation: effect 3s infinite linear;
-}
-
-#group .glitch::after {
-  left: 2px;
-  text-shadow: 2px 0px #92a8d1;
-  -webkit-animation: effect 2s infinite linear;
-          animation: effect 2s infinite linear;
-}
-
-@-webkit-keyframes effect {
-  0% {
-    clip: rect(55px, 9999px, 56px, 0);
-  }
-  5% {
-    clip: rect(47px, 9999px, 30px, 0);
-  }
-  10% {
-    clip: rect(33px, 9999px, 99px, 0);
-  }
-  15% {
-    clip: rect(3px, 9999px, 19px, 0);
-  }
-  20% {
-    clip: rect(54px, 9999px, 109px, 0);
-  }
-  25% {
-    clip: rect(96px, 9999px, 989px, 0);
-  }
-  30% {
-    clip: rect(54px, 9999px, 109px, 0);
-  }
-  35% {
-    clip: rect(50px, 9999px, 34px, 0);
-  }
-  40% {
-    clip: rect(60px, 9999px, 72px, 0);
-  }
-  45% {
-    clip: rect(10px, 9999px, 81px, 0);
-  }
-  50% {
-    clip: rect(2px, 9999px, 68px, 0);
-  }
-  55% {
-    clip: rect(23px, 9999px, 89px, 0);
-  }
-  60% {
-    clip: rect(76px, 9999px, 91px, 0);
-  }
-  65% {
-    clip: rect(62px, 9999px, 30px, 0);
-  }
-  70% {
-    clip: rect(60px, 9999px, 73px, 0);
-  }
-  75% {
-    clip: rect(60px, 9999px, 87px, 0);
-  }
-  80% {
-    clip: rect(2px, 9999px, 14px, 0);
-  }
-  85% {
-    clip: rect(28px, 9999px, 87px, 0);
-  }
-  90% {
-    clip: rect(73px, 9999px, 50px, 0);
-  }
-  95% {
-    clip: rect(79px, 9999px, 70px, 0);
-  }
-  100% {
-    clip: rect(17px, 9999px, 79px, 0);
-  }
-}
-
-@keyframes effect {
-  0% {
-    clip: rect(55px, 9999px, 56px, 0);
-  }
-  5% {
-    clip: rect(47px, 9999px, 30px, 0);
-  }
-  10% {
-    clip: rect(33px, 9999px, 99px, 0);
-  }
-  15% {
-    clip: rect(3px, 9999px, 19px, 0);
-  }
-  20% {
-    clip: rect(54px, 9999px, 109px, 0);
-  }
-  25% {
-    clip: rect(96px, 9999px, 989px, 0);
-  }
-  30% {
-    clip: rect(54px, 9999px, 109px, 0);
-  }
-  35% {
-    clip: rect(50px, 9999px, 34px, 0);
-  }
-  40% {
-    clip: rect(60px, 9999px, 72px, 0);
-  }
-  45% {
-    clip: rect(10px, 9999px, 81px, 0);
-  }
-  50% {
-    clip: rect(2px, 9999px, 68px, 0);
-  }
-  55% {
-    clip: rect(23px, 9999px, 89px, 0);
-  }
-  60% {
-    clip: rect(76px, 9999px, 91px, 0);
-  }
-  65% {
-    clip: rect(62px, 9999px, 30px, 0);
-  }
-  70% {
-    clip: rect(60px, 9999px, 73px, 0);
-  }
-  75% {
-    clip: rect(60px, 9999px, 87px, 0);
-  }
-  80% {
-    clip: rect(2px, 9999px, 14px, 0);
-  }
-  85% {
-    clip: rect(28px, 9999px, 87px, 0);
-  }
-  90% {
-    clip: rect(73px, 9999px, 50px, 0);
-  }
-  95% {
-    clip: rect(79px, 9999px, 70px, 0);
-  }
-  100% {
-    clip: rect(17px, 9999px, 79px, 0);
-  }
-}
-
-#group .glitch a {
-  text-decoration: none;
-}
-
-#group .glitch a:visited {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-.loading-screen {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  background-color: #4bedc2;
-  width: 100%;
-  height: 0%;
-}
-
-.load-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: 100%;
-  overflow: hidden;
-  z-index: 10;
-  pointer-events: none;
-}
-
 .mainHome {
   font-family: New York;
   position: absolute;
@@ -796,144 +588,38 @@ header {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 90vw;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
 }
 
 .mainHome__paragraph {
-  margin-top: 10em;
-  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  text-align: center;
+}
+
+.mainHome__paragraph__image {
+  background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center 55%;
+  background-size: cover;
+  -webkit-filter: grayscale(80%) opacity(0.5);
+          filter: grayscale(80%) opacity(0.5);
+  width: 100%;
   height: 100%;
 }
 
-.mainHome__paragraph__topic {
+.mainHome__paragraph h1 {
   position: absolute;
-  font-size: 1.8em;
-  opacity: 0.2;
-  margin-top: 0.1em;
-}
-
-.mainHome__paragraph__title {
-  top: 1em;
-  font-size: 7em;
-}
-
-.mainHome__paragraph__title span {
-  opacity: 0;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.mainHome__paragraph__title span.fade {
-  opacity: 1;
-}
-
-.mainHome__paragraph__subtitle {
-  position: absolute;
-  text-decoration: none;
-  top: 8em;
-  right: 1em;
-  font-size: 1.2em;
-  border: 1px solid silver;
-  border-radius: 50%;
-  padding: 3em 1em;
-  width: 150px;
-  text-align: center;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  color: dimgray;
-  transition: 1s ease-in-out;
-}
-
-.mainHome__paragraph__subtitle:hover {
-  color: white;
-  opacity: 1;
-  -webkit-backdrop-filter: invert(50%);
-          backdrop-filter: invert(50%);
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-}
-
-.mainHome__paragraph__subtitle::before {
-  position: absolute;
-  content: "";
-  border: 1px solid silver;
-  border-radius: 50%;
-  padding: 3.6em;
-  top: 0;
-  left: 0;
-}
-
-.mainHome__paragraph__subtitle::after {
-  position: absolute;
-  content: "";
-  border: 1px solid silver;
-  border-radius: 50%;
-  padding: 3.6em;
-  top: -0.1em;
-  left: 0.2em;
-}
-
-.mainHome__paragraph__description {
-  width: 70%;
-  margin-bottom: 1em;
-}
-
-.mainHome__paragraph__images {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 35% 52%;
-      grid-template-columns: 35% 52%;
-  grid-gap: 2%;
-}
-
-.mainHome__paragraph__images__image1Div__image1 {
-  -webkit-backdrop-filter: invert(90%);
-          backdrop-filter: invert(90%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5em;
   width: 100%;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.mainHome__paragraph__images__image2Div__image2 {
-  -webkit-backdrop-filter: invert(90%);
-          backdrop-filter: invert(90%);
-  width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.mainHome__paragraph__imagesOutside__image3 {
-  display: none;
-}
-
-.mainHome__paragraph__imagesOutside__image4 {
-  position: absolute;
-  bottom: -22em;
-  width: 38%;
-  height: 50%;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-  -webkit-filter: brightness(20%) grayscale(100%);
-          filter: brightness(20%) grayscale(100%);
-}
-
-.mainHome__paragraph__imagesOutside__image5 {
-  position: absolute;
-  right: 1em;
-  bottom: -24em;
-  width: 57%;
-  height: 50%;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-  -webkit-filter: brightness(20%) grayscale(100%);
-          filter: brightness(20%) grayscale(100%);
 }
 
 .mainProfile {
@@ -942,7 +628,7 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 95%;
+  width: 100%;
   height: 100%;
   padding: 0 2em;
   margin-left: auto;
@@ -996,8 +682,10 @@ header {
   margin-right: auto;
 }
 
-.mainProfile__paragraph__name::before {
-  display: none;
+.mainProfile__paragraph__name::after {
+  content: "We are";
+  position: absolute;
+  font-size: 5em;
 }
 
 .mainProfile__paragraph__name:hover {
@@ -1022,7 +710,7 @@ header {
 }
 
 .mainProfile__paragraph__debutDiv__debut {
-  background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
+  background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed right;
   background-size: 300px;
   background-blend-mode: saturation;
   margin-right: 0;
@@ -1044,9 +732,8 @@ header {
 .mainProfile__paragraph__debutDiv__debut::before {
   content: "Debut";
   position: absolute;
-  font-size: 5em;
+  font-size: 10em;
   opacity: .5;
-  right: 3.5em;
   margin-top: -1em;
 }
 
@@ -1121,6 +808,8 @@ header {
 }
 
 .mainProfile__paragraph__fandom {
+  position: relative;
+  left: 5%;
   margin-top: 35em;
   background: url("../../../images/members/hoshi_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
@@ -1131,60 +820,83 @@ header {
 .mainProfile__paragraph__fandom::before {
   content: "Fandom";
   position: absolute;
-  font-size: 5em;
+  font-size: 10em;
   opacity: .5;
-  margin-top: -0.5em;
+  margin-top: -0.6em;
   left: 0;
   z-index: 1;
 }
 
-.mainProfile__paragraph__colors {
+.mainProfile__paragraph__colorsDiv {
+  position: relative;
   margin-top: 20em;
-  margin-left: 50%;
-  background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
-  background-size: cover;
-  height: 20em;
-  width: 20em;
+  width: 90%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mainProfile__paragraph__colors::before {
-  content: "Fan Colors";
+.mainProfile__paragraph__colorsDiv__colors {
   position: absolute;
-  font-size: 5em;
+  left: 50%;
+  font-size: 10em;
   opacity: .5;
-  margin-top: -0.7em;
   margin-left: -1em;
   z-index: 1;
 }
 
-.mainProfile__paragraph__members {
-  margin-top: 15em;
+.mainProfile__paragraph__colorsDiv__theColors {
+  position: absolute;
+  top: 20%;
+  left: 10%;
   width: 100%;
-  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainProfile__paragraph__colorsDiv__theColors p {
+  display: inline-block;
+  margin: 10%;
+  padding: 8%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.mainProfile__paragraph__colorsDiv__theColors p:nth-child(1) {
+  background-color: #f7cac9;
+}
+
+.mainProfile__paragraph__colorsDiv__theColors p:nth-child(2) {
+  background-color: #92a8d1;
+}
+
+.mainProfile__paragraph__members {
+  margin-top: 25em;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 45% 55%;
       grid-template-columns: 45% 55%;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
 }
 
 .mainProfile__paragraph__members::before {
   content: "Members";
   position: absolute;
-  font-size: 5em;
+  font-size: 10em;
   opacity: .5;
   margin-top: -0.7em;
-  left: 0;
+  left: 0.3em;
   z-index: 1;
 }
 
 .mainProfile__paragraph__members__image {
   width: 40em;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   height: 40em;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1193,19 +905,26 @@ header {
 }
 
 .mainProfile__paragraph__members__image:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__members__names {
+.mainProfile__paragraph__members__membersNameDiv {
   z-index: 1;
+  height: 40em;
+  position: relative;
+}
+
+.mainProfile__paragraph__members__membersNameDiv__names {
   font-size: 3.3em;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
-  display: block;
+  text-align: right;
 }
 
-.mainProfile__paragraph__members__names span:hover {
+.mainProfile__paragraph__members__membersNameDiv__names span:hover {
   opacity: 1;
   -webkit-filter: invert(80%) drop-shadow(2px 2px gray);
           filter: invert(80%) drop-shadow(2px 2px gray);
@@ -1213,7 +932,7 @@ header {
   transition: .2s ease-in-out;
 }
 
-.mainProfile__paragraph__members__names span:hover::after {
+.mainProfile__paragraph__members__membersNameDiv__names span:hover::after {
   content: '';
   position: absolute;
   top: 40%;
@@ -1261,6 +980,24 @@ header {
   }
 }
 
+.mainProfile__paragraph__members__membersNameDiv__link {
+  position: absolute;
+  font-size: 15px;
+  margin-left: 4em;
+  padding: 0 1em 1em 1em;
+  bottom: 0;
+  text-align: center;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.mainProfile__paragraph__members__membersNameDiv__link:hover {
+  -webkit-backdrop-filter: invert(20%) blur(20px);
+          backdrop-filter: invert(20%) blur(20px);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
 .mainProfile__paragraph__sub_units_list {
   background-size: cover;
   background-blend-mode: saturation;
@@ -1277,7 +1014,7 @@ header {
 .mainProfile__paragraph__sub_units_list::before {
   content: "Sub-Units";
   position: absolute;
-  font-size: 5em;
+  font-size: 10em;
   opacity: .5;
   left: 1.8em;
   width: 100%;
@@ -1421,35 +1158,55 @@ header {
   background-size: cover;
 }
 
-.mainProfile__paragraph__filmography {
-  margin-top: 4em;
+.mainProfile__paragraph__filmRelated {
+  margin-top: 10em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 75%;
+      grid-template-columns: 25% 75%;
+}
+
+.mainProfile__paragraph__filmRelated__filmography {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  padding: 2em;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 
-.mainProfile__paragraph__filmography::before {
+.mainProfile__paragraph__filmRelated__filmography::before {
   content: "Filmography";
   position: absolute;
   font-size: 5em;
   opacity: .5;
-  margin-left: -2em;
-  margin-top: -0.3em;
+  top: -2em;
 }
 
-.mainProfile__paragraph__filmography:hover {
+.mainProfile__paragraph__filmRelated__filmography:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__television {
+.mainProfile__paragraph__filmRelated__filmsInFilmography {
+  background: purple;
+  height: auto;
+}
+
+.mainProfile__paragraph__filmRelated__filmsInFilmography div {
+  margin-bottom: 2em;
+}
+
+.mainProfile__paragraph__filmRelated__filmsInFilmography__television {
+  position: relative;
+  left: 1em;
   background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
@@ -1459,16 +1216,9 @@ header {
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  margin-left: 2em;
-  padding: 2em;
-  margin-top: 8em;
 }
 
-.mainProfile__paragraph__television div {
-  padding-top: 1em;
-}
-
-.mainProfile__paragraph__television::before {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__television::before {
   content: "Television";
   position: absolute;
   font-size: 5em;
@@ -1477,30 +1227,29 @@ header {
   left: -0.7em;
 }
 
-.mainProfile__paragraph__television:hover {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__television:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__onlineshows {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows {
   position: absolute;
-  right: 4em;
+  right: 5em;
   background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
   width: 25em;
-  height: 25em;
+  height: 400px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
-  padding: 1em;
 }
 
-.mainProfile__paragraph__onlineshows::before {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows::before {
   content: "Online Shows";
   position: absolute;
   font-size: 5em;
@@ -1510,31 +1259,30 @@ header {
   right: -0.5em;
 }
 
-.mainProfile__paragraph__onlineshows:hover {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__film {
-  left: 1em;
+.mainProfile__paragraph__filmRelated__filmsInFilmography__film {
+  position: relative;
+  top: 25em;
+  left: 3em;
   background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
   width: 25em;
-  height: 25em;
-  margin-left: 5em;
+  height: 400px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
-  padding: 1em;
-  margin-top: 20em;
 }
 
-.mainProfile__paragraph__film::before {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__film::before {
   content: "Film";
   position: absolute;
   font-size: 5em;
@@ -1544,7 +1292,7 @@ header {
   right: -0.5em;
 }
 
-.mainProfile__paragraph__film:hover {
+.mainProfile__paragraph__filmRelated__filmsInFilmography__film:hover {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
@@ -1552,7 +1300,7 @@ header {
 }
 
 .mainProfile__paragraph__concerts {
-  margin-top: 20em;
+  margin-top: 15em;
   background: url("../../../images/home_page/attacca/attacca_group_photo_2.jpeg") no-repeat fixed center;
   background-size: cover;
   height: 80%;
@@ -1565,7 +1313,7 @@ header {
 .mainProfile__paragraph__concerts::before {
   content: "Concerts";
   position: absolute;
-  font-size: 5em;
+  font-size: 10em;
   opacity: .5;
   margin-top: -0.7em;
 }
@@ -1583,18 +1331,19 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-  padding-top: 2em;
+  width: 100%;
+  height: 100%;
   font-family: New York;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .mainMembers__dets {
   width: 100%;
-  height: 80vh;
-  padding-bottom: 0;
+  height: 100vh;
+  margin-bottom: 10em;
+}
+
+.mainMembers__dets:nth-child(13) {
+  margin-bottom: 0;
 }
 
 .mainMembers__dets__pronunciation {
@@ -1616,99 +1365,66 @@ header {
 
 .mainMembers__dets__number {
   position: absolute;
-  width: 100%;
+  width: 97%;
   text-align: right;
-  margin-right: 0;
-  margin-top: 22%;
-  font-size: 5em;
+  margin-top: -5%;
+  font-size: 8em;
   opacity: 0.1;
+}
+
+.mainMembers__dets__number .totalMembers {
+  font-size: 25px;
 }
 
 .mainMembers__dets__imageDiv {
   position: absolute;
-  display: inline-block;
   overflow: hidden;
-  height: 600px;
-  right: 30%;
-  margin: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  height: 100vh;
+  width: 50vw;
+  -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 
 .mainMembers__dets__imageDiv img {
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
-.mainMembers__dets__imageDiv:hover img {
+.mainMembers__dets__imageDiv img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
 .mainMembers__dets__imageDiv__image {
-  width: 410px;
-  height: 600px;
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
-}
-
-.mainMembers__dets__imageDiv:hover {
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
-  width: 100%;
-  right: 0;
-}
-
-.mainMembers__dets__imageDiv:hover img {
-  width: 100%;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 
 .mainMembers__dets__info {
   position: relative;
   width: 100%;
-  top: 1em;
-  text-align: left;
-  background-color: #000;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(77.5%, #000), color-stop(10%, #fff));
-  background-image: linear-gradient(90deg, #000 77.5%, #fff 10%);
-  background-size: 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  right: 5%;
+  top: 30%;
+  text-align: right;
+  color: black;
 }
 
 .mainMembers__dets__info.dark {
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, #fff), color-stop(10%, #000));
-  background-image: linear-gradient(90deg, #fff 100%, #000 10%);
+  color: white;
 }
 
 .mainMembers__dets__info__label {
-  font-style: oblique;
   font-weight: 800;
   margin-right: 0.5em;
+  -webkit-filter: drop-shadow(1.5px 1.5px gray);
+          filter: drop-shadow(1.5px 1.5px gray);
 }
 
 .mainMembers__dets__info__name {
@@ -1726,6 +1442,100 @@ header {
 
 .mainMembers__dets__info__birth_name {
   margin-top: 2em;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  right: 2em;
+  padding: 2em;
+  font-family: New York;
+  opacity: 0.5;
+  font-size: 2em;
+}
+
+.showTheDiv {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.showTheDiv .thedivToBeShown {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 0;
+}
+
+.showTheDiv .thedivToBeShown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 3px;
+  background-color: pink;
+}
+
+.showTheDiv .thedivToBeShown::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 0.5em;
+  background-color: pink;
+}
+
+.theDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  visibility: hidden;
+}
+
+.theDiv.show {
+  visibility: visible;
+}
+
+.theDiv .membersCarousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  padding-top: 10%;
+  margin: auto;
+}
+
+.theDiv .membersCarousel__paragraph {
+  white-space: nowrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.theDiv .membersCarousel__paragraph__image {
+  z-index: -10;
+  position: relative;
+  padding: 1em;
+  width: auto;
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.theDiv .membersCarousel__paragraph__membersCarousel > img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: firebrick;
+  margin: 10px;
 }
 
 .listen-link {
@@ -2030,8 +1840,30 @@ header {
   text-align: center;
 }
 
+.mainCredits__svtNamesDiv {
+  overflow: hidden;
+}
+
+.mainCredits__svtNamesDiv__svtNames {
+  text-align: left;
+}
+
+.mainCredits__svtNamesDiv__svtNames span {
+  opacity: 0.2;
+  margin-left: 1em;
+  margin-right: 1em;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.mainCredits__svtNamesDiv__svtNames span:hover {
+  opacity: 0.8;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
 .mainCredits__bio {
-  padding: 2em;
+  padding: 1em;
 }
 
 .mainCredits__bio__iAm {
@@ -2043,7 +1875,7 @@ header {
 }
 
 .mainCredits__photos {
-  padding: 2em;
+  padding: 1em;
 }
 
 .mainCredits__photos__from {
@@ -2075,6 +1907,10 @@ header {
   -moz-text-fill-color: transparent;
 }
 
+.mainSocials {
+  font-family: New York;
+}
+
 .mainSocials .socialsBar {
   text-align: center;
   width: 100vw;
@@ -2090,11 +1926,23 @@ header {
           transform: translate(-50%, -50%);
 }
 
+.mainSocials .socialsBar__icons h2 {
+  font-size: 2em;
+}
+
+.mainSocials .socialsBar__icons a {
+  text-decoration: none;
+}
+
 .mainSocials .socialsBar__icons__links {
   display: block;
-  padding-bottom: 1.3em;
+  padding: .5em;
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
+}
+
+.mainSocials .socialsBar__icons__links i {
+  font-size: 15px;
 }
 
 .mainSocials .socialsBar__icons__links:hover {
@@ -2103,7 +1951,7 @@ header {
   transition: .2s ease-in;
 }
 
-.mainSocials .socialsBar__icons__links i:hover {
+.mainSocials .socialsBar__icons__links:hover sup i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition: .5s ease-in;
@@ -2365,100 +2213,23 @@ header {
   }
   .mainHome {
     height: 90%;
-    width: 70vw;
+    overflow: hidden;
   }
   .mainHome__paragraph {
-    margin-top: 7em;
-    width: 100vw;
-    height: 100%;
+    width: 90%;
   }
-  .mainHome__paragraph__topic {
+  .mainHome__paragraph__image {
+    background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed 57%;
+    background-size: cover;
+  }
+  .mainHome__paragraph h1 {
     position: absolute;
-    content: "Name";
-    font-size: 1em;
-    opacity: 0.2;
-    margin-top: -0.2em;
-  }
-  .mainHome__paragraph__title {
-    width: 70%;
-    font-size: 4em;
-  }
-  .mainHome__paragraph__subtitle {
-    top: 4em;
-    right: 0;
-    font-size: 0.6em;
-    padding: 3em 1em;
-    width: 75px;
-  }
-  .mainHome__paragraph__subtitle::before {
-    position: absolute;
-    content: "";
-    border: 1px solid silver;
-    border-radius: 50%;
-    padding: 3.6em;
-    top: 0;
-    left: 0;
-  }
-  .mainHome__paragraph__subtitle::after {
-    position: absolute;
-    content: "";
-    border: 1px solid silver;
-    border-radius: 50%;
-    padding: 3.6em;
-    top: -0.1em;
-    left: 0.2em;
-  }
-  .mainHome__paragraph__description {
-    font-size: 0.7em;
-    margin-bottom: 1em;
-  }
-  .mainHome__paragraph__images {
-    display: block;
-    width: 70%;
-  }
-  .mainHome__paragraph__images__image1Div {
-    height: 200px;
-  }
-  .mainHome__paragraph__images__image1Div__image1 {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 3em;
     width: 100%;
-    height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    -webkit-backdrop-filter: invert(90%);
-            backdrop-filter: invert(90%);
-  }
-  .mainHome__paragraph__images__image2Div__image2 {
-    display: none;
-  }
-  .mainHome__paragraph__imagesOutside__image3 {
-    display: none;
-  }
-  .mainHome__paragraph__imagesOutside__image4 {
-    position: absolute;
-    bottom: -17em;
-    width: 60%;
-    height: 50%;
-    z-index: -1;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 20px;
-    -webkit-filter: brightness(40%) grayscale(100%);
-            filter: brightness(40%) grayscale(100%);
-  }
-  .mainHome__paragraph__imagesOutside__image5 {
-    position: absolute;
-    right: 0;
-    bottom: -21em;
-    width: 35%;
-    height: 50%;
-    z-index: -1;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 20px;
-    -webkit-filter: brightness(60%) grayscale(100%);
-            filter: brightness(60%) grayscale(100%);
   }
   .mainMembers {
     width: 80%;
@@ -2514,9 +2285,9 @@ header {
     width: 80%;
     padding: 0 0;
   }
-  .mainProfile__seventeen__name {
+  .mainProfile__seventeen_name {
     position: absolute;
-    font-size: 5em;
+    font-size: 2em;
     -webkit-filter: invert(50%);
             filter: invert(50%);
     margin-top: -1em;
@@ -2569,7 +2340,7 @@ header {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
   }
-  .mainProfile__paragraph__members__names {
+  .mainProfile__paragraph__members__membersNameDiv__names {
     text-align: center;
     font-size: 1.3em;
     width: 100%;
@@ -2907,6 +2678,27 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: inherit;
+}
+
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4bedc2;
+  width: 100%;
+  height: 0%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
 }
 
 header, footer {

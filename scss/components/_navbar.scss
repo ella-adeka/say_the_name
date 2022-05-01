@@ -19,15 +19,16 @@ header{
         position: absolute;
         top: 0;
         // top: -0.5em;
-        right: 0;
+        // right: 0;
         width: 80px;
         height: 80px;
         transition: 2s ease-in-out;
         // background: white;   
-        border: 1px solid transparent;
-        border-radius: 50%;   
-        writing-mode: vertical-lr;
-        text-orientation: upright;
+        // border: 1px solid peru;
+        // border-radius: 50%;  
+        // margin: auto; 
+        // writing-mode: vertical-lr;
+        // text-orientation: upright;
 
         &::before{
             content: '';
@@ -68,25 +69,28 @@ header{
             // @include transition-ease;
             // transition: 2s ease-in-out 3s; 
             // transform: rotate(720deg);
-            background: transparent;
+            // background: pink;
             transition: 2s ease-in;
+            // border: 1px solid dimgray;
+            // border-radius: 50%;
+            // padding: auto;
 
             &::before {
                 transition: 2s ease-in-out;
                 left: 1em;
-                // width: 28px;
+                width: 28px;
                 // content: 'close';
                 // writing-mode: horizontal-tb;
                 // text-orientation: sideways;
                 // transition: all .2s ease-in 3s;
-                transform: rotate(45deg) translate(2px, 10px);
+                transform: rotate(15deg) translate(-1px, 5px);
             }
 
             &::after {
                 transition: 2s ease-in-out;
                 left: 1em;
-                // width: 28px;
-                transform: rotate(-45deg) translate(-7px, -5px);
+                width: 28px;
+                transform: rotate(-15deg) translate(-4px, -5px);
             }
         }
     }
@@ -232,12 +236,14 @@ header{
                                 width: 50%;
                                 position: fixed;
                                 z-index: -1;
+                                
 
                                 .home-project-preview {
                                     position: fixed;
                                     width: 0%;
                                     // width: 50%;
                                     height: 120px;
+                                    filter: grayscale(100%);
                                     background: url('../../images/members/woozi_attacca_op1.jpg') no-repeat fixed center;
                                     background-size: cover;
                                     overflow: hidden;
@@ -261,7 +267,7 @@ header{
 
                             &:nth-child(1){
                                 width: 70%;
-                                filter:   opacity(0.3) grayscale(100%);
+                                filter: grayscale(100%);
                                 // margin-right: 2em;
                                 // display: flex;
                                 // height: 100px;
@@ -271,7 +277,9 @@ header{
                                 // background-size: cover;
 
                                 .profile-project-preview {
-                                    // position: fixed;
+                                    // position: absolute;
+                                    // top: 0;
+                                    // right: 0;
                                     width: 0%;
                                     // width: 100%;
                                     height: 120px;
@@ -318,7 +326,6 @@ header{
     
                     &:nth-child(3){
                         text-align: left;
-                        margin-left: 1em;
 
                         span{
                             display: inline-block;
@@ -340,14 +347,10 @@ header{
                             }
     
                             &:nth-child(2){
-                                // display: none;
                                 width: 55%;
-                                // height: 100px;
                                 position: fixed;
                                 z-index: -1;
                                 margin-left: -2em;
-                                // background: url("../../../images/members/woozi_attacca_op1.jpg") no-repeat fixed center;
-                                // background-size: cover;
 
                                  .discography-project-preview {
                                     position: fixed;
@@ -367,16 +370,6 @@ header{
                                 }
                             }
                         }
-                        
-
-                        
-
-                        // &:hover{
-                        //     background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
-                        //     background-size: 700px;
-                        //     // transition: 2s ease-in; 
-                        //     // animation: navItemOneBackground 2s ease 1 forwards;
-                        // }
                     }
     
                     &:nth-child(4){
@@ -463,7 +456,7 @@ header{
                             top: 40%;
                             left: 0;
                             animation: strike 1s cubic-bezier(0.1, 0.7, 1.0, 0.1) 1 forwards;
-                            background: white;   
+                            background: black;   
                         }                  
                     }
     
@@ -500,17 +493,12 @@ header{
             background-color: black;
             color: white;
         }
-
-        
-        
     }
 
     .credits{
         position: absolute;
         bottom: 0;
-        // bottom: -0.5em;
         width: 100%;
-        
         text-align: center;
         font-size: 1.2em;
         text-transform: uppercase;
@@ -522,15 +510,10 @@ header{
             margin-right: auto;
             width: 30%;
             transition: .2s ease-in;
-            // text-align: center;
-           
-
             a{
                 &:hover{
-                    // animation: strike 2s ease 1 forwards;
                     color: inherit;
                     transition: .2s ease-in;
-                    // transition: all 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
                 }
             }
         }
@@ -540,127 +523,3 @@ header{
     
 }
 
-
-
-// #colorMode, .menu_btn {
-//     display: block;
-// }
-
-
-#group{
-    position: absolute;
-    left: 0.5em;
-    bottom: 0;
-
-    a:visited{
-        // color: dimgray;
-        filter: invert(100%);
-    }
-    .glitch{
-        font-family: $sideBarFont;
-        font-size: 2.5em;
-        writing-mode: vertical-lr;
-        text-orientation: upright;
-        
-
-        &::before, &::after{
-            content: 'SVT';
-            top: 0;
-            position: absolute;
-            overflow: hidden;
-
-            
-        }
-
-        &::before{
-            right: 4px;
-            text-shadow: 2px 0px #f7cac9;
-            animation: effect 3s infinite linear;
-        }
-
-        &::after{
-            left: 2px;
-            text-shadow: 2px 0px #92a8d1;
-            animation: effect 2s infinite linear;
-        }
-
-        @keyframes effect {
-            0%{
-                clip: rect(55px,9999px,56px,0);
-            }
-            5%{
-                clip: rect(47px,9999px,30px,0);
-            }
-            10%{
-                clip: rect(33px,9999px,99px,0);
-            }
-            15%{
-                clip: rect(3px,9999px,19px,0);
-            }
-            20%{
-                clip: rect(54px,9999px,109px,0);
-            }
-            25%{
-                clip: rect(96px,9999px,989px,0);
-            }
-            30%{
-                clip: rect(54px,9999px,109px,0);
-            }
-            35%{
-                clip:rect(50px,9999px,34px,0);
-            }
-            40%{
-                clip:rect(60px,9999px,72px,0);
-            }
-            45%{
-                clip:rect(10px,9999px,81px,0);
-            }
-            50%{
-                clip:rect(2px,9999px,68px,0);
-            }
-            55%{
-                clip:rect(23px,9999px,89px,0);
-            }
-            60%{
-                clip:rect(76px,9999px,91px,0);
-            }
-            65%{
-                clip:rect(62px,9999px,30px,0);
-            }
-            70%{
-                clip:rect(60px,9999px,73px,0);
-            }
-            75%{
-                clip:rect(60px,9999px,87px,0);
-            }
-            80%{
-                clip:rect(2px,9999px,14px,0);
-            }
-            85%{
-                clip:rect(28px,9999px,87px,0);
-            }
-            90%{
-                clip:rect(73px,9999px,50px,0);
-            }
-            95%{
-                clip:rect(79px,9999px,70px,0);
-            }
-            100%{
-                clip:rect(17px,9999px,79px,0);
-            }
-        }
-
-        a{
-            text-decoration: none;
-            // color: inherit;
-
-            &:visited{
-                // color: dimgray;
-                filter: invert(100%);
-            }
-        }
-
-        
-    }
-    
-}

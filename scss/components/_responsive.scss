@@ -295,129 +295,43 @@
 
     // HOME 
     .mainHome{
+        // font-family: $discographyfont;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // width: 90vw;
         height: 90%;
-        width: 70vw;
-    
+        // background-color: rgba(255, 255, 255, 0.153);
+        overflow: hidden;
+
         &__paragraph{
-            margin-top: 7em;
-            width: 100vw;
-            height: 100%;
-            // position: fixed;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            width: 90%;
+            // height: 90%;
+            // text-align: center;
 
-            &__topic{
+            &__image{
+                background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed 57%;
+                background-size: cover;
+                // filter: grayscale(80%) opacity(0.5);
+                // filter: grayscale(80%) hue-rotate(20);
+                // width: 100%;
+                // height: 100%;
+            }
+       
+            h1{
                 position: absolute;
-                content: "Name";
-                font-size: 1em;
-                opacity: 0.2;
-                margin-top: -0.2em;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3em;
+                width: 100%;
             }
-            
-            &__title{
-                // position: fixed;
-                width: 70%;
-                font-size: 4em;
-                
-                
-            }
-            &__subtitle{
-                // position: fixed;
-                top: 4em;
-                right: 0;
-                font-size: 0.6em;
-                padding: 3em 1em;
-                width: 75px;
-    
-                &::before{
-                    position: absolute;
-                    content: "";
-                    border: 1px solid silver;
-                    border-radius: 50%;
-                    padding: 3.6em;
-                    top: 0;
-                    left: 0;
-                }
 
-                &::after{
-                    position: absolute;
-                    content: "";
-                    border: 1px solid silver;
-                    border-radius: 50%;
-                    padding: 3.6em;
-                    top: -0.1em;
-                    left: 0.2em;
-                }
-            }
-    
-            &__description{
-                // position: fixed;
-                // top: 50%;
-                font-size: 0.7em;
-                margin-bottom: 1em;
-                
-            }
-    
-            &__images{
-                display: block;
-                width: 70%;
-
-                &__image1Div{
-                    height: 200px;
-                    &__image1{
-                        width: 100%;
-                        height: 250px;
-                        object-fit: cover;
-                        object-position: center;
-                        backdrop-filter: invert(90%);
-                    }
-                }
-                &__image2Div{
-                    &__image2{
-                        // width: 100%;
-                        // height: 50px;
-                        // object-fit: contain;
-                        // object-position: left;
-
-                        display: none;
-                    }
-                }
-            }
-    
-            &__imagesOutside{
-                &__image3{
-                    // position: absolute;
-                    // top: -20em;
-                    // width: 50%;
-                    // height: 50%;
-                    // z-index: -1;
-                    // object-fit: cover;
-                    // object-position: center -50%;
-                    // border-radius: 10%;
-                    // filter: brightness(60%) grayscale(100%) opacity(0.5);
-                    display: none;
-                }
-    
-                &__image4{
-                    position: absolute;
-                    bottom: -17em;
-                    width: 60%;
-                    height: 50%;
-                    z-index: -1;
-                    object-fit: cover;
-                    border-radius: 20px;
-                    filter: brightness(40%) grayscale(100%);
-                }
-                &__image5{
-                    position: absolute;
-                    right: 0;
-                    bottom: -21em;
-                    width: 35%;
-                    height: 50%;
-                    z-index: -1;
-                    object-fit: cover;
-                    border-radius: 20px;
-                    filter: brightness(60%) grayscale(100%);
-                }
-            }
         }
     }
     // MEMBERS
@@ -506,10 +420,10 @@
         padding: 0 0;
         // width: 75%;
 
-        &__seventeen__name{
+        &__seventeen_name{
             position: absolute;
             // font-size: 8em;
-            font-size: 5em;
+            font-size: 2em;
             // font-family: $discographyfont;
             filter: invert(50%);
             margin-top: -1em;
@@ -571,12 +485,14 @@
                     filter: grayscale(0%);
                 }
     
-                &__names{
-                    text-align: center;
-                    font-size: 1.3em;
-                    width: 100%;
-                    // background-color: #000;
-                    // background-image: none;  
+                &__membersNameDiv{
+                    &__names{
+                        text-align: center;
+                        font-size: 1.3em;
+                        width: 100%;
+                        // background-color: #000;
+                        // background-image: none;  
+                    }
                 }
     
             }
