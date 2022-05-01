@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;
+    width: 100%;
     height: 100%;
     padding: 0 2em;
     margin-left: auto;
@@ -85,13 +85,14 @@
             margin-right: auto;
             
 
-            &::before{
-                // content: "Name";
-                // position: absolute;
-                // font-size: 5em;
+            &::after{
+                content: "We are";
+                position: absolute;
+                font-size: 5em;
                 // opacity: .5;
+                // top: 100%;
                 // left: 50%;
-                display: none;
+                // display: none;
             }
 
             &:hover{
@@ -130,7 +131,7 @@
             // position: absolute;
             
             &__debut{
-                background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed;
+                background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed right;
                 background-size: 300px;
                 background-blend-mode: saturation;
                 // top: 20em;
@@ -154,9 +155,9 @@
                 &::before{
                     content: "Debut";
                     position: absolute;
-                    font-size: 5em;
+                    font-size: 10em;
                     opacity: .5;
-                    right: 3.5em;
+                    // right: 3.5em;
                     margin-top: -1em;
                 }
     
@@ -233,6 +234,8 @@
         }
 
         &__fandom{
+            position: relative;
+            left: 5%;
             margin-top: 35em;
             background: url("../../../images/members/hoshi_attacca_op1.jpg") no-repeat fixed;
             background-size: cover;
@@ -242,42 +245,87 @@
             &::before{
                 content: "Fandom";
                 position: absolute;
-                font-size: 5em;
+                font-size: 10em;
                 opacity: .5;
-                margin-top: -0.5em;
+                margin-top: -0.6em;
                 left: 0;
                 z-index: 1;
             }
         }
 
-        &__colors{
+        &__colorsDiv{
+            position: relative;
             margin-top: 20em;
-            margin-left: 50%;
-            background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
-            background-size: cover;
-            height: 20em;
-            width: 20em;
+            width: 90%;
+            height: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            // background-color: aqua;
 
-            &::before{
-                content: "Fan Colors";
+            &__colors{
+                // height: 10em;
+                // background: url("../../../images/members/minghao_attacca_op1.jpg") no-repeat fixed;
+                // background-size: cover;
+                
+                // width: 20em;
+                // background-color: aquamarine;
+    
+                // &::before{
+                    // content: "Fan Colors";
+                    position: absolute;
+                    left: 50%;
+                    font-size: 10em;
+                    opacity: .5;
+                    // margin-top: -0.7em;
+                    margin-left: -1em;
+                    z-index: 1;
+                    // background-color: aqua;
+                // }
+            }
+
+            &__theColors{
                 position: absolute;
-                font-size: 5em;
-                opacity: .5;
-                margin-top: -0.7em;
-                margin-left: -1em;
-                z-index: 1;
+                top: 20%;
+                left: 10%;
+                width: 100%;
+                // background-color: aqua;
+                margin-left: auto;
+                    margin-right: auto;
+
+                p{
+                    display: inline-block;
+                    // margin-left: auto;
+                    // margin-right: auto;
+                    margin: 10%;
+                    padding: 8%;
+                    border-radius: 50%;
+                    // height: 180px;
+                    // width: 180px;
+                    text-align: center;
+
+                    &:nth-child(1){
+                        background-color:  #f7cac9;
+                        
+                    }
+                    &:nth-child(2){
+                        background-color:   #92a8d1;
+                    }
+                }
             }
         }
 
         &__members{
-            margin-top: 15em;
+            margin-top: 25em;
             // right: 3em;
-            width: 100%;
-            text-align: right;
+            // height: 100%;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            
             display: grid;
             grid-template-columns: 45% 55%;
             transition: .5s ease-in-out;
-            filter: grayscale(100%);
+            
 
             // &:hover{
             //     filter: grayscale(0%);
@@ -287,64 +335,92 @@
             &::before{
                 content: "Members";
                 position: absolute;
-                font-size: 5em;
+                font-size: 10em;
                 opacity: .5;
                 margin-top: -0.7em;
-                left: 0;
+                left: 0.3em;
                 z-index: 1;
             }
 
 
             &__image{
                 width: 40em;
-                transition: .5s ease-in-out;
+                // transition: .1s ease-in-out;
+                filter: grayscale(100%);
                 // height: 20em;
                 height: 40em;
                 object-fit: cover;
                 object-position: center 10%;
     
                 &:hover{
+                    filter: grayscale(100%);
                     transition: .5s ease-in;
                 }
             }
 
-            &__names{
+            &__membersNameDiv{
                 z-index: 1;
-                font-size: 3.3em;
-                transition: .2s ease-in-out;
-                display: block;
-                // position: absolute;
-                // top: 50%;
-                // width: 50%;
+                height: 40em;
+                // background-color: aqua;
+                position: relative;
                 
-                span{
-                
+                &__names{
+                    font-size: 3.3em;
+                    transition: .2s ease-in-out;
+                    text-align: right;
+                    
+                    span{
+                        &:hover{
+                            opacity: 1;
+                            filter: invert(80%) drop-shadow(2px 2px gray);
+                            transition: .2s ease-in-out;
+                        }
+    
+                        &:hover::after{
+                            content: '';
+                            position: absolute;
+                            top: 40%;
+                            left: 0;   
+                            animation: name-strike 1s ease 1 forwards;
+                            background: white; 
+                        }
+                        
+                        
+                        @keyframes name-strike {
+                            0% { width: 0; height: 2px;}
+                            50% { width: 10%; height: 2px;}
+                            75% { width: 85%; height: 2px;}
+                            100% { width: 0%; height: 2px;}
+                        } 
+                    }
+                }
+    
+                &__link{
+                    // margin-top: 100em;
+                    position: absolute;
+                    // width: 20%;
+                    // color: pink;
+                    // text-decoration: none;
+                    // backdrop-filter: invert(20%);
+                    // backdrop-filter: invert(20%) blur(20px);
+                    // border: 1px solid white;
+                    font-size: 15px;
+                    margin-left: 4em;
+                    padding: 0 1em 1em 1em;
+                    bottom: 0;
+                    // width: 200px;
+                    text-align: center;
+                    transition: .2s ease-in;
+    
                     &:hover{
-                        opacity: 1;
-                        filter: invert(80%) drop-shadow(2px 2px gray);
-                        transition: .2s ease-in-out;
+                        // color: inherit;
+                        // background-color: white;
+                        // filter: invert(100%);
+                        backdrop-filter: invert(20%) blur(20px);
+                        transition: .2s ease-in;
                     }
-
-                    &:hover::after{
-                        content: '';
-                        position: absolute;
-                        top: 40%;
-                        left: 0;   
-                        animation: name-strike 1s ease 1 forwards;
-                        background: white; 
-                    }
-                    
-                    
-                    @keyframes name-strike {
-                        0% { width: 0; height: 2px;}
-                        50% { width: 10%; height: 2px;}
-                        75% { width: 85%; height: 2px;}
-                        100% { width: 0%; height: 2px;}
-                    } 
                 }
             }
-
-            
         }
 
         &__sub_units_list{
@@ -364,7 +440,7 @@
             &::before{
                 content: "Sub-Units";
                 position: absolute;
-                font-size: 5em;
+                font-size: 10em;
                 opacity: .5;
                 left: 1.8em;
                 width: 100%;
@@ -502,188 +578,137 @@
         }
         
 
-        &__filmography{
-            margin-top: 4em;
-            // margin-bottom: 3em;
-            // right: 3em;
-            // width: 30em;
-            // height: 40em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
-            // text-align: center;
-            padding: 2em;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-                
-            
-            &::before{
-                content: "Filmography";
-                position: absolute;
-                font-size: 5em;
-                opacity: .5;
-                margin-left: -2em;
-                margin-top: -0.3em;
-                // left: 1.8em;
-                // width: 100%;
-                // text-align: center;
-                // margin-left: auto;
-                // margin-right: auto;
-                // text-align: center;
-            }
+        &__filmRelated{
+            // height: auto;
+            margin-top: 10em;
+            display: grid;
+            grid-template-columns: 25% 75%;
 
-            &:hover{
-                filter: grayscale(0%);
-                transition: .5s ease-in;
+
+            &__filmography{
+                filter: grayscale(100%);
+                transition: .5s ease-in-out;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                    
+                
+                &::before{
+                    content: "Filmography";
+                    position: absolute;
+                    font-size: 5em;
+                    opacity: .5;
+                    top: -2em;
+                }
+    
+                &:hover{
+                    filter: grayscale(0%);
+                    transition: .5s ease-in;
+                }
             }
-        }
+            
+    
+            &__filmsInFilmography{
+                background: purple;
+                height: auto;
+                // position: relative;
+                div{
+                    margin-bottom: 2em;
+                }
+
+                &__television{
+                    position: relative;
+                    left: 1em;
+                    background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
+                    background-size: cover;
+                    // background: pink;
+                    background-blend-mode: saturation;
+                    width: 25em;
+                    height: 25em;
+                    filter: grayscale(100%);
+                    transition: .5s ease-in-out;
         
-
-        &__television{
-            // position: absolute;
-            background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
-            background-size: cover;
-            background-blend-mode: saturation;
-            // display: inline-block;
-            // top: 115em;
-            // right: 3.5em;
-            width: 25em;
-            height: 25em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
-            margin-left: 2em;
-            // text-align: left;
-            padding: 2em;
-            // margin-top: 20em;
-            margin-top: 8em;
-            // margin-bottom: 2em;
-
-            div{
-                padding-top: 1em;
+                    &::before{
+                        content: "Television";
+                        position: absolute;
+                        font-size: 5em;
+                        opacity: .5;
+                        top: -0.7em;
+                        left: -0.7em;
+                    }
+        
+                    &:hover{
+                        filter: grayscale(0%);
+                        transition: .5s ease-in;
+                    }
+                }
+    
+                &__onlineshows{
+                    position: absolute;
+                    right: 5em;
+                    background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed;
+                    background-size: cover;
+                    background-blend-mode: saturation;
+                    width: 25em;
+                    height: 400px;
+                    filter: grayscale(100%);
+                    transition: .5s ease-in-out;
+                    text-align: left;
+                    
+                    &::before{
+                        content: "Online Shows";
+                        position: absolute;
+                        font-size: 5em;
+                        opacity: .5;
+                        text-align: right;
+                        bottom: -1.3em;
+                        right: -0.5em;
+                    }
+        
+                    &:hover{
+                        filter: grayscale(0%);
+                        transition: .5s ease-in;
+                    }
+                }
+    
+                &__film{
+                    position: relative;
+                    top: 25em;
+                    left: 3em;
+                    background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
+                    background-size: cover;
+                    background-blend-mode: saturation;
+                    width: 25em;
+                    height: 400px;
+                    filter: grayscale(100%);
+                    transition: .5s ease-in-out;
+                    text-align: left;
+        
+                    &::before{
+                        content: "Film";
+                        position: absolute;
+                        font-size: 5em;
+                        opacity: .5;
+                        text-align: right;
+                        bottom: -0.5em;
+                        right: -0.5em;
+                        
+                    }
+        
+                    &:hover{
+                        filter: grayscale(0%);
+                        transition: .5s ease-in;
+                    }
+                }
             }
-
-            &::before{
-                content: "Television";
-                position: absolute;
-                font-size: 5em;
-                opacity: .5;
-                top: -0.7em;
-                left: -0.7em;
-                // bottom: 0;
-            }
-
-            &:hover{
-                filter: grayscale(0%);
-                transition: .5s ease-in;
-            }
+    
         }
-        &__onlineshows{
-            position: absolute;
-            right: 4em;
-            background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed;
-            background-size: cover;
-            background-blend-mode: saturation;
-            // display: inline-block;
-            width: 25em;
-            height: 25em;
-            // margin-left: 15em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
-            text-align: left;
-            padding: 1em;
-            // margin-top: 2em;
-
-            
-
-            &::before{
-                content: "Online Shows";
-                position: absolute;
-                font-size: 5em;
-                opacity: .5;
-                text-align: right;
-                bottom: -1.3em;
-                // padding-right: -25em;
-                right: -0.5em;
-                
-            }
-
-            &:hover{
-                filter: grayscale(0%);
-                transition: .5s ease-in;
-            }
-        }
-        &__film{
-            // position: absolute;
-            left: 1em;
-            background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
-            background-size: cover;
-            background-blend-mode: saturation;
-            // display: inline-block;
-            width: 25em;
-            height: 25em;
-            margin-left: 5em;
-            filter: grayscale(100%);
-            transition: .5s ease-in-out;
-            text-align: left;
-            padding: 1em;
-            margin-top:20em;
-
-            
-
-            &::before{
-                content: "Film";
-                position: absolute;
-                font-size: 5em;
-                opacity: .5;
-                text-align: right;
-                bottom: -0.5em;
-                // padding-right: -25em;
-                right: -0.5em;
-                
-            }
-
-            &:hover{
-                filter: grayscale(0%);
-                transition: .5s ease-in;
-            }
-        }
-
-        // &__concerts{
-        //     display: none;
-        //     margin-top: 20em;
-        //     // margin-bottom: 3em;
-        //     // right: 3em;
-        //     // width: 30em;
-        //     // height: 40em;
-        //     filter: grayscale(100%);
-        //     transition: .5s ease-in-out;
-        //     // text-align: center;
-        //     padding-bottom: 2em;
-        //     // margin-left: auto;
-        //     // margin-right: auto;
-        //     text-align: left;
-        //     z-index: 10;
-            
-                
-            
-        //     &::before{
-        //         content: "Concerts";
-        //         position: absolute;
-        //         font-size: 5em;
-        //         opacity: .5;
-        //         // margin-left: -2em;
-        //         margin-top: -0.3em;
-        //     }
-
-        //     // &:hover{
-        //     //     filter: grayscale(0%);
-        //     //     transition: .5s ease-in;
-        //     // }
-        // }
+  
 
         &__concerts{
-            margin-top: 20em;
-            // position: absolute;
+            margin-top: 15em;
             background: url("../../../images/home_page/attacca/attacca_group_photo_2.jpeg") no-repeat fixed center;
             background-size: cover;
             height: 80%;
@@ -693,9 +718,8 @@
             &::before{
                 content: "Concerts";
                 position: absolute;
-                font-size: 5em;
+                font-size: 10em;
                 opacity: .5;
-                // margin-left: -2em;
                 margin-top: -0.7em;
             }
 
