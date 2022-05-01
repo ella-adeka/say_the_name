@@ -29,7 +29,7 @@ membersData.forEach(member => {
         </div>   
         <p class="mainMembers__dets__pronunciation"> ${member.pronunciation}</p>
         <p class="mainMembers__dets__number">
-            ${member.id}
+            ${member.id}<sub class="totalMembers">/${membersData.length}</sub>
         </p>
     `;
 
@@ -44,3 +44,41 @@ membersData.forEach(member => {
 });
 
 // <p class="mainMembers__dets__info__korean_name" ><span class="mainMembers__dets__info__label">Korean Name:</span> ${member.korean_name}</p>
+
+const showTheDiv = document.querySelector(".mainMembers__dets__imageDiv");
+
+const closeMember = document.querySelector(".close");
+const theDiv = document.querySelector(".theDiv");
+
+let showSpecificMember = false;
+
+showTheDiv.addEventListener('click', toggleMember);
+closeMember.addEventListener('click', closeMemberFunc);
+
+function toggleMember() {
+  if(!showSpecificMember) {
+    theDiv.classList.add('show');
+    localStorage.setItem('member', 'showing');
+    console.log("showing");
+
+    showSpecificMember = true;
+  } else {
+    theDiv.classList.remove('show');
+    localStorage.setItem('member', 'not showing');
+    console.log("not showing");
+
+    showSpecificMember = false;
+  }
+}
+
+function closeMemberFunc() {
+    localStorage.setItem('member', 'not showing');
+    theDiv.classList.remove('show');
+
+    showSpecificMember = false;
+    console.log("false")
+}
+
+if (localStorage.getItem("member") === "showing") {
+    theDiv.classList.add('show');
+}
