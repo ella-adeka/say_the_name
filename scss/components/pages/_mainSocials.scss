@@ -6,6 +6,7 @@
     // &.openFooter{
     //     visibility: visible;
     // }
+    font-family: $discographyfont;
 
     .socialsBar{
         text-align: center;
@@ -27,23 +28,39 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                h2{
+                    font-size: 2em;
+                }
+            
+                a{
+                    text-decoration: none;
+                }
+
+                
             &__links{
                 display: block;
-                padding-bottom: 1.3em;
+                padding: .5em;
                 transition: .2s ease-in;
+
+                i{
+                    font-size: 15px;
+                } 
     
                 &:hover{
                     color: inherit;
                     transition: .2s ease-in;
+
+                    sup{
+                        i{
+                            transform: rotate(360deg);
+                            transition: .5s ease-in;
+                            opacity: 1;
+                        }
+                    }
                 }
     
-                i{
-                    &:hover{
-                        transform: rotate(360deg);
-                        transition: .5s ease-in;
-                        opacity: 1;
-                    } 
-                }  
+                 
             }
         }
     }
