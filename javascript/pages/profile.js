@@ -4,6 +4,33 @@ const groupName = document.querySelector(".mainProfile__paragraph__name");
 const seventeen = document.querySelector(".mainProfile__seventeen_name");
 const debutImages = document.querySelector(".mainProfile__paragraph__debutImages");
 
+const body = document.querySelector('body');
+const fanColorRose = document.querySelector(".roseQuartz");
+const fanColorSerenity = document.querySelector(".serenity");
+var tl = gsap.timeline();
+var color = localStorage.getItem("mode");
+console.log(color);
+
+if (color === "dark") {
+    body.classList.add("dark");
+}
+
+fanColorRose.addEventListener('mouseover', () => {
+    tl.to('body', {duration: 1.2, "background-size": "100%",ease: "Cubic.easeInOut"})
+});
+
+fanColorRose.addEventListener('mouseout', () => {
+    tl.to('body', {duration: 0.6, "background-size": "0%",ease: "Expo.easeInOut"})
+});
+
+fanColorSerenity.addEventListener('mouseover', () => {
+    tl.to('body', {duration: 1.2, "background-color": "#92a8d1",ease: "Cubic.easeInOut"})
+});
+
+fanColorSerenity.addEventListener('mouseout', () => {
+    tl.to('body', {duration: 0.6, "background-color": "#000",ease: "Expo.easeInOut"})
+});
+
 const hhu = document.querySelector(".mainProfile__paragraph__units__unit__hhu");
 
 const scoups = document.querySelector(".scoups");
@@ -60,7 +87,8 @@ mainProfile.addEventListener("scroll", () => {
 
 
 // DISPLAY MEMBERS NAMES IN MEMBER SECTION OF PROFILE
-const namesParagraph = document.querySelector('.mainProfile__paragraph__members__names');
+const namesDiv = document.querySelector('.mainProfile__paragraph__members__membersNameDiv');
+const namesParagraph = document.querySelector('.mainProfile__paragraph__members__membersNameDiv__names');
 const profileMembersImage = document.querySelector('.mainProfile__paragraph__members__image');
 
 profileMembersData.forEach(profileMember => {
@@ -107,3 +135,12 @@ wonwoo.addEventListener("mouseover", () => {
 // hhu.addEventListener("mouseover", () => {
 //     hhu.style.cssText = "background: url('/images/units/hhu_3.jpeg') no-repeat fixed; background-size: cover;";
 // })
+
+const membersProfileLink = document.createElement("a");
+membersProfileLink.setAttribute("href", "members.html");
+membersProfileLink.setAttribute( "class", "mainProfile__paragraph__members__membersNameDiv__link");
+membersProfileLink.innerHTML = `
+    <br> View Members Profile
+`;
+namesDiv.append(membersProfileLink);
+// console.log(membersProfileLink);
