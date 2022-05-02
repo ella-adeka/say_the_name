@@ -13,6 +13,42 @@ body.dark{
     background: black;
     // background: linear-gradient(125deg, #f7cac9 ,  #92a8d1 );
     color: white;
+
+    .navbar{
+        background-color: black;
+        color: white;
+    }
+
+    .footerBar{
+        backdrop-filter: invert(20%) blur(20px);
+    }
+
+
+    .mainHome{
+        &__paragraph{
+
+            &__image{
+                background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center 55%;
+                background-size: cover;
+                filter: grayscale(80%)  opacity(0.7);
+            }
+        }
+    }
+
+    .mainMembers{
+
+        &__dets{
+
+            &__info{
+
+                color: white;
+            }
+        }
+    }
+
+    .theDiv{
+        background-color: black;
+    }
 }
 
 
