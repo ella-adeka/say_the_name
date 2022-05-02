@@ -323,13 +323,21 @@
                 // height: 100%;
             }
        
-            h1{
+            &__intro{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                font-size: 3em;
+                // font-size: 3em;
                 width: 100%;
+
+                p{
+                    font-size: 1em;
+                }
+    
+                h1{
+                    font-size: 4em;
+                }
             }
 
         }

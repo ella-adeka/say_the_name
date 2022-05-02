@@ -28,6 +28,26 @@
   src: url("../../fonts/newyork/NewYork.otf");
 }
 
+@font-face {
+  font-family: Femme Fatale;
+  src: url("../../fonts/FemmeFatale/FemmeFatale-Regular.otf");
+}
+
+@font-face {
+  font-family: Hugo;
+  src: url("../../fonts/Hugo/Hugo.otf");
+}
+
+@font-face {
+  font-family: Dolce Gargia;
+  src: url("../../fonts/dolce_gargia/Dolce Gargia.otf");
+}
+
+@font-face {
+  font-family: Trovas;
+  src: url("../../fonts/TrovasDemo/Trovas Demo.otf");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -84,6 +104,31 @@ body.dark {
   color: white;
 }
 
+body.dark .navbar {
+  background-color: black;
+  color: white;
+}
+
+body.dark .footerBar {
+  -webkit-backdrop-filter: invert(20%) blur(20px);
+          backdrop-filter: invert(20%) blur(20px);
+}
+
+body.dark .mainHome__paragraph__image {
+  background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center 55%;
+  background-size: cover;
+  -webkit-filter: grayscale(80%) opacity(0.7);
+          filter: grayscale(80%) opacity(0.7);
+}
+
+body.dark .mainMembers__dets__info {
+  color: white;
+}
+
+body.dark .theDiv {
+  background-color: black;
+}
+
 .clicked {
   background: white;
 }
@@ -101,18 +146,6 @@ body.dark {
   pointer-events: none;
   -webkit-backdrop-filter: invert(80%);
           backdrop-filter: invert(80%);
-}
-
-#cursor.dark {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
 }
 
 .expand {
@@ -172,8 +205,8 @@ header {
 .menu_btn__burger {
   position: absolute;
   top: 0;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
 }
@@ -550,11 +583,6 @@ header {
   width: 100%;
 }
 
-.nav .navbar.dark {
-  background-color: black;
-  color: white;
-}
-
 .nav .credits {
   position: absolute;
   bottom: 0;
@@ -601,25 +629,35 @@ header {
   width: 90%;
   height: 90%;
   text-align: center;
+  color: ghostwhite;
 }
 
 .mainHome__paragraph__image {
-  background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center 55%;
+  background: url("../../../images/home_page/attacca/attacca_group_photo_2.jpeg") no-repeat fixed center 55%;
   background-size: cover;
-  -webkit-filter: grayscale(80%) opacity(0.5);
-          filter: grayscale(80%) opacity(0.5);
+  -webkit-filter: grayscale(100%) brightness(70%);
+          filter: grayscale(100%) brightness(70%);
   width: 100%;
   height: 100%;
 }
 
-.mainHome__paragraph h1 {
+.mainHome__paragraph__intro {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 5em;
   width: 100%;
+}
+
+.mainHome__paragraph__intro p {
+  font-size: 1em;
+}
+
+.mainHome__paragraph__intro h1 {
+  font-size: 5em;
+  font-family: Trovas;
+  font-weight: bolder;
 }
 
 .mainProfile {
@@ -706,32 +744,23 @@ header {
 
 .mainProfile__paragraph__debutDiv {
   height: 20em;
-  margin-top: 15em;
+  margin-top: 20em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mainProfile__paragraph__debutDiv__debut {
-  background: url("../../../images/members/dk_attacca_op1.jpg") no-repeat fixed right;
-  background-size: 300px;
-  background-blend-mode: saturation;
-  margin-right: 0;
   height: 20em;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  text-align: left;
+  text-align: center;
   padding: 0;
 }
 
-.mainProfile__paragraph__debutDiv__debut__debut {
-  position: absolute;
-  margin-top: -4.5em;
-  margin-left: -12em;
-}
-
-.mainProfile__paragraph__debutDiv__debut::before {
-  content: "Debut";
-  position: absolute;
+.mainProfile__paragraph__debutDiv__debut__debutWord {
   font-size: 10em;
   opacity: .5;
   margin-top: -1em;
@@ -742,6 +771,15 @@ header {
           filter: grayscale(0%);
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
+}
+
+.mainProfile__paragraph__debutDiv__debut__date {
+  font-size: 3em;
+}
+
+.mainProfile__paragraph__debutDiv__debut__image {
+  width: 400px;
+  padding: 2em;
 }
 
 @-webkit-keyframes debut {
@@ -763,7 +801,7 @@ header {
 }
 
 .mainProfile__paragraph__debutdate {
-  margin-top: -10em;
+  text-align: right;
   width: 60%;
 }
 
@@ -784,17 +822,11 @@ header {
   margin-top: 15em;
 }
 
-.mainProfile__paragraph__debutImages__para {
-  white-space: nowrap;
-  margin: 5px 0;
-}
-
-.mainProfile__paragraph__debutImages__para__image {
+.mainProfile__paragraph__debutImages__image {
   z-index: -10;
   position: relative;
   padding: 1em;
-  width: 40em;
-  height: 30em;
+  width: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1185,7 +1217,7 @@ header {
   position: absolute;
   font-size: 5em;
   opacity: .5;
-  top: -2em;
+  top: -1em;
 }
 
 .mainProfile__paragraph__filmRelated__filmography:hover {
@@ -1196,7 +1228,6 @@ header {
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography {
-  background: purple;
   height: auto;
 }
 
@@ -1205,8 +1236,7 @@ header {
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography__television {
-  position: relative;
-  left: 1em;
+  margin-left: 1em;
   background: url("../../../images/members/jun_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
@@ -1216,6 +1246,10 @@ header {
           filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+}
+
+.mainProfile__paragraph__filmRelated__filmsInFilmography__television div {
+  padding: 2em;
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography__television::before {
@@ -1235,8 +1269,8 @@ header {
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows {
-  position: absolute;
-  right: 5em;
+  margin-top: 5em;
+  margin-left: 50%;
   background: url("../../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
@@ -1247,6 +1281,10 @@ header {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
+}
+
+.mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows div {
+  padding: 2em;
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows::before {
@@ -1267,9 +1305,8 @@ header {
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography__film {
-  position: relative;
-  top: 25em;
-  left: 3em;
+  margin-top: 5em;
+  margin-left: 3em;
   background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
   background-size: cover;
   background-blend-mode: saturation;
@@ -1280,6 +1317,10 @@ header {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   text-align: left;
+}
+
+.mainProfile__paragraph__filmRelated__filmsInFilmography__film div {
+  padding: 2em;
 }
 
 .mainProfile__paragraph__filmRelated__filmsInFilmography__film::before {
@@ -1339,7 +1380,7 @@ header {
 .mainMembers__dets {
   width: 100%;
   height: 100vh;
-  margin-bottom: 10em;
+  margin-bottom: 0.5px;
 }
 
 .mainMembers__dets:nth-child(13) {
@@ -1416,10 +1457,6 @@ header {
   color: black;
 }
 
-.mainMembers__dets__info.dark {
-  color: white;
-}
-
 .mainMembers__dets__info__label {
   font-weight: 800;
   margin-right: 0.5em;
@@ -1446,6 +1483,7 @@ header {
 
 .scroll {
   position: absolute;
+  z-index: -10;
   bottom: 0;
   right: 2em;
   padding: 2em;
@@ -1497,7 +1535,7 @@ header {
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: white;
   visibility: hidden;
 }
 
@@ -1505,37 +1543,150 @@ header {
   visibility: visible;
 }
 
+.theDiv .close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.theDiv .close::before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  right: 0.5em;
+  width: 28px;
+  -webkit-transform: rotate(15deg) translate(-1px, 5px);
+          transform: rotate(15deg) translate(-1px, 5px);
+  height: 2px;
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+}
+
+.theDiv .close::after {
+  content: '';
+  position: absolute;
+  top: 1.5em;
+  right: 0.5em;
+  width: 28px;
+  height: 2px;
+  -webkit-transform: rotate(-15deg) translate(-4px, -5px);
+          transform: rotate(-15deg) translate(-4px, -5px);
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+}
+
 .theDiv .membersCarousel {
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
-  padding-top: 10%;
   margin: auto;
+  overflow: hidden;
 }
 
 .theDiv .membersCarousel__paragraph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 95%;
+  height: 80%;
+  margin: auto;
   white-space: nowrap;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 
 .theDiv .membersCarousel__paragraph__image {
-  z-index: -10;
-  position: relative;
-  padding: 1em;
-  width: auto;
-  height: 70vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 20%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(1) {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-transform: translate(0px, 10%);
+          transform: translate(0px, 10%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(1):hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(2) {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-transform: translate(10px, 100%);
+          transform: translate(10px, 100%);
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(2):hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(3) {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-transform: translate(-25px, 5%);
+          transform: translate(-25px, 5%);
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(3):hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(4) {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-transform: translate(-50px, 80%);
+          transform: translate(-50px, 80%);
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(4):hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  z-index: 1;
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(5) {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  -webkit-transform: translate(-25px, 20px);
+          transform: translate(-25px, 20px);
+}
+
+.theDiv .membersCarousel__paragraph__image:nth-child(5):hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .theDiv .membersCarousel__paragraph__membersCarousel > img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: firebrick;
-  margin: 10px;
+}
+
+.theDiv .membersCarousel .member_name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em;
+  font-family: New York;
+  opacity: 0.5;
+  font-size: 5em;
 }
 
 .listen-link {
@@ -2035,11 +2186,6 @@ header {
   opacity: 1;
 }
 
-.footer .footerBar.dark {
-  -webkit-backdrop-filter: invert(20%) blur(20px);
-          backdrop-filter: invert(20%) blur(20px);
-}
-
 @media screen and (max-width: 300px) {
   .mainMembers {
     padding-top: 10%;
@@ -2222,14 +2368,19 @@ header {
     background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed 57%;
     background-size: cover;
   }
-  .mainHome__paragraph h1 {
+  .mainHome__paragraph__intro {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    font-size: 3em;
     width: 100%;
+  }
+  .mainHome__paragraph__intro p {
+    font-size: 1em;
+  }
+  .mainHome__paragraph__intro h1 {
+    font-size: 4em;
   }
   .mainMembers {
     width: 80%;
