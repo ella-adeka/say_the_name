@@ -7,20 +7,20 @@ const navBar = document.querySelector(".navbar");
 const footerBar = document.querySelector(".footerBar");
 const membersInfo = document.querySelectorAll(".mainMembers__dets__info");
 
-const colorMode = document.querySelector("#colorMode");
+// const colorMode = document.querySelector("#colorMode");
 
 
 colorMode.addEventListener("click", toggleMode);
 
 function toggleMode() {
     
-    if (!colorModeToggle && !body.classList.contains('dark')   && !cursor.classList.contains('dark') ) {
+    if (!colorModeToggle && !body.classList.contains('dark')   ) {
         body.classList.add('dark');
-        membersInfo.forEach(el => { el.classList.add('dark')});
-        cursor.classList.add('dark');
-        navBar.classList.add('dark');
-        footerBar.classList.add('dark');
-        colorMode.style.borderColor = "white";
+        // membersInfo.forEach(el => { el.classList.add('dark')});
+        // cursor.classList.add('dark');
+        // navBar.classList.add('dark');
+        // footerBar.classList.add('dark');
+        // colorMode.style.borderColor = "white";
         colorMode.textContent = "Face The Sun";
         body.style.transition = "2s ease-in";
         localStorage.setItem('mode', 'dark');
@@ -38,11 +38,11 @@ function toggleMode() {
     // } 
     else {
         body.classList.remove('dark');
-        membersInfo.forEach(el => { el.classList.remove('dark')});
-        cursor.classList.remove('dark');
-        navBar.classList.remove('dark');
-        footerBar.classList.remove('dark');
-        colorMode.style.borderColor = "black";
+        // membersInfo.forEach(el => { el.classList.remove('dark')});
+        // cursor.classList.remove('dark');
+        // navBar.classList.remove('dark');
+        // footerBar.classList.remove('dark');
+        // colorMode.style.borderColor = "black";
         colorMode.textContent = "Fear The Sun";
         body.style.transition = "2s ease-in";
         localStorage.setItem('mode', 'light');
@@ -52,11 +52,11 @@ function toggleMode() {
 
 if (localStorage.getItem("mode") === "dark") {
     body.classList.add('dark');
-    membersInfo.forEach(el => { el.classList.add('dark')});
-    cursor.classList.add('dark');
-    navBar.classList.add('dark');
+    // membersInfo.forEach(el => { el.classList.add('dark')});
+    // cursor.classList.add('dark');
+    // navBar.classList.add('dark');
     // footerBar.classList.add('dark');
-    colorMode.style.borderColor = "white";
+    // colorMode.style.borderColor = "white";
     colorMode.textContent = "Face The Sun";
 } 
 
