@@ -30,6 +30,23 @@
     font-family: New York;
     src: url('../../fonts/newyork/NewYork.otf');
 }
+@font-face {
+    font-family: Femme Fatale;
+    src: url('../../fonts/FemmeFatale/FemmeFatale-Regular.otf');
+}
+
+@font-face {
+    font-family: Hugo;
+    src: url('../../fonts/Hugo/Hugo.otf');
+}
+@font-face {
+    font-family: Dolce Gargia;
+    src: url('../../fonts/dolce_gargia/Dolce Gargia.otf');
+}
+@font-face {
+    font-family: Trovas;
+    src: url('../../fonts/TrovasDemo/Trovas Demo.otf');
+}
 
 $backGroundTextFont: Appears;
 // $sideBarFont: 'Epilogue', sans-serif;
@@ -37,6 +54,7 @@ $sideBarFont: Seraya;
 $navBarFont: Valery;
 $bodyTextFont: Valery;
 $discographyfont: New York;
+$Homefont: Trovas;
 // $bodyTextFont: 'Asap', sans-serif;
 
 
