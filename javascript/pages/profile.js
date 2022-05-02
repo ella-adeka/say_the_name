@@ -66,7 +66,7 @@ mainProfile.addEventListener("scroll", () => {
     // if (i == 400) {
         seventeen.setAttribute("style", "margin-left: -" + (i.toFixed()) + "px;");
     //    if (i == 100) {
-        debutImages.setAttribute("style", "margin-left: -" + (i.toFixed()) + "px;");
+        // debutImages.setAttribute("style", "margin-left: -" + (i.toFixed()) + "px;");
     //    }
         
 
