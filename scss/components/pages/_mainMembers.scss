@@ -120,9 +120,11 @@
 
             &__label{
                 // font-style: italic;
-                font-weight: 800;
+                // font-weight: 800;
                 margin-right: 0.5em;
-                filter: drop-shadow(1.5px 1.5px gray);
+                font-size: 1.2em;
+                opacity: .3;
+                // filter: drop-shadow(1.5px 1.5px gray);
             }
 
             &__name{
@@ -208,9 +210,11 @@
     height: 100%;
     background-color: white;
     visibility: hidden;
+    
 
     &.show{
         visibility: visible;
+        
     }
 
     .close{
@@ -243,6 +247,17 @@
             // transition: 2s ease-in-out;
         }
 
+        &:hover{
+            &::before{
+                transform: rotate(25deg) translate(-1px, 5px);
+                transition: .2s ease-in-out;
+            }
+            &::after{
+                transform: rotate(-25deg) translate(-4px, -5px);
+                transition: .2s ease-in-out;
+            }
+        }
+
     }
 
     .membersCarousel{
@@ -261,72 +276,99 @@
             width: 95%;
             height: 80%;
             margin: auto;
-            white-space: nowrap;
+                white-space: nowrap;
             // background-color: rgba(0, 255, 255, 0.542);
-    
-            &__image{
+            
+            li{
+                list-style: none;
                 width: 20%;
-                // height: 400px;
-                object-fit: contain;
-
-                &:nth-child(1){
-                    filter: grayscale(70%);
-                    // backdrop-filter: blur(20px);
-                    transform: translate(0px, 10%);
-                    transition: all .2s ease-in-out;
-
-                    &:hover{
-                        filter: grayscale(0%);
-                        // transform: translate(0px, 0%) rotate(0deg);
-                        transition: all .2s ease-in-out;
-                    }
-                }
-                &:nth-child(2){
-                    // z-index: 100;
-                    filter: grayscale(70%);
-                    backdrop-filter: blur(20px);
-                    transform: translate(10px, 100%);
-                    // -webkit-transform: translate(-10px, 20px) rotate(-10deg);
-
-                    &:hover{
-                        filter: grayscale(0%);
-                        // transform: translate(0px, 100%) rotate(0deg);
-                        transition: all .2s ease-in-out;
-                    }
-                }
-                &:nth-child(3){
-                    filter: grayscale(70%);
-                    transform: translate(-25px, 5%);
-
-                    &:hover{
-                        filter: grayscale(0%);
-                        // transform: translate(0px, 0%) rotate(0deg);
-                        transition: all .2s ease-in-out;
-                    }
-                }
-                &:nth-child(4){
-                    filter: grayscale(70%);
-                    transform: translate(-50px, 80%) ;
-
-                    &:hover{
-                        filter: grayscale(0%);
-                        // transform: translate(0px, 80%) rotate(0deg);
-                        transition: all .2s ease-in-out;
-                        z-index: 1;
-                    }
-                }
-                &:nth-child(5){
-                    filter: grayscale(70%);
-                    transform: translate(-25px, 20px);
-
-                    &:hover{
-                        filter: grayscale(0%);
-                        // transform: translate(-30px, 10px) rotate(10deg);
-                        transition: all .2s ease-in-out;
-                    }
-                }
-
+                height: 320px;
+                display: inline-block;
                 
+
+                span{
+                    width: 100%;
+                    height: 320px;
+                    .membersCarousel__paragraph__image{
+                        position: absolute;
+                        width: 100%;
+                        height: 330px;
+                        object-fit: cover;
+                        // transition: all 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+                    }
+
+                    // &:hover{
+                    //     .membersCarousel__paragraph__image{
+                    //         height: 320px;
+                    //         transition: all 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+                    //     }
+                    // }
+                }
+
+                    &:nth-child(1){
+                        // position: fixed;
+                        filter: grayscale(70%);
+                        // backdrop-filter: blur(20px);
+                        transform: translate(0px, 10%);
+                        // transition: all .2s ease-in-out;
+
+                        &:hover{
+                            filter: grayscale(0%);
+                            // transform: translate(0px, 0%) rotate(0deg);
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                    &:nth-child(2){
+                        // position: fixed;
+                        // z-index: 100;
+                        filter: grayscale(70%);
+                        backdrop-filter: blur(20px);
+                        transform: translate(10px, 100%);
+                        // -webkit-transform: translate(-10px, 20px) rotate(-10deg);
+
+                        &:hover{
+                            filter: grayscale(0%);
+                            // transform: translate(0px, 100%) rotate(0deg);
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                    &:nth-child(3){
+                        // position: fixed;
+                        filter: grayscale(70%);
+                        transform: translate(-25px, 0%);
+
+                        &:hover{
+                            filter: grayscale(0%);
+                            // transform: translate(0px, 0%) rotate(0deg);
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+                    &:nth-child(4){
+                        // position: fixed;
+                        filter: grayscale(70%);
+                        transform: translate(-50px, 80%) ;
+
+                        &:hover{
+                            filter: grayscale(0%);
+                            // transform: translate(0px, 80%) rotate(0deg);
+                            transition: all .2s ease-in-out;
+                            z-index: 1;
+                        }
+                    }
+                    &:nth-child(5){
+                        // position: fixed;
+                        filter: grayscale(70%);
+                        transform: translate(-25px, 10%);
+
+                        &:hover{
+                            filter: grayscale(0%);
+                            // transform: translate(-30px, 10px) rotate(10deg);
+                            transition: all .2s ease-in-out;
+                        }
+                    }
+
+                    
+                // }
             }
     
             &__membersCarousel > img {
