@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet">   
+    
+    <!-- BLOTTER RELATED -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js" integrity="sha512-Na4qwz8+Hb6JAVf8zFKtPri3XX/Z9/drSpFQuA9hUDnSYLFuu+GU0sfyDYw0SIUkvo/gSw//hCW/CjFJmIIc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js" integrity="sha512-rvYwlDPzd/lRzBvegx4gYYSywGV31gBq2dTL80HdKMzJ3EdfIbQXNbxbHSdfgf52L+tk9F2dRvUtvZYAvXNFPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <title>SEVENTEEN </title>
 </head>
 <body> 
@@ -45,17 +49,17 @@
                             <span><a class="link profileLink animate-this" href="profile.html" data-text="Profile">Profile</a></span>
                         </li> 
                         <li>
-                            <span><a class="link discographyLink animate-this" href="discography.html" data-text="Discography">Discography</a></span>
-                            <span class="discography-project-preview-wrapper">
-                                <div class="discography-project-preview"></div>
+                            <span><a class="link membersLink animate-this" href="members.html" data-text="Members">Members</a></span>
+                            <span class="members-project-preview-wrapper">
+                                <div class="members-project-preview"></div>
                             </span>
                         </li>
-                        <li>
+                        <!-- <li>
                             <span class="members-project-preview-wrapper">
                                 <div class="members-project-preview"></div>
                             </span>
                             <span><a class="link membersLink animate-this" href="members.html" data-text="Members">Members</a></span>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="credits"><span><a href="credits.html">Credits</a></span><span><a href="socials.html">Socials</a></span></div>
                 </div>
@@ -75,7 +79,7 @@
          <div class="mainHome__paragraph__image"></div>
          <div class="mainHome__paragraph__intro">
             <p>Say The Name.</p>
-            <h1>Seventeen</h1>
+            <h1 id="homeText"></h1>
             <!-- <h1>17.</h1> -->
             <!-- <h1>세븐틴</h1> -->
             <!-- <h1>seh · vuhn · teen</h1> -->
@@ -131,6 +135,78 @@
     <script src="/javascript/data/home_data.js"></script>
     <script src="/javascript/navbar.js"></script>
     <script src="/javascript/footer.js"></script>
+    <script>
+        var thetext = ["Sixteenn", '17', 'eightin'];
+
+        var i = 0;
+        let text = "";
+        // (function increament() {
+        //     var datEXT = setInterval(() => {
+        //         // while (i<thetext.length) {
+        //             // text += "<br> The number is " + i;
+        //             i++;
+        //             if (i == thetext.length) {
+        //                 clearInterval(datEXT);
+        //             }
+        //         // }
+        //         console.log(i);
+        //     }, 2000);
+        // })();
+
+        var elem = document.getElementById("homeText");
+        var datEXT = setInterval(() => {
+                // while (i<thetext.length) {
+                    // text += "<br> The number is " + i;
+                    i++;
+                    if (i == thetext.length) {
+                        clearInterval(datEXT);
+                    }
+                // }
+                
+            }, 2000);
+
+            console.log(i);
+
+        var innerText = new Blotter.Text("Seventeen", {
+            family : "Trovas",
+            // family : "Dolce Gargia",
+            size: 70,
+            fill: "#ffffff",
+            paddingLeft: 50,
+            paddingRight: 50
+        });
+
+        var material = new Blotter.LiquidDistortMaterial();
+
+        material.uniforms.uSpeed.value = 0.1;
+        material.uniforms.uVolatility.value = 0.10;
+        material.uniforms.uSeed.value = 1.0;
+
+        // elem.addEventListener("mouseover", () => {
+        //     material.uniforms.uSpeed.value = 0.1;
+        //     material.uniforms.uVolatility.value = 0.10;
+        //     // material.uniforms.uSeed.value = 0.0;
+
+        //     elem.style.transition = "all 10s ease-in-out";
+        // });
+
+
+        // elem.addEventListener("mouseout", () => {
+        //     elem.style.transition = "all 10s ease-in-out";
+
+        //     material.uniforms.uSpeed.value = 0.5;
+        //     material.uniforms.uVolatility.value = 0.20;
+        //     material.uniforms.uSeed.value = 1.0;
+        // });
+        var blotter = new Blotter(material, {
+            texts: innerText
+        });
+
+        
+        var scope = blotter.forText(innerText);
+
+        scope.appendTo(elem);
+    </script>
     <!-- <script type="text/javascript">
         barba.init();
     
