@@ -34,7 +34,7 @@ const discographyLink = document.querySelector(".discographyLink");
 const membersLink = document.querySelector(".membersLink");
 var homeTl = gsap.timeline();
 var profileTl = gsap.timeline();
-var discographyTl = gsap.timeline();
+// var discographyTl = gsap.timeline();
 var membersTl = gsap.timeline();
 
 homeLink.addEventListener("mouseover", () =>{
@@ -51,17 +51,17 @@ profileLink.addEventListener("mouseout", () =>{
     profileTl.to(".profile-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
 });
 
-discographyLink.addEventListener("mouseover", () =>{
-    discographyTl.to(".discography-project-preview", {duration: 1.8, width: "55%",ease: "Cubic.easeInOut"});
-});
-discographyLink.addEventListener("mouseout", () =>{
-    discographyTl.to(".discography-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
-});
-
 membersLink.addEventListener("mouseover", () =>{
-    membersTl.to(".members-project-preview", {duration: 1.8, width: "60%",ease: "Cubic.easeInOut"});
+    membersTl.to(".members-project-preview", {duration: 1.8, width: "55%",ease: "Cubic.easeInOut"});
 });
 membersLink.addEventListener("mouseout", () =>{
     membersTl.to(".members-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
 });
+
+// membersLink.addEventListener("mouseover", () =>{
+//     membersTl.to(".members-project-preview", {duration: 1.8, width: "60%",ease: "Cubic.easeInOut"});
+// });
+// membersLink.addEventListener("mouseout", () =>{
+//     membersTl.to(".members-project-preview", {duration: .2, width: "0%",ease: "Expo.easeInOut"});
+// });
 // END OF NAVBAR ANIMATION
