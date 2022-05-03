@@ -589,7 +589,9 @@
 
         &__filmRelated{
             // height: auto;
-            margin-top: 10em;
+            // margin-top: 10em;
+            // margin-bottom: 10em;
+            margin: 15% 0 15% 0;
             display: grid;
             grid-template-columns: 25% 75%;
 
@@ -607,9 +609,10 @@
                 &::before{
                     content: "Filmography";
                     position: absolute;
-                    font-size: 5em;
+                    font-size: 8em;
                     opacity: .5;
-                    top: -1em;
+                    top: -1.5em;
+                    left: -0.5em;
                 }
     
                 &:hover{
@@ -727,7 +730,7 @@
   
 
         &__concerts{
-            margin-top: 15em;
+            margin-top: 40%;
             background: url("../../../images/home_page/attacca/attacca_group_photo_2.jpeg") no-repeat fixed center;
             background-size: cover;
             height: 80%;
