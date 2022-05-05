@@ -364,6 +364,12 @@ header {
   width: 100%;
 }
 
+.nav .navbar__item ul li:nth-child(1) span:hover:nth-child(1):after {
+  opacity: 1;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
 .nav .navbar__item ul li:nth-child(1) span:nth-child(1) {
   width: 25%;
 }
@@ -371,9 +377,10 @@ header {
 .nav .navbar__item ul li:nth-child(1) span:nth-child(1)::after {
   content: "01";
   position: absolute;
-  font-size: 0.15em;
-  margin-top: -3em;
-  margin-left: 0.5em;
+  font-size: 0.2em;
+  opacity: 0.3;
+  margin-top: -1em;
+  margin-left: -0.5em;
   font-family: New York;
 }
 
@@ -405,6 +412,12 @@ header {
   width: 100%;
 }
 
+.nav .navbar__item ul li:nth-child(2) span:hover:nth-child(2):before {
+  opacity: 1;
+  -webkit-transition: .1s ease-in;
+  transition: .1s ease-in;
+}
+
 .nav .navbar__item ul li:nth-child(2) span:nth-child(1) {
   width: 70%;
 }
@@ -426,9 +439,10 @@ header {
 .nav .navbar__item ul li:nth-child(2) span:nth-child(2)::before {
   content: "02";
   position: absolute;
-  font-size: 0.15em;
-  margin-top: -3em;
-  margin-left: -1.5em;
+  font-size: 0.2em;
+  opacity: 0.3;
+  margin-top: -2.1em;
+  margin-left: -1em;
   font-family: New York;
 }
 
@@ -444,6 +458,12 @@ header {
   width: 100%;
 }
 
+.nav .navbar__item ul li:nth-child(3) span:hover:nth-child(1):after {
+  opacity: 1;
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
 .nav .navbar__item ul li:nth-child(3) span:nth-child(1) {
   width: 45%;
 }
@@ -451,9 +471,10 @@ header {
 .nav .navbar__item ul li:nth-child(3) span:nth-child(1)::after {
   content: "03";
   position: absolute;
-  font-size: 0.15em;
-  margin-top: -3em;
-  margin-left: 0.5em;
+  font-size: 0.2em;
+  opacity: 0.3;
+  margin-top: -1em;
+  margin-left: -0.5em;
   font-family: New York;
 }
 
@@ -557,6 +578,40 @@ header {
   color: inherit;
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
+}
+
+.nav .credits span:nth-child(1)::after {
+  content: "4.1";
+  position: absolute;
+  font-size: 0.5em;
+  margin-top: -0.7em;
+  margin-left: -0.5em;
+  opacity: 0.2;
+}
+
+.nav .credits span:nth-child(1):hover::after {
+  opacity: 1;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.nav .credits span:nth-child(2)::after {
+  content: "4.2";
+  position: absolute;
+  font-size: 0.5em;
+  margin-top: -0.7em;
+  margin-left: -0.5em;
+  opacity: 0.2;
+}
+
+.nav .credits span:nth-child(2):hover::after {
+  opacity: 1;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 
 .mainHome {
@@ -854,6 +909,7 @@ header {
 .mainProfile__paragraph__members {
   margin-top: 25em;
   width: 95%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   display: -ms-grid;
@@ -1137,6 +1193,38 @@ header {
   transition: .5s ease-in-out;
   background: url("../../../images/units/pu_2.jpeg") no-repeat fixed right;
   background-size: cover;
+}
+
+.mainProfile__paragraph__discography {
+  margin-top: 20%;
+  height: 50em;
+  width: 100%;
+}
+
+.mainProfile__paragraph__discography__title::before {
+  position: absolute;
+  content: 'Discography';
+  font-size: 10em;
+  opacity: .5;
+  margin-top: -1.2em;
+}
+
+.mainProfile__paragraph__discography__list {
+  text-align: center;
+}
+
+.mainProfile__paragraph__discography__list div {
+  display: inline-block;
+  width: 33%;
+  padding: 5em 0;
+}
+
+.mainProfile__paragraph__discography__list__number {
+  font-size: 6em;
+}
+
+.mainProfile__paragraph__discography__list__title {
+  text-transform: uppercase;
 }
 
 .mainProfile__paragraph__filmRelated {
@@ -1562,6 +1650,9 @@ header {
   width: 20%;
   height: 320px;
   display: inline-block;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .theDiv .membersCarousel__paragraph li span {
@@ -1578,74 +1669,72 @@ header {
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(1) {
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+  -webkit-filter: grayscale(70%) opacity(0.7);
+          filter: grayscale(70%) opacity(0.7);
   -webkit-transform: translate(0px, 10%);
           transform: translate(0px, 10%);
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(1):hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) opacity(1);
+          filter: grayscale(0%) opacity(1);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(2) {
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-filter: grayscale(70%) opacity(0.5);
+          filter: grayscale(70%) opacity(0.5);
   -webkit-transform: translate(10px, 100%);
           transform: translate(10px, 100%);
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(2):hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) opacity(1);
+          filter: grayscale(0%) opacity(1);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(3) {
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+  -webkit-filter: grayscale(70%) opacity(0.2);
+          filter: grayscale(70%) opacity(0.2);
   -webkit-transform: translate(-25px, 0%);
           transform: translate(-25px, 0%);
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(3):hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) opacity(1);
+          filter: grayscale(0%) opacity(1);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(4) {
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+  -webkit-filter: grayscale(70%) opacity(0.4);
+          filter: grayscale(70%) opacity(0.4);
   -webkit-transform: translate(-50px, 80%);
           transform: translate(-50px, 80%);
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(4):hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) opacity(1);
+          filter: grayscale(0%) opacity(1);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   z-index: 1;
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(5) {
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+  -webkit-filter: grayscale(70%) opacity(0.4);
+          filter: grayscale(70%) opacity(0.4);
   -webkit-transform: translate(-25px, 10%);
           transform: translate(-25px, 10%);
 }
 
 .theDiv .membersCarousel__paragraph li:nth-child(5):hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) opacity(1);
+          filter: grayscale(0%) opacity(1);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -1968,6 +2057,7 @@ header {
 
 .mainCredits__svtNamesDiv {
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .mainCredits__svtNamesDiv__svtNames {
@@ -2052,7 +2142,7 @@ header {
           transform: translate(-50%, -50%);
 }
 
-.mainSocials .socialsBar__icons h2 {
+.mainSocials .socialsBar__icons p {
   font-size: 2em;
 }
 
@@ -2358,12 +2448,14 @@ header {
     font-size: 4em;
   }
   .mainMembers {
+    padding-top: 3em;
     width: 80%;
     height: 90%;
   }
   .mainMembers__dets {
     margin-bottom: 5em;
-    height: 70vh;
+    width: 100%;
+    height: 80vh;
   }
   .mainMembers__dets:nth-child(13) {
     margin-bottom: 0;
@@ -2371,22 +2463,28 @@ header {
   }
   .mainMembers__dets__number {
     right: 0;
-    margin-top: -2.9em;
+    margin-top: -52%;
     opacity: 0.5;
     position: absolute;
   }
   .mainMembers__dets__imageDiv {
-    left: 0;
-    width: 90%;
+    width: 100%;
     height: 90%;
   }
-  .mainMembers__dets__imageDiv:hover img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+  .mainMembers__dets__imageDiv img:hover {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   .mainMembers__dets__imageDiv__image {
-    width: 100%;
-    height: 80%;
+    width: 90%;
+    height: 72%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    -o-object-position: top;
+       object-position: top;
   }
   .mainMembers__dets__imageDiv__image:nth-child(13) {
     height: 400px;
@@ -2396,13 +2494,9 @@ header {
     left: 0;
     top: 55%;
     text-align: left;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(8%, #000), color-stop(8%, #fff));
-    background-image: linear-gradient(90deg, #000 8%, #fff 8%);
   }
-  .mainMembers__dets__info.dark {
-    background-color: #fff;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(8%, #fff), color-stop(8%, #000));
-    background-image: linear-gradient(90deg, #fff 8%, #000 8%);
+  .mainMembers__dets__info__label {
+    opacity: 1;
   }
   .mainMembers__dets__info__name {
     font-size: 3em;
@@ -2434,22 +2528,64 @@ header {
     font-size: 3.5em;
     margin: -1em 0 0 -0.5em;
   }
-  .mainProfile__paragraph__debut {
-    margin-left: 25%;
-    width: 100%;
-    background-size: contain;
-    height: 20em;
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-    text-align: left;
+  .mainProfile__paragraph__definition {
+    margin-top: 10em;
+    width: 90%;
+    line-height: 1.5em;
   }
-  .mainProfile__paragraph__debut::before {
-    margin: -1em 0 0 1em;
+  .mainProfile__paragraph__debutDiv {
+    height: 10em;
+    margin-top: 10em;
+    width: 100%;
+  }
+  .mainProfile__paragraph__debutDiv__debut__debutWord {
+    font-size: 5em;
+  }
+  .mainProfile__paragraph__debutDiv__debut__date {
+    font-size: 2em;
+  }
+  .mainProfile__paragraph__debutDiv__debut__image {
+    width: 400px;
+    padding: 2em;
+  }
+  .mainProfile__paragraph__fandom {
+    background-color: aqua;
     left: 0;
-    font-size: 3.5em;
+    height: 400px;
+    width: 100%;
+  }
+  .mainProfile__paragraph__fandom::before {
+    font-size: 5em;
+  }
+  .mainProfile__paragraph__colorsDiv {
+    margin-top: 10em;
+    width: 100%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mainProfile__paragraph__colorsDiv__colors {
+    position: absolute;
+    left: 0%;
+    font-size: 5em;
+    opacity: .5;
+    margin-left: 0;
+  }
+  .mainProfile__paragraph__colorsDiv__theColors {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mainProfile__paragraph__colorsDiv__theColors p {
+    width: 40%;
+    display: inline-block;
+    margin: 2%;
+    padding: 4%;
+    border-radius: 50%;
+    text-align: center;
   }
   .mainProfile__paragraph__members {
-    margin-top: 8em;
+    margin-top: 5em;
     right: 0;
     width: 100%;
     height: 100%;
@@ -2457,8 +2593,8 @@ header {
     display: block;
   }
   .mainProfile__paragraph__members::before {
-    font-size: 3.5em;
-    left: 1em;
+    font-size: 5em;
+    left: 0;
   }
   .mainProfile__paragraph__members__image {
     width: 100%;
@@ -2466,17 +2602,25 @@ header {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
   }
+  .mainProfile__paragraph__members__membersNameDiv {
+    height: auto;
+  }
   .mainProfile__paragraph__members__membersNameDiv__names {
     text-align: center;
     font-size: 1.3em;
     width: 100%;
   }
-  .mainProfile__paragraph__list {
+  .mainProfile__paragraph__members__membersNameDiv__link {
+    height: 50px;
+    right: 0;
+    top: 5em;
+  }
+  .mainProfile__paragraph__sub_units_list {
     position: relative;
     margin-top: 3em;
   }
-  .mainProfile__paragraph__list::before {
-    font-size: 3.5em;
+  .mainProfile__paragraph__sub_units_list::before {
+    font-size: 5em;
     left: 0;
   }
   .mainProfile__paragraph__units__unit {
@@ -2491,6 +2635,7 @@ header {
   .mainProfile__paragraph__units__unit__hhu__names {
     font-size: 1em;
     margin-left: -20px;
+    width: 20%;
   }
   .mainProfile__paragraph__units__unit__hhu::before {
     font-size: 2em;
@@ -2505,6 +2650,7 @@ header {
   .mainProfile__paragraph__units__unit__vu__names {
     font-size: 1em;
     margin-left: -20px;
+    width: 20%;
   }
   .mainProfile__paragraph__units__unit__vu::before {
     font-size: 2em;
@@ -2519,59 +2665,118 @@ header {
   .mainProfile__paragraph__units__unit__pu__names {
     font-size: 1em;
     margin-left: -20px;
+    width: 20%;
   }
   .mainProfile__paragraph__units__unit__pu::before {
     font-size: 2em;
-    right: 0.4em;
+    right: -0.5em;
   }
-  .mainProfile__paragraph__television {
+  .mainProfile__paragraph__filmRelated {
+    margin: 15% 0 15% 0;
     display: block;
-    background-size: contain;
+  }
+  .mainProfile__paragraph__filmRelated__onlineshows_div {
+    font-size: 0.7em;
+  }
+  .mainProfile__paragraph__filmRelated__filmography {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    text-orientation: sideways;
+    word-break: break-all;
+    display: block;
     width: 100%;
-    height: 100%;
+  }
+  .mainProfile__paragraph__filmRelated__filmography::before {
+    content: "Filmography";
+    position: absolute;
+    font-size: 5em;
+    opacity: .5;
+    top: -1.5em;
+    left: 0%;
+  }
+  .mainProfile__paragraph__filmRelated__filmography:hover {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
-    padding: 2em;
-    margin-top: 8em;
-    margin-left: 2em;
+    -webkit-transition: .5s ease-in;
+    transition: .5s ease-in;
   }
-  .mainProfile__paragraph__television::before {
-    top: -0.5em;
-    left: -0.5em;
-    font-size: 3.5em;
+  .mainProfile__paragraph__filmRelated__filmsInFilmography {
+    height: auto;
   }
-  .mainProfile__paragraph__onlineshows {
+  .mainProfile__paragraph__filmRelated__filmsInFilmography div {
+    margin-bottom: 2em;
+  }
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__television {
     display: block;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
-    height: 100%;
-    right: 0;
+    height: 400px;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+    padding: 0;
+    margin-top: 4em;
+    margin-left: 0;
+  }
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__television div {
+    padding: 2em;
+  }
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__television::before {
+    top: -0.5em;
+    left: 0;
+    font-size: 2.5em;
+  }
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows {
+    display: block;
+    background-size: cover;
+    width: 100%;
+    margin-left: 0%;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
     text-align: left;
   }
-  .mainProfile__paragraph__onlineshows::before {
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows div {
+    padding: 2em;
+  }
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__onlineshows::before {
     text-align: right;
-    bottom: 3.2em;
+    bottom: -0.5em;
     right: 0;
     font-size: 3.5em;
   }
-  .mainProfile__paragraph__film {
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__film {
     display: block;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 400px;
     left: 0;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
     text-align: left;
     margin-bottom: 0;
+    margin-left: 0;
   }
-  .mainProfile__paragraph__film::before {
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__film div {
+    padding: 2em;
+  }
+  .mainProfile__paragraph__filmRelated__filmsInFilmography__film::before {
     text-align: right;
-    bottom: 3.2em;
+    bottom: -0.5em;
     right: 0;
     font-size: 3.5em;
+  }
+  .mainProfile__paragraph__concerts {
+    margin-top: 40%;
+  }
+  .mainProfile__paragraph__concerts::before {
+    font-size: 5em;
   }
   .listen-link {
     position: absolute;
