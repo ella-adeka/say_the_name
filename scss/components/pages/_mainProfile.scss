@@ -325,12 +325,10 @@
 
         &__members{
             margin-top: 25em;
-            // right: 3em;
-            // height: 100%;
             width: 95%;
+            height: auto;
             margin-left: auto;
             margin-right: auto;
-            
             display: grid;
             grid-template-columns: 45% 55%;
             transition: .5s ease-in-out;
@@ -582,6 +580,47 @@
                         background: url("../../../images/units/pu_2.jpeg") no-repeat fixed right;
                         background-size: cover;
                     }
+                }
+            }
+        }
+
+        &__discography{
+            margin-top: 20%;
+            height: 50em;
+            width: 100%;
+            // background-color: palegoldenrod;
+
+            &__title{
+                &::before{
+                    position: absolute;
+                    content: 'Discography';
+                    font-size: 10em;
+                    opacity: .5;
+                    margin-top: -1.2em;
+                }
+            }
+
+            &__list{
+                // width: 100%;
+                
+                // grid-template-columns: auto auto auto;
+                // gap: 1%;
+                text-align: center;
+                
+
+                div{
+                    display: inline-block;
+                    width: 33%;
+                    padding: 5em 0;
+                    // background: #92a8d1;
+                }
+                
+                &__number{
+                    font-size: 6em;
+                }
+
+                &__title{
+                    text-transform: uppercase;
                 }
             }
         }
