@@ -55,10 +55,10 @@
             img{
                 transition: all 5s ease-in-out;
             
-                &:hover {
-                    transform: scale(1.2);
-                    transition: all 5s ease-in-out;
-                }
+                // &:hover {
+                //     transform: none;
+                //     transition: all 5s ease-in-out;
+                // }
             }
 
             &__image{
@@ -210,6 +210,7 @@
     height: 100%;
     background-color: white;
     visibility: hidden;
+    // overflow: hidden;
     
 
     &.show{

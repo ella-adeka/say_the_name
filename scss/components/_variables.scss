@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: Barracuda;
-    src: url('../../fonts/Barracuda/Barracuda-Bold.ttf');
+    src: url('../../fonts/Barracuda/Barracuda-Light.ttf');
 }
 
 @font-face {
@@ -47,6 +47,10 @@
     font-family: Trovas;
     src: url('../../fonts/TrovasDemo/Trovas Demo.otf');
 }
+@font-face {
+    font-family: Arogant;
+    src: url('../../fonts/Arogant/ArogantDemo.ttf');
+}
 
 $backGroundTextFont: Appears;
 // $sideBarFont: 'Epilogue', sans-serif;
@@ -55,6 +59,7 @@ $navBarFont: Valery;
 $bodyTextFont: Valery;
 $discographyfont: New York;
 $Homefont: Trovas;
+// $Homefont: "Epilogue", sans-serif;
 // $bodyTextFont: 'Asap', sans-serif;
 
 

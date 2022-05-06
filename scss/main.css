@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: Barracuda;
-  src: url("../../fonts/Barracuda/Barracuda-Bold.ttf");
+  src: url("../../fonts/Barracuda/Barracuda-Light.ttf");
 }
 
 @font-face {
@@ -46,6 +46,11 @@
 @font-face {
   font-family: Trovas;
   src: url("../../fonts/TrovasDemo/Trovas Demo.otf");
+}
+
+@font-face {
+  font-family: Arogant;
+  src: url("../../fonts/Arogant/ArogantDemo.ttf");
 }
 
 * {
@@ -444,6 +449,8 @@ header {
   margin-top: -2.1em;
   margin-left: -1em;
   font-family: New York;
+  -webkit-transition: 4s ease-out;
+  transition: 4s ease-out;
 }
 
 .nav .navbar__item ul li:nth-child(3) {
@@ -653,6 +660,7 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  line-height: 3.5em;
 }
 
 .mainHome__paragraph__intro p {
@@ -660,6 +668,7 @@ header {
 }
 
 .mainHome__paragraph__intro h1 {
+  font-size: 5em;
   font-family: Trovas;
   font-weight: bolder;
 }
@@ -867,7 +876,7 @@ header {
   position: relative;
   margin-top: 20em;
   width: 90%;
-  height: 60%;
+  height: 50em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -907,7 +916,7 @@ header {
 }
 
 .mainProfile__paragraph__members {
-  margin-top: 25em;
+  margin-top: 15em;
   width: 95%;
   height: auto;
   margin-left: auto;
@@ -1199,6 +1208,7 @@ header {
   margin-top: 20%;
   height: 50em;
   width: 100%;
+  background-color: palegoldenrod;
 }
 
 .mainProfile__paragraph__discography__title::before {
@@ -1465,13 +1475,6 @@ header {
 }
 
 .mainMembers__dets__imageDiv img {
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
-.mainMembers__dets__imageDiv img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   -webkit-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
 }
@@ -2448,14 +2451,18 @@ header {
     font-size: 4em;
   }
   .mainMembers {
-    padding-top: 3em;
     width: 80%;
-    height: 90%;
+    height: 100%;
   }
   .mainMembers__dets {
-    margin-bottom: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 100%;
-    height: 80vh;
+    height: 80%;
+    margin-bottom: 0;
   }
   .mainMembers__dets:nth-child(13) {
     margin-bottom: 0;
@@ -2471,13 +2478,9 @@ header {
     width: 100%;
     height: 90%;
   }
-  .mainMembers__dets__imageDiv img:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-  }
   .mainMembers__dets__imageDiv__image {
     width: 90%;
-    height: 72%;
+    height: 80%;
     position: absolute;
     top: 0;
     left: 50%;
@@ -2500,6 +2503,109 @@ header {
   }
   .mainMembers__dets__info__name {
     font-size: 3em;
+  }
+  .scroll {
+    font-size: 1.5em;
+    right: 5%;
+  }
+  .theDiv {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .theDiv .membersCarousel {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+  }
+  .theDiv .membersCarousel__paragraph {
+    white-space: normal;
+  }
+  .theDiv .membersCarousel__paragraph li {
+    list-style: none;
+    width: 30%;
+    height: 250px;
+    display: inline-block;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .theDiv .membersCarousel__paragraph li span {
+    width: 100%;
+    height: 250px;
+  }
+  .theDiv .membersCarousel__paragraph li span .membersCarousel__paragraph__image {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(1) {
+    -webkit-filter: grayscale(20%) opacity(0.6);
+            filter: grayscale(20%) opacity(0.6);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(1):hover {
+    -webkit-filter: grayscale(0%) opacity(1);
+            filter: grayscale(0%) opacity(1);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(2) {
+    -webkit-filter: grayscale(20%) opacity(0.6);
+            filter: grayscale(20%) opacity(0.6);
+    -webkit-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(2):hover {
+    -webkit-filter: grayscale(0%) opacity(1);
+            filter: grayscale(0%) opacity(1);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(3) {
+    -webkit-filter: grayscale(20%) opacity(0.6);
+            filter: grayscale(20%) opacity(0.6);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(3):hover {
+    -webkit-filter: grayscale(0%) opacity(1);
+            filter: grayscale(0%) opacity(1);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(4) {
+    -webkit-filter: grayscale(20%) opacity(0.6);
+            filter: grayscale(20%) opacity(0.6);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(4):hover {
+    -webkit-filter: grayscale(0%) opacity(1);
+            filter: grayscale(0%) opacity(1);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(5) {
+    -webkit-filter: grayscale(20%) opacity(0.6);
+            filter: grayscale(20%) opacity(0.6);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .theDiv .membersCarousel__paragraph li:nth-child(5):hover {
+    -webkit-filter: grayscale(0%) opacity(1);
+            filter: grayscale(0%) opacity(1);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .theDiv .membersCarousel .member_name {
+    font-size: 3.5em;
+    padding: 0.5em;
   }
   .mainProfile {
     width: 80%;
@@ -2988,6 +3094,7 @@ html, body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  scroll-behavior: smooth;
 }
 
 body {

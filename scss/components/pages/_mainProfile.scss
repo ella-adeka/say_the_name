@@ -266,7 +266,7 @@
             position: relative;
             margin-top: 20em;
             width: 90%;
-            height: 60%;
+            height: 50em;
             margin-left: auto;
             margin-right: auto;
             // background-color: aqua;
@@ -324,7 +324,7 @@
         }
 
         &__members{
-            margin-top: 25em;
+            margin-top: 15em;
             width: 95%;
             height: auto;
             margin-left: auto;
@@ -588,7 +588,7 @@
             margin-top: 20%;
             height: 50em;
             width: 100%;
-            // background-color: palegoldenrod;
+            background-color: palegoldenrod;
 
             &__title{
                 &::before{
