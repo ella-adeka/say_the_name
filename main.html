@@ -17,8 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.js" integrity="sha512-rvYwlDPzd/lRzBvegx4gYYSywGV31gBq2dTL80HdKMzJ3EdfIbQXNbxbHSdfgf52L+tk9F2dRvUtvZYAvXNFPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <title>SEVENTEEN </title>
 </head>
-<body> 
-<!-- <body onload="homePageNews()">  -->
+<!-- <body>  -->
+<body onload="showDiffTitlesFunc()"> 
     <!-- background-color: #f7cac9; color: #92a8d1; -->
     
     <!-- HEADER -->
@@ -74,12 +74,13 @@
     </div>
 
     <!-- MAINHOME -->
-    <main class="mainHome"  data-barba="wrapper"> 
+    <main class="mainHome" data-barba="wrapper"> 
         <div class="mainHome__paragraph" data-barba="container" data-barba-namespace="home">
          <div class="mainHome__paragraph__image"></div>
          <div class="mainHome__paragraph__intro">
             <p>Say The Name.</p>
-            <h1 id="homeText"></h1>
+            <h1 class="mainHome__paragraph__intro__h1">Seventeen</h1>
+            <!-- <h1 id="homeText"></h1> -->
             <!-- <h1>17.</h1> -->
             <!-- <h1>세븐틴</h1> -->
             <!-- <h1>seh · vuhn · teen</h1> -->
@@ -132,6 +133,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- MAIN JAVASCRIPT FILES -->
     <script type="module" src="/app.js"></script>
     <script src="/javascript/data/home_data.js"></script>
@@ -215,7 +217,7 @@
 
     </script> -->
     <!-- <script src="/javascript/navbar.js"></script> -->
-    <!-- <script src="/javascript/pages/main.js"></script> -->
+    <script src="/javascript/pages/main.js"></script>
     <!-- END OF JAVASCRIPT RELATED -->
 </body>
 </html>
