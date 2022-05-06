@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mate SC&display=swap" rel="stylesheet"> 
     <title>SEVENTEEN - MEMBERS</title>
 </head>
-<body data-barba="wrapper">
+<body data-barba="wrapper" onload="members()">
     <header>
         <div id="cursor"></div>
 
@@ -68,8 +68,6 @@
 
     <div class="theDiv">
         <div class="close"></div>
-        
-        
     </div>
 
     <div class="scroll">Scroll</div>
@@ -98,6 +96,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/58fb59c662.js" crossorigin="anonymous"></script>
 
+    <!-- HOVER EFFECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script src="dist/hover-effect.umd.js"></script>
+
     <!-- BARVA.JS -->
         <!-- unpkg -->
         <script src="https://unpkg.com/@barba/core"></script>
@@ -107,10 +111,39 @@
     <!-- END OF BARBA.JS -->
 
     <script src="/javascript/data/members_data.js"></script>
-    <script src="/javascript/data/eachMembersData.js"></script>
     <script type="module" src="app.js"></script>
     <script src="/javascript/navbar.js"></script>
     <script src="/javascript/footer.js"></script>
     <script src="/javascript/pages/members.js"></script>
+
+    <script type="module">
+
+        // var myAnimation = new hoverEffect({
+        //     parent: document.querySelector('.mainMembers__dets__imageDiv__image'),
+        //     intensity: 0.5,
+        //     image1: './images/members/scoups_attacca_op1.jpg',
+        //     image2: './images/attacca_op3/scoups_attacca_op3.jpeg',
+        //     displacementImage: 'images/seventeen_logo.png'
+        // });
+        // const main = document.querySelector('.mainMembers');
+        // const dets = document.createElement('div');
+        //   var lastScrollTop = 0;
+        //     main.addEventListener("scroll", () => {
+        //         var st =  window.pageYOffset || document.documentElement.scrollTop;
+
+        //         if (st > lastScrollTop) {
+        //             // downward scroll
+        //             // i = i+1;
+        //             // members();
+        //             console.log("scrolled down")
+        //         } else {
+        //             // upward scroll
+        //             // i = i-1;
+        //             // members()
+        //             console.log("scrolled up")
+        //         }
+        //         lastScrollTop = st <= 0 ? 0 : st; //For mobile or -ve scrolling
+        //     }, false)
+    </script>
    </body>
 </html>
