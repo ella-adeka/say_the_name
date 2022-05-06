@@ -81,19 +81,29 @@
         //     }
         // })
 
-        let scrolling = false;
-        main.addEventListener("scroll", () => {
-            scrolling = true;
-            i++;
-            members()
-        })
+        // var lastScrollTop = 0;
+        // main.addEventListener("scroll", () => {
+        //     var st = window.pageYOffset || document.documentElement.scrollTop;
+        //     if (st > lastScrollTop) {
+        //         // downward scroll
+        //         // i = i+1;
+        //         // members();
+        //         console.log("scrolled down")
+        //     } else {
+        //         // upward scroll
+        //         // i = i-1;
+        //         // members()
+        //         console.log("scrolled up")
+        //     }
+        //     lastScrollTop = st <= 0 ? 0 : st; //For mobile or -ve scrolling
+        // }, false)
 
-        setInterval(() => {
-            if (scrolling) {
-                scrolling = false;
+        // setInterval(() => {
+        //     if (scrolling) {
+        //         scrolling = false;
                 
-            }
-        }, 1000)
+        //     }
+        // }, 1000)
         
 
 
