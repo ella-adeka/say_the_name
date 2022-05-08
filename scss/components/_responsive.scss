@@ -357,6 +357,7 @@
             height: 80%;
             margin-bottom: 0;
             // padding-top: 3em;
+            // background-color: aqua;
 
             &:nth-child(13){
                 margin-bottom: 0;
@@ -365,27 +366,30 @@
 
             &__number{
                 right: 0;
-                // margin-top: -2.5em;
-                margin-top: -52%;
+                margin-top: -0.5em;
+                width:auto;
+                z-index: 1;
+                // margin-top: 0%;
+                // margin-top: -52%;
                 // margin-top: 60%;
                 opacity: 0.5;
-                position: absolute;
+                position: fixed;
                 // margin-top: 0;
             }
     
             &__imageDiv{
                 width: 100%;
-                height: 90%;
+                height: 80%;
                 
                 &__image{
                     width: 90%;
-                    height: 80%;
+                    height: 95%;
                     position: absolute;
                     top: 0;
                     left: 50%;
                     transform: translate(-50%, 0%);
-                    object-position: top;
-                    // object-fit: contain;
+                    object-position: center 15%;
+                    // object-fit: cover;
                    
                     
 
@@ -397,21 +401,23 @@
             }
         
             &__info{
-                // position: absolute;
+                position: absolute;
                 width: 90%;
                 left: 0;
-                top: 55%;
+                bottom: 0;
                 text-align: left;
+                z-index: 1;
                
 
                 // &.dark{
-                //     background-color: #fff;
+                    // background-color: #fff;
                 //     background-image: linear-gradient(90deg, #fff 8%, #000 8%);  
                 //     // background-image: linear-gradient(90deg, #fff 100%, #000 10%);  
                 // }
 
                 &__label{
                     opacity: 1;
+                    font-size: 1.1em;
                 }
     
     
@@ -429,7 +435,9 @@
                     // -moz-text-fill-color: transparent;
                 }
 
-
+                &__birth_name{
+                    margin-top: 3em;
+                }
             }
         }
     }
@@ -542,7 +550,7 @@
             }
     
             .member_name{
-                font-size: 3.5em;
+                font-size: 3.2em;
                 padding: 0.5em;
     
             }
