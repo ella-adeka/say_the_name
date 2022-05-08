@@ -194,7 +194,6 @@ body.dark .theDiv {
 
 header {
   width: 55px;
-  height: 100%;
 }
 
 .menu_btn {
@@ -281,7 +280,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 10%;
   opacity: 1;
   visibility: hidden;
 }
@@ -1208,7 +1207,6 @@ header {
   margin-top: 20%;
   height: 50em;
   width: 100%;
-  background-color: palegoldenrod;
 }
 
 .mainProfile__paragraph__discography__title::before {
@@ -1355,7 +1353,7 @@ header {
 .mainProfile__paragraph__filmRelated__filmsInFilmography__film {
   margin-top: 5em;
   margin-left: 3em;
-  background: url("../../../images/members/jeonghan_attacca_op1.jpg") no-repeat fixed;
+  background: url("../../../images/home_page/pol/pol_3.jpeg") no-repeat fixed center;
   background-size: cover;
   background-blend-mode: saturation;
   width: 25em;
@@ -1453,10 +1451,11 @@ header {
 }
 
 .mainMembers__dets__number {
-  position: absolute;
+  position: fixed;
   width: 97%;
+  z-index: -2;
   text-align: right;
-  margin-top: -5%;
+  margin-top: -0.75em;
   font-size: 8em;
   opacity: 0.1;
 }
@@ -1474,15 +1473,10 @@ header {
   transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 
-.mainMembers__dets__imageDiv img {
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
 .mainMembers__dets__imageDiv__image {
   position: absolute;
-  width: 50vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 1s cubic-bezier(0.1, 0.7, 1, 0.1);
@@ -1491,9 +1485,9 @@ header {
 
 .mainMembers__dets__info {
   position: relative;
-  width: 100%;
+  z-index: -1;
   right: 5%;
-  top: 30%;
+  bottom: -30%;
   text-align: right;
   color: black;
 }
@@ -2470,39 +2464,47 @@ header {
   }
   .mainMembers__dets__number {
     right: 0;
-    margin-top: -52%;
+    margin-top: -0.5em;
+    width: auto;
+    z-index: 1;
     opacity: 0.5;
-    position: absolute;
+    position: fixed;
   }
   .mainMembers__dets__imageDiv {
     width: 100%;
-    height: 90%;
+    height: 80%;
   }
   .mainMembers__dets__imageDiv__image {
     width: 90%;
-    height: 80%;
+    height: 95%;
     position: absolute;
     top: 0;
     left: 50%;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
-    -o-object-position: top;
-       object-position: top;
+    -o-object-position: center 15%;
+       object-position: center 15%;
   }
   .mainMembers__dets__imageDiv__image:nth-child(13) {
     height: 400px;
   }
   .mainMembers__dets__info {
+    position: absolute;
     width: 90%;
     left: 0;
-    top: 55%;
+    bottom: 0;
     text-align: left;
+    z-index: 1;
   }
   .mainMembers__dets__info__label {
     opacity: 1;
+    font-size: 1.1em;
   }
   .mainMembers__dets__info__name {
     font-size: 3em;
+  }
+  .mainMembers__dets__info__birth_name {
+    margin-top: 3em;
   }
   .scroll {
     font-size: 1.5em;
@@ -2604,7 +2606,7 @@ header {
     transition: all .2s ease-in-out;
   }
   .theDiv .membersCarousel .member_name {
-    font-size: 3.5em;
+    font-size: 3.2em;
     padding: 0.5em;
   }
   .mainProfile {
