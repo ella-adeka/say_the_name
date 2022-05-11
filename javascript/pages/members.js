@@ -12,7 +12,21 @@ const theDiv = document.querySelector(".theDiv");
 const dets = document.createElement('div');
 dets.setAttribute("class", "mainMembers__dets");
 
-let j = 2;
+let j = 0;
+
+function showNextMember() {
+    if (j != membersData.length -1) {
+        j = j+1;
+        members()
+    }
+}
+
+main.addEventListener("wheel", showNextMember)
+if (j == membersData.length) {
+    main.removeEventListener("wheel", showNextMember)
+    console.log("Last Member")
+}
+
 function members() {
     if (j<membersData.length) {
 
@@ -30,15 +44,18 @@ function members() {
         </div>
         
         <div class="mainMembers__dets__info">
-            <p class="mainMembers__dets__info__name">${membersData[j].stage_name}<span>${membersData[j].korean_stage_name}</span></p>
-            <p class="mainMembers__dets__info__subunit">${membersData[j].sub_unit}</p>
-            
-            <p class="mainMembers__dets__info__birth_name"><span class="mainMembers__dets__info__label">Birth Name:</span> ${membersData[j].birth_name}</p>
-            ${korean_name}
-            <p class="mainMembers__dets__info__position"><span class="mainMembers__dets__info__label">Position:</span> ${membersData[j].position}</p>
-            <p class="mainMembers__dets__info__nationality"><span class="mainMembers__dets__info__label">Nationality:</span> ${membersData[j].nationality}</p>
-            <p class="mainMembers__dets__info__birthday"><span class="mainMembers__dets__info__label">Birthday:</span> ${membersData[j].birthday}</p>
-            <p class="mainMembers__dets__info__zodiac"><span class="mainMembers__dets__info__label">Zodiac Sign:</span> ${membersData[j].zodiac_sign}</p>
+            <div class"mainMembers__dets__info__mainInfo">
+                <p class="mainMembers__dets__info__mainInfo__name">${membersData[j].stage_name}<span>${membersData[j].korean_stage_name}</span></p>
+                <p class="mainMembers__dets__info__mainInfo__subunit">${membersData[j].sub_unit}</p>   
+            </div>
+            <div class"mainMembers__dets__info__otherInfo">
+                <p class="mainMembers__dets__info__otherInfo__birth_name"><span class="mainMembers__dets__info__otherInfo__label">Birth Name:</span> ${membersData[j].birth_name}</p>
+                ${korean_name}
+                <p class="mainMembers__dets__info__otherInfo__position"><span class="mainMembers__dets__info__otherInfo__label">Position:</span> ${membersData[j].position}</p>
+                <p class="mainMembers__dets__info__otherInfo__nationality"><span class="mainMembers__dets__info__otherInfo__label">Nationality:</span> ${membersData[j].nationality}</p>
+                <p class="mainMembers__dets__info__otherInfo__birthday"><span class="mainMembers__dets__info__otherInfo__label">Birthday:</span> ${membersData[j].birthday}</p>
+                <p class="mainMembers__dets__info__otherInfo__zodiac"><span class="mainMembers__dets__info__otherInfo__label">Zodiac Sign:</span> ${membersData[j].zodiac_sign}</p>
+            </div>
         </div>   
         <p class="mainMembers__dets__pronunciation"> ${membersData[j].pronunciation}</p>
         <p class="mainMembers__dets__number">
@@ -149,8 +166,8 @@ function changeOnHover(j) {
     //     intensity: 0.9,
     //     image1: 'images/members/'+membersData[j].image,
     //     image2: 'images/attacca_op3/'+membersData[j].hoverImage,
-    //     displacementImage: 'images/heightMap.png'
+    //     displacementImage: 'images/heightMap.png',
+    //     imagesRatio: 1.2
     // });
 
-    console.log("changed")
 }
