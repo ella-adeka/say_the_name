@@ -4,66 +4,79 @@ const profileMembersData = [
     {
         id: "01",
         name: "S.Coups",
-        image: "scoups_attacca_op1"
+        image: "scoups_attacca_op1",
+        unit: "Hip-Hop Team"
     },
     {
         id: "02",
-        name: "Jeonghan",
-        image: "jeonghan_attacca_op1"
+        name: "Wonwoo",
+        image: "wonwoo_attacca_op1",
+        unit: "Hip-Hop Team"
     },
     {
         id: "03",
-        name: "Joshua",
-        image: "joshua_attacca_op1"
+        name: "Mingyu",
+        image: "mingyu_attacca_op1",
+        unit: "Hip-Hop Team"
     },
     {
         id: "04",
-        name: "Jun",
-        image: "jun_attacca_op1"
+        name: "Vernon",
+        image: "vernon_attacca_op1",
+        unit: "Hip-Hop Team"
     },
     {
         id: "05",
-        name: "Hoshi",
-        image: "hoshi_attacca_op1"
+        name: "Woozi",
+        image: "woozi_attacca_op1",
+        unit: "Vocal Team"
     },
     {
         id: "06",
-        name: "Wonwoo",
-        image: "wonwoo_attacca_op1"
+        name: "Jeonghan",
+        image: "jeonghan_attacca_op1",
+        unit: "Vocal Team"
     },
     {
         id: "07",
-        name: "Woozi",
-        image: "woozi_attacca_op1"
+        name: "Joshua",
+        image: "joshua_attacca_op1",
+        unit: "Vocal Team"
     },
     {
         id: "08",
-        name: "Dokyeom",
-        image: "dk_attacca_op1"
+        name: "DK",
+        image: "dk_attacca_op1",
+        unit: "Vocal Team"
     },
     {
         id: "09",
-        name: "Mingyu",
-        image: "mingyu_attacca_op1"
+        name: "Seungkwan",
+        image: "seungkwan_attacca_op1",
+        unit: "Vocal Team"
     },
     {
         id: "10",
-        name: "Minghao",
-        image: "minghao_attacca_op1"
+        name: "Hoshi",
+        image: "hoshi_attacca_op1",
+        unit: "Performance Team"
     },
     {
         id: "11",
-        name: "Seungkwan",
-        image: "seungkwan_attacca_op1"
+        name: "Jun",
+        image: "jun_attacca_op1",
+        unit: "Performance Team"
     },
     {
         id: "12",
-        name: "Vernon",
-        image: "vernon_attacca_op1"
+        name: "Minghao",
+        image: "minghao_attacca_op1",
+        unit: "Performance Team"
     },
     {
         id: "13",
         name: "Dino",
-        image: "dino_attacca_op1"
+        image: "dino_attacca_op1",
+        unit: "Performance Team"
     },
 ]
