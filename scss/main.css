@@ -1054,6 +1054,7 @@ header {
   transition: .5s ease-in-out;
   text-align: center;
   padding: 2em;
+  z-index: -1;
 }
 
 .mainProfile__paragraph__sub_units_list::before {
@@ -1103,6 +1104,18 @@ header {
 .mainProfile__paragraph__units__unit__hhu__names {
   font-size: 1.2em;
   color: white;
+  margin-bottom: .6em;
+  text-align: left;
+  width: 30%;
+}
+
+.mainProfile__paragraph__units__unit__hhu__names:hover {
+  opacity: 1;
+  color: black;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
 }
 
 .mainProfile__paragraph__units__unit__hhu::before {
@@ -1138,11 +1151,22 @@ header {
   text-align: right;
   padding: 2em;
   margin-bottom: 2em;
+  text-align: right;
 }
 
 .mainProfile__paragraph__units__unit__vu__names {
   font-size: 1.2em;
   color: black;
+  margin-bottom: .6em;
+}
+
+.mainProfile__paragraph__units__unit__vu__names:hover {
+  opacity: 1;
+  color: white;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
 }
 
 .mainProfile__paragraph__units__unit__vu::before {
@@ -1176,11 +1200,31 @@ header {
   text-align: right;
   padding: 2em;
   margin-bottom: 2em;
+  opacity: 1;
 }
 
 .mainProfile__paragraph__units__unit__pu__names {
   font-size: 1.2em;
   color: white;
+  margin-bottom: .6em;
+  position: relative;
+  opacity: 1;
+  text-align: right;
+  right: 0;
+  width: 50px;
+}
+
+.mainProfile__paragraph__units__unit__pu__names:hover {
+  opacity: 1;
+  color: white;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.mainProfile__paragraph__units__unit__pu__names:not(:hover) {
+  opacity: .5;
 }
 
 .mainProfile__paragraph__units__unit__pu::before {
@@ -1229,10 +1273,22 @@ header {
 
 .mainProfile__paragraph__discography__list__number {
   font-size: 6em;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
 }
 
 .mainProfile__paragraph__discography__list__title {
   text-transform: uppercase;
+}
+
+.mainProfile__paragraph__discography__list .each-list:hover {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.mainProfile__paragraph__discography__list .each-list:hover .mainProfile__paragraph__discography__list__number {
+  visibility: visible;
 }
 
 .mainProfile__paragraph__filmRelated {
@@ -1412,6 +1468,27 @@ header {
   transition: .5s ease-in;
 }
 
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4bedc2;
+  width: 100%;
+  height: 0%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
 .mainMembers {
   position: absolute;
   top: 50%;
@@ -1421,12 +1498,13 @@ header {
   width: 100%;
   height: 100%;
   font-family: New York;
+  scroll-snap-align: center;
+  position: fixed;
 }
 
 .mainMembers__dets {
   width: 100%;
   height: 100vh;
-  margin-bottom: 0.5px;
 }
 
 .mainMembers__dets:nth-child(13) {
@@ -1453,9 +1531,10 @@ header {
 .mainMembers__dets__number {
   position: fixed;
   width: 97%;
+  height: 20%;
   z-index: -2;
   text-align: right;
-  margin-top: -0.75em;
+  margin-top: -10%;
   font-size: 8em;
   opacity: 0.1;
 }
@@ -1490,28 +1569,29 @@ header {
   bottom: -30%;
   text-align: right;
   color: black;
+  height: 40%;
 }
 
-.mainMembers__dets__info__label {
+.mainMembers__dets__info__mainInfo__name {
+  font-size: 5em;
+}
+
+.mainMembers__dets__info__mainInfo__name span {
+  font-size: .3em;
+}
+
+.mainMembers__dets__info__mainInfo__subunit {
+  margin-top: -0.4em;
+  font-size: 1.3em;
+}
+
+.mainMembers__dets__info__otherInfo__label {
   margin-right: 0.5em;
   font-size: 1.2em;
   opacity: .3;
 }
 
-.mainMembers__dets__info__name {
-  font-size: 5em;
-}
-
-.mainMembers__dets__info__name span {
-  font-size: .3em;
-}
-
-.mainMembers__dets__info__subunit {
-  margin-top: -0.4em;
-  font-size: 1.3em;
-}
-
-.mainMembers__dets__info__birth_name {
+.mainMembers__dets__info__otherInfo__birth_name {
   margin-top: 2em;
 }
 
@@ -2495,15 +2575,22 @@ header {
     bottom: 0;
     text-align: left;
     z-index: 1;
+    height: 40%;
   }
-  .mainMembers__dets__info__label {
+  .mainMembers__dets__info__mainInfo {
+    background-color: brown;
+  }
+  .mainMembers__dets__info__mainInfo__name {
+    font-size: 3em;
+  }
+  .mainMembers__dets__info__otherInfo {
+    background-color: darkolivegreen;
+  }
+  .mainMembers__dets__info__otherInfo__label {
     opacity: 1;
     font-size: 1.1em;
   }
-  .mainMembers__dets__info__name {
-    font-size: 3em;
-  }
-  .mainMembers__dets__info__birth_name {
+  .mainMembers__dets__info__otherInfo__birth_name {
     margin-top: 3em;
   }
   .scroll {
@@ -3118,27 +3205,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: inherit;
-}
-
-.loading-screen {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  background-color: #4bedc2;
-  width: 100%;
-  height: 0%;
-}
-
-.load-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: 100%;
-  overflow: hidden;
-  z-index: 10;
-  pointer-events: none;
 }
 
 header, footer {

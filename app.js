@@ -4,11 +4,11 @@ import '/javascript/cursor.js';
 
 
 // function pageTransition() {
-    // var tl = gsap.timeline();
-    // tl.to("div.loading-screen", {duration: 1.2, width: "100%", bottom: "0%",ease: "Expo.easeInOut",});
+//     var tl = gsap.timeline();
+//     tl.to("div.loading-screen", {duration: 1.2, width: "100%", bottom: "0%",ease: "Expo.easeInOut",});
 
-    // tl.to("div.loading-screen", {duration: 1, width: "100%", bottom: "100%",ease: "Expo.easeInOut",delay: 0.3,});
-    // tl.set("div.loading-screen", { bottom: "-100%" });
+//     tl.to("div.loading-screen", {duration: 1, width: "100%", bottom: "100%",ease: "Expo.easeInOut",delay: 0.3,});
+//     tl.set("div.loading-screen", { bottom: "-100%" });
 // }
 
 // function contentAnimation() {
