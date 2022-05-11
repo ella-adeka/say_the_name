@@ -31,10 +31,10 @@ fanColorSerenity.addEventListener('mouseout', () => {
     tl.to('body', {duration: 0.6, "background-color": "#000",ease: "Expo.easeInOut"})
 });
 
-const hhu = document.querySelector(".mainProfile__paragraph__units__unit__hhu");
+// const hhu = document.querySelector(".mainProfile__paragraph__units__unit__hhu");
 
-const scoups = document.querySelector(".scoups");
-const wonwoo = document.querySelector(".wonwoo");
+// const scoups = document.querySelector(".scoups");
+// const wonwoo = document.querySelector(".wonwoo");
 
 
 // seventeen.setAttribute("style", "margin-left: 500px;");
@@ -116,17 +116,17 @@ namesParagraph.addEventListener("mouseleave", () => {
 });
 
 
-scoups.addEventListener("mouseover", () => {
-    hhu.style.cssText = "background: url('/images/members/scoups_attacca_op1.jpg') no-repeat fixed; background-size: cover;";
-});
+// scoups.addEventListener("mouseover", () => {
+//     hhu.style.cssText = "background: url('/images/members/scoups_attacca_op1.jpg') no-repeat fixed; background-size: cover;";
+// });
 
-scoups.addEventListener("mouseout", () => {
-    hhu.style.cssText = "background: url('/images/units/hhu_2.jpg') no-repeat fixed; background-size: cover;";
-})
+// scoups.addEventListener("mouseout", () => {
+//     hhu.style.cssText = "background: url('/images/units/hhu_2.jpg') no-repeat fixed; background-size: cover;";
+// })
 
-wonwoo.addEventListener("mouseover", () => {
-    hhu.style.cssText = "background: url('/images/members/wonwoo_attacca_op1.jpg') no-repeat fixed; background-size: cover;";
-})
+// wonwoo.addEventListener("mouseover", () => {
+//     hhu.style.cssText = "background: url('/images/members/wonwoo_attacca_op1.jpg') no-repeat fixed; background-size: cover;";
+// })
 
 // hhu.addEventListener("mouseout", () => {
 //     hhu.style.cssText = "background: url('/images/units/hhu_2.jpg') no-repeat fixed; background-size: cover;";
@@ -144,3 +144,61 @@ membersProfileLink.innerHTML = `
 `;
 namesDiv.append(membersProfileLink);
 // console.log(membersProfileLink);
+
+
+
+// DISPLAY MEMBERS IN UNITS
+// const hhuNames = document.querySelector(".mainProfile__paragraph__units__unit__hhu__names");
+const hhu = document.querySelector(".mainProfile__paragraph__units__unit__hhu");
+const vu = document.querySelector(".mainProfile__paragraph__units__unit__vu");
+const pu = document.querySelector(".mainProfile__paragraph__units__unit__pu");
+
+profileMembersData.forEach(subUnit => {
+    if (subUnit.unit == "Hip-Hop Team") {
+        const hhuNames = document.createElement("p");
+        hhuNames.setAttribute("class", "mainProfile__paragraph__units__unit__hhu__names");
+
+        let image = '/images/members/'+subUnit.image+'.jpg';
+        function changeHHUImages() {
+            hhu.style.cssText = "background: url("+image+")  no-repeat fixed center; background-size: cover;";
+        }
+        hhuNames.addEventListener("mouseover", changeHHUImages);
+        hhuNames.removeEventListener("mouseout", changeHHUImages, true);
+
+        hhuNames.innerHTML = `
+            ${subUnit.name}
+        `;
+        hhu.append(hhuNames);
+    } else if (subUnit.unit == "Vocal Team"){
+        const vuNames = document.createElement("p");
+        vuNames.setAttribute("class", "mainProfile__paragraph__units__unit__vu__names");
+
+        let image = '/images/members/'+subUnit.image+'.jpg';
+        function changeVUImages() {
+            vu.style.cssText = "background: url("+image+")  no-repeat fixed center; background-size: cover;";
+        }
+        vuNames.addEventListener("mouseover", changeVUImages);
+        vuNames.removeEventListener("mouseout", changeVUImages, true);
+
+        vuNames.innerHTML = `
+            ${subUnit.name}
+        `;
+        vu.append(vuNames);
+    } else if (subUnit.unit == "Performance Team"){
+        const puNames = document.createElement("p");
+        puNames.setAttribute("class", "mainProfile__paragraph__units__unit__pu__names");
+
+        let image = '/images/members/'+subUnit.image+'.jpg';
+        function changePUImages() {
+            pu.style.cssText = "background: url("+image+")  no-repeat fixed center; background-size: cover;";
+        }
+        puNames.addEventListener("mouseover", changePUImages);
+        puNames.removeEventListener("mouseout", changePUImages, true);
+
+        puNames.innerHTML = `
+            ${subUnit.name}
+        `;
+        pu.append(puNames);
+    }
+});
+
