@@ -436,13 +436,11 @@
             background-blend-mode: saturation;
             margin-top: 20em;
             margin-bottom: 3em;
-            // right: 3em;
-            // width: 30em;
-            // height: 40em;
             filter: grayscale(100%);
             transition: .5s ease-in-out;
             text-align: center;
             padding: 2em;
+            z-index: -1;
             
             &::before{
                 content: "Sub-Units";
@@ -452,6 +450,7 @@
                 left: 1.8em;
                 width: 100%;
                 text-align: center;
+                
             }
 
             &:hover{
@@ -491,6 +490,16 @@
                     &__names{
                         font-size: 1.2em;
                         color: white;
+                        margin-bottom: .6em;
+                        text-align: left;
+                        width: 30%;
+
+                        &:hover{
+                            opacity: 1;
+                            color: black;
+                            transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+                            filter: blur(0px);
+                        }
                     }
         
                     &::before{
@@ -526,10 +535,19 @@
                     text-align: right;
                     padding: 2em;
                     margin-bottom: 2em;
+                    text-align: right;
 
                     &__names{
                         font-size: 1.2em;
                         color: black;
+                        margin-bottom: .6em;
+
+                        &:hover{
+                            opacity: 1;
+                            color: white;
+                            transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+                            filter: blur(0px);
+                        }
                     }
         
                     &::before{
@@ -558,10 +576,29 @@
                     text-align: right;
                     padding: 2em;
                     margin-bottom: 2em;
+                    // z-index: 1;
+                    opacity: 1;
                     
                     &__names{
                         font-size: 1.2em;
                         color: white;
+                        margin-bottom: .6em;
+                        position: relative;
+                        opacity: 1;
+                        text-align: right;
+                        right: 0;
+                        width: 50px;
+
+                        &:hover{
+                            opacity: 1;
+                            color: white;
+                            transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+                            filter: blur(0px);
+                        }
+
+                        &:not(:hover){
+                            opacity: .5;
+                        }
                     }
         
                     &::before{
@@ -617,10 +654,23 @@
                 
                 &__number{
                     font-size: 6em;
+                    visibility: hidden;
+                    transition:  .2s ease-in;
                 }
 
                 &__title{
                     text-transform: uppercase;
+                }
+
+                .each-list{
+                    // transition:  .2s ease-in;
+                    &:hover{
+                        transition:  .2s ease-in;
+                        .mainProfile__paragraph__discography__list__number{
+                            visibility: visible;
+                            // transition:  2s ease-in-
+                        }
+                    }
                 }
             }
         }
