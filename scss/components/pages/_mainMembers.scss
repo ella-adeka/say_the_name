@@ -1,3 +1,24 @@
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #4bedc2;
+    width: 100%;
+    height: 0%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
 .mainMembers{
     position: absolute;
     top: 50%;
@@ -6,11 +27,15 @@
     width: 100%;
     height: 100%;
     font-family: $discographyfont;
+    scroll-snap-align: center;
+    position: fixed;
 
     &__dets{
+        
         width: 100%;
         height: 100vh;
-        margin-bottom: 0.5px;
+        // margin-top: 1px;
+        // margin-bottom: 1px;
 
         &:nth-child(13){
             margin-bottom: 0;
@@ -34,12 +59,14 @@
             &__number{
                 position: fixed;
                 width: 97%;
+                height: 20%;
                 z-index: -2;
                 text-align: right;
-                margin-top: -0.75em;
-                // margin-top: -5%;
+                // margin-top: -em;
+                margin-top: -10%;
                 font-size: 8em;
                 opacity: 0.1;
+                
                 
                 .totalMembers{
                     font-size: 25px;
@@ -104,6 +131,7 @@
             bottom: -30%;
             text-align: right;
             color: black;
+            height: 40%;
             // background-color: #000;
             // background-image: linear-gradient(90deg, #000 77.5%, #fff 10%);
             // background-size: 100%;
@@ -121,35 +149,41 @@
             //     color: white;
             // }
 
-            
-
-            &__label{
-                // font-style: italic;
-                // font-weight: 800;
-                margin-right: 0.5em;
-                font-size: 1.2em;
-                opacity: .3;
-                // filter: drop-shadow(1.5px 1.5px gray);
-            }
-
-            &__name{
-                font-size: 5em;
-
-               
-
-                span{
-                    font-size: .3em;
-
+            &__mainInfo{
+                &__name{
+                    font-size: 5em;
+    
+                   
+    
+                    span{
+                        font-size: .3em;
+    
+                    }
+                }
+        
+                &__subunit{
+                    margin-top: -0.4em;
+                    font-size: 1.3em;
                 }
             }
-    
-            &__subunit{
-                margin-top: -0.4em;
-                font-size: 1.3em;
-            }
 
-            &__birth_name{
-                margin-top: 2em;
+            
+
+            &__otherInfo{
+                &__label{
+                    // font-style: italic;
+                    // font-weight: 800;
+                    margin-right: 0.5em;
+                    font-size: 1.2em;
+                    opacity: .3;
+                    // filter: drop-shadow(1.5px 1.5px gray);
+                }
+    
+                
+    
+                &__birth_name{
+                    margin-top: 2em;
+                }
             }
         }
     }
