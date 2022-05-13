@@ -259,45 +259,11 @@
 
     .close{
         position: absolute;
-        top:1em;
-        right: 1em;
-
-        &::before{
-            content: '';
-            position: absolute;
-            top: 1em;
-            right: 0.5em;
-            width: 28px;
-            transform: rotate(15deg) translate(-1px, 5px);
-            height: 2px;   
-            backdrop-filter:invert(100%) ;
-            // transition: 2s ease-in-out;
-
-        }
-        &::after{
-            content: '';
-            position: absolute;
-            top: 1.5em;
-            right: 0.5em;
-            width: 28px;
-            height: 2px;
-            // background-color: aqua;
-            transform: rotate(-15deg) translate(-4px, -5px);     
-            backdrop-filter:invert(100%);
-            // transition: 2s ease-in-out;
-        }
-
-        &:hover{
-            &::before{
-                transform: rotate(25deg) translate(-1px, 5px);
-                transition: .2s ease-in-out;
-            }
-            &::after{
-                transform: rotate(-25deg) translate(-4px, -5px);
-                transition: .2s ease-in-out;
-            }
-        }
-
+        top:1.5em;
+        right: 1.5em;
+        font-family: $discographyfont;
+        font-size: 1.2em;
+        z-index: 9;
     }
 
     .membersCarousel{
