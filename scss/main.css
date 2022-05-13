@@ -430,7 +430,6 @@ header {
   width: 0%;
   height: 120px;
   background: url("../../images/members/wonwoo_attacca_op1.jpg") no-repeat fixed center;
-  background-size: cover;
   overflow: hidden;
 }
 
@@ -496,7 +495,6 @@ header {
   width: 0%;
   height: 120px;
   background: url("../../images/members/dk_attacca_op1.jpg") no-repeat fixed center;
-  background-size: cover;
   overflow: hidden;
 }
 
@@ -1155,9 +1153,12 @@ header {
 }
 
 .mainProfile__paragraph__units__unit__vu__names {
+  position: relative;
   font-size: 1.2em;
   color: black;
   margin-bottom: .6em;
+  margin-left: 75%;
+  width: 25%;
 }
 
 .mainProfile__paragraph__units__unit__vu__names:hover {
@@ -1210,8 +1211,8 @@ header {
   position: relative;
   opacity: 1;
   text-align: right;
-  right: 0;
-  width: 50px;
+  margin-left: 75%;
+  width: 25%;
 }
 
 .mainProfile__paragraph__units__unit__pu__names:hover {
@@ -1453,10 +1454,9 @@ header {
   transition: .5s ease-in;
 }
 
-.mainProfile__paragraph__concerts::before {
-  content: "Concerts";
+.mainProfile__paragraph__concerts p {
   position: absolute;
-  font-size: 10em;
+  font-size: 9em;
   opacity: .5;
   margin-top: -0.7em;
 }
@@ -1659,48 +1659,11 @@ header {
 
 .theDiv .close {
   position: absolute;
-  top: 1em;
-  right: 1em;
-}
-
-.theDiv .close::before {
-  content: '';
-  position: absolute;
-  top: 1em;
-  right: 0.5em;
-  width: 28px;
-  -webkit-transform: rotate(15deg) translate(-1px, 5px);
-          transform: rotate(15deg) translate(-1px, 5px);
-  height: 2px;
-  -webkit-backdrop-filter: invert(100%);
-          backdrop-filter: invert(100%);
-}
-
-.theDiv .close::after {
-  content: '';
-  position: absolute;
   top: 1.5em;
-  right: 0.5em;
-  width: 28px;
-  height: 2px;
-  -webkit-transform: rotate(-15deg) translate(-4px, -5px);
-          transform: rotate(-15deg) translate(-4px, -5px);
-  -webkit-backdrop-filter: invert(100%);
-          backdrop-filter: invert(100%);
-}
-
-.theDiv .close:hover::before {
-  -webkit-transform: rotate(25deg) translate(-1px, 5px);
-          transform: rotate(25deg) translate(-1px, 5px);
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-
-.theDiv .close:hover::after {
-  -webkit-transform: rotate(-25deg) translate(-4px, -5px);
-          transform: rotate(-25deg) translate(-4px, -5px);
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  right: 1.5em;
+  font-family: New York;
+  font-size: 1.2em;
+  z-index: 9;
 }
 
 .theDiv .membersCarousel {
@@ -2381,7 +2344,7 @@ header {
     font-size: 4em;
   }
   .menu_btn {
-    top: 1em;
+    top: 0;
   }
   .nav .navbar__item {
     padding: 1em 0 0 0;
@@ -2598,22 +2561,28 @@ header {
     right: 5%;
   }
   .theDiv {
-    width: 80%;
+    width: 90%;
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
+    background-color: aquamarine;
+  }
+  .theDiv .close {
+    top: 1.3em;
+    right: 0;
+    position: fixed;
   }
   .theDiv .membersCarousel {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: auto;
-    overflow: hidden;
+    overflow-y: auto;
   }
   .theDiv .membersCarousel__paragraph {
     white-space: normal;
   }
   .theDiv .membersCarousel__paragraph li {
     list-style: none;
-    width: 30%;
+    width: 200px;
     height: 250px;
     display: inline-block;
     -webkit-box-align: baseline;
@@ -2695,6 +2664,8 @@ header {
   .theDiv .membersCarousel .member_name {
     font-size: 3.2em;
     padding: 0.5em;
+    bottom: 0;
+    position: fixed;
   }
   .mainProfile {
     width: 80%;
@@ -2861,6 +2832,7 @@ header {
     font-size: 1em;
     margin-left: -20px;
     width: 20%;
+    text-align: left;
   }
   .mainProfile__paragraph__units__unit__pu::before {
     font-size: 2em;
@@ -2970,7 +2942,7 @@ header {
   .mainProfile__paragraph__concerts {
     margin-top: 40%;
   }
-  .mainProfile__paragraph__concerts::before {
+  .mainProfile__paragraph__concerts p {
     font-size: 5em;
   }
   .listen-link {
