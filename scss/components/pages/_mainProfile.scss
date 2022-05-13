@@ -536,11 +536,15 @@
                     padding: 2em;
                     margin-bottom: 2em;
                     text-align: right;
+                    // max-width: 20%;
 
                     &__names{
+                        position: relative;
                         font-size: 1.2em;
                         color: black;
                         margin-bottom: .6em;
+                        margin-left: 75%;
+                        width: 25%;
 
                         &:hover{
                             opacity: 1;
@@ -586,8 +590,8 @@
                         position: relative;
                         opacity: 1;
                         text-align: right;
-                        right: 0;
-                        width: 50px;
+                        margin-left: 75%;
+                        width: 25%;
 
                         &:hover{
                             opacity: 1;
@@ -826,10 +830,9 @@
             filter: grayscale(100%);
             transition: .5s ease-in;
 
-            &::before{
-                content: "Concerts";
+            p{
                 position: absolute;
-                font-size: 10em;
+                font-size: 9em;
                 opacity: .5;
                 margin-top: -0.7em;
             }
