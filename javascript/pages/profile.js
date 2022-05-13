@@ -1,3 +1,17 @@
+const diffConcertsTours = [
+    {
+        id: "01",
+        name: "Concerts",
+    },
+    {
+        id: "02",
+        name: "Tours",
+    },
+    {
+        id: "03",
+        name: "Fanmeetings",
+    },
+]
 // DISPLAY THE NAME "SEVENTEEN" ON SCROLL
 const mainProfile = document.querySelector(".mainProfile");
 const groupName = document.querySelector(".mainProfile__paragraph__name");
@@ -160,7 +174,7 @@ profileMembersData.forEach(subUnit => {
 
         let image = '/images/members/'+subUnit.image+'.jpg';
         function changeHHUImages() {
-            hhu.style.cssText = "background: url("+image+")  no-repeat fixed center; background-size: cover;";
+            hhu.style.cssText = "background: url("+image+")  no-repeat fixed top; background-size: cover;";
         }
         hhuNames.addEventListener("mouseover", changeHHUImages);
         hhuNames.removeEventListener("mouseout", changeHHUImages, true);
@@ -175,7 +189,7 @@ profileMembersData.forEach(subUnit => {
 
         let image = '/images/members/'+subUnit.image+'.jpg';
         function changeVUImages() {
-            vu.style.cssText = "background: url("+image+")  no-repeat fixed center; background-size: cover;";
+            vu.style.cssText = "background: url("+image+")  no-repeat fixed top; background-size: cover;";
         }
         vuNames.addEventListener("mouseover", changeVUImages);
         vuNames.removeEventListener("mouseout", changeVUImages, true);
@@ -190,7 +204,7 @@ profileMembersData.forEach(subUnit => {
 
         let image = '/images/members/'+subUnit.image+'.jpg';
         function changePUImages() {
-            pu.style.cssText = "background: url("+image+")  no-repeat fixed center; background-size: cover;";
+            pu.style.cssText = "background: url("+image+")  no-repeat fixed top; background-size: cover;";
         }
         puNames.addEventListener("mouseover", changePUImages);
         puNames.removeEventListener("mouseout", changePUImages, true);
@@ -202,3 +216,25 @@ profileMembersData.forEach(subUnit => {
     }
 });
 
+const concertsDiv = document.querySelector(".mainProfile__paragraph__concerts");
+const concertsPara = document.querySelector(".mainProfile__paragraph__concerts__p");
+
+let j = 0;
+let showDiffConcerts;
+function showDiffConcertsFunc() {
+    showDiffConcerts = setInterval(() => {
+        j++;
+
+        concertsPara.textContent = `${diffConcertsTours[j].name}`;
+
+        if (j>= diffConcertsTours.length -1) {
+            clearInterval(showDiffConcerts);
+            j=-1;
+            if (j = -1) {
+                showDiffConcertsFunc(); 
+            }
+        }
+    }, 5000);
+
+    concertsDiv.append(concertsPara); 
+ }
