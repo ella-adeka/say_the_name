@@ -14,16 +14,59 @@ dets.setAttribute("class", "mainMembers__dets");
 
 let j = 0;
 
-function showNextMember() {
-    if (j != membersData.length -1) {
-        j = j+1;
-        members()
-    }
+// WHEEL EVENTS
+function handler(e) {
+    var isTouchPad = e.wheelDeltaY ? e.wheelDeltaY === -3 * e.deltaY : e.deltaMode === 0;
+    isOrIsNot = isTouchPad ? "isTouchPad" : "isMouse";
+    console.log(isOrIsNot);
 }
 
-main.addEventListener("wheel", showNextMember)
+main.addEventListener("mousewheel", handler, false);
+main.addEventListener("DOMMouseScroll", handler, false);
+
+function showNextMemberWithWheel(event) {
+    event.preventDefault();
+    var y = Math.max(-1, Math.min(1, (event.deltaY)));
+    
+    if (y>0) {
+        if (j != membersData.length -1) {
+            j++;
+            members()
+        }
+    } else {
+        if (j != 0) {
+            j--;
+            members()
+        } 
+    }  
+}
+
+main.addEventListener("wheel", showNextMemberWithWheel)
 if (j == membersData.length) {
-    main.removeEventListener("wheel", showNextMember)
+    main.removeEventListener("wheel", showNextMemberWithWheel)
+    console.log("Last Member")
+}
+
+function showNextMemberWithTouch(event) {
+    var y = event.touches[0].clientY;
+
+    // if (y>0) {
+    //     if (j != membersData.length -1) {
+            j++;
+            members()
+    //     }
+    // } else {
+    //     if (j != 0) {
+    //         j--;
+    //         members()
+    //     } 
+    // } 
+    console.log(y) 
+}
+
+main.addEventListener("touchmove", showNextMemberWithTouch)
+if (j == membersData.length) {
+    main.removeEventListener("touchmove", showNextMemberWithTouch)
     console.log("Last Member")
 }
 
