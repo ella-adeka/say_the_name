@@ -12,6 +12,7 @@ const theDiv = document.querySelector(".theDiv");
 const dets = document.createElement('div');
 dets.setAttribute("class", "mainMembers__dets");
 
+
 let j = 0;
 
 // WHEEL EVENTS
@@ -24,24 +25,32 @@ function handler(e) {
 main.addEventListener("mousewheel", handler, false);
 main.addEventListener("DOMMouseScroll", handler, false);
 
-function showNextMemberWithWheel(event) {
-    event.preventDefault();
-    var y = Math.max(-1, Math.min(1, (event.deltaY)));
-    
+function showNextMemberWithWheel(e) {
+    // var y = Math.max(-1, Math.min(1, (event.deltaY)));
+
+    var y = e.deltaY;
+
     if (y>0) {
         if (j != membersData.length -1) {
             j++;
-            members()
+            localStorage.setItem('member', j)
+            members(j)
+            console.log(j)
         }
-    } else {
-        if (j != 0) {
+    } else  {
+        if (j !== 0) {
             j--;
-            members()
+            
+            localStorage.setItem('member', j)
+            members(j)
+            console.log(j)
         } 
     }  
+    // console.log(j)
+    // console.log(y)
 }
 
-main.addEventListener("wheel", showNextMemberWithWheel)
+main.addEventListener("wheel", showNextMemberWithWheel, {passive:false})
 if (j == membersData.length) {
     main.removeEventListener("wheel", showNextMemberWithWheel)
     console.log("Last Member")
@@ -70,13 +79,17 @@ if (j == membersData.length) {
     console.log("Last Member")
 }
 
-function members() {
+function members(j) {
     if (j<membersData.length) {
-
+        if (localStorage.getItem("member") === null) {
+            localStorage.setItem('member', j)
+        }
+        var j = localStorage.getItem("member"); 
+        // console.log(j)
         let korean_name_var = membersData[j].korean_name;
         let korean_name;
         if (typeof korean_name_var != 'undefined') {
-            korean_name = `<p class="mainMembers__dets__info__korean_name"><span class="mainMembers__dets__info__label">Korean Name:</span> ${membersData[j].korean_name}</p>`;
+            korean_name = `<p class="mainMembers__dets__info__otherInfo__korean_name"><span class="mainMembers__dets__info__otherInfo__label">Korean Name:</span> ${membersData[j].korean_name}</p>`;
         } else{
             korean_name = `<span><span>`;
         }
@@ -92,9 +105,9 @@ function members() {
                 <p class="mainMembers__dets__info__mainInfo__subunit">${membersData[j].sub_unit}</p>   
             </div>
             <div class"mainMembers__dets__info__otherInfo">
+                <p class="mainMembers__dets__info__otherInfo__position"><span class="mainMembers__dets__info__otherInfo__label">Position:</span> ${membersData[j].position}</p>
                 <p class="mainMembers__dets__info__otherInfo__birth_name"><span class="mainMembers__dets__info__otherInfo__label">Birth Name:</span> ${membersData[j].birth_name}</p>
                 ${korean_name}
-                <p class="mainMembers__dets__info__otherInfo__position"><span class="mainMembers__dets__info__otherInfo__label">Position:</span> ${membersData[j].position}</p>
                 <p class="mainMembers__dets__info__otherInfo__nationality"><span class="mainMembers__dets__info__otherInfo__label">Nationality:</span> ${membersData[j].nationality}</p>
                 <p class="mainMembers__dets__info__otherInfo__birthday"><span class="mainMembers__dets__info__otherInfo__label">Birthday:</span> ${membersData[j].birthday}</p>
                 <p class="mainMembers__dets__info__otherInfo__zodiac"><span class="mainMembers__dets__info__otherInfo__label">Zodiac Sign:</span> ${membersData[j].zodiac_sign}</p>
