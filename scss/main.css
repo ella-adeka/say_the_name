@@ -1599,7 +1599,7 @@ header {
   position: absolute;
   z-index: -10;
   bottom: 0;
-  right: 2em;
+  right: 0.5em;
   padding: 2em;
   font-family: New York;
   opacity: 0.5;
