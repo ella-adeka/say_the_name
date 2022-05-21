@@ -157,7 +157,7 @@ function members(j) {
         // console.log("false")
     }
     showCarousel(j);
-    changeOnHover(j)
+    // changeOnHover(j)
 }
 
 
@@ -169,29 +169,29 @@ function showCarousel(j) {
     memberCarousel.innerHTML = `
         <ul class="membersCarousel__paragraph"> 
             <li>
-                <span>
+                <div>
                     <img class="membersCarousel__paragraph__image"  src="${membersData[j].imagesGrp[0]}" alt="">
-                </span>
+                </div>
             </li>
             <li>
-                <span>
+                <div>
                     <img class="membersCarousel__paragraph__image"  src="${membersData[j].imagesGrp[1]}" alt="">
-                </span>
+                </div>
             </li>
             <li>
-                <span>
+                <div>
                     <img class="membersCarousel__paragraph__image"  src="${membersData[j].imagesGrp[2]}" alt="">
-                </span>
+                </div>
             </li>
             <li>
-                <span>
+                <div>
                     <img class="membersCarousel__paragraph__image"  src="${membersData[j].imagesGrp[3]}" alt="">
-                </span>
+                </div>
             </li>
             <li>
-                <span>
+                <div>
                     <img class="membersCarousel__paragraph__image"  src="${membersData[j].imagesGrp[4]}" alt="">
-                </span>
+                </div>
             </li>
         </ul>
        
