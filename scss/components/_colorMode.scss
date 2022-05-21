@@ -14,10 +14,24 @@ body.dark{
     // background: linear-gradient(125deg, #f7cac9 ,  #92a8d1 );
     color: white;
 
+    .nav{
+        .colorModeDiv{
+            #colorMode{
+                .state{
+                    filter: invert(10%)
+                }
+            }
+        }
+    
+
     .navbar{
         background-color: black;
         color: white;
+
+        
+      
     }
+}
 
     .footerBar{
         backdrop-filter: invert(20%) blur(20px);
@@ -28,7 +42,7 @@ body.dark{
         &__paragraph{
 
             &__image{
-                background: url("../../../images/home_page/attacca/attacca_group_photo_1.jpeg") no-repeat fixed center 55%;
+                // background: url("../../../images/group/control_group.jpeg") no-repeat fixed center 55%;
                 background-size: cover;
                 filter: grayscale(80%)  opacity(0.7);
             }
@@ -48,6 +62,26 @@ body.dark{
 
     .theDiv{
         background-color: black;
+    }
+
+    @include media-md{
+        .mainMembers{
+            &__dets{
+                &__info{
+                    &__mainInfo{
+                        &__name{
+                            background-color: #fff;
+                            background-size: 0%;
+                        }
+    
+                        &__subunit{
+                            background-color: #fff;
+                            background-size: 0%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
