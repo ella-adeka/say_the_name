@@ -124,7 +124,7 @@ profileMembersData.forEach(profileMember => {
 
 namesParagraph.addEventListener("mouseleave", () => {
     setTimeout(() => {
-        profileMembersImage.setAttribute("src", "images/attacca_group_photo_3.jpg");
+        profileMembersImage.setAttribute("src", "images/group/attacca_group_photo_3.jpg");
         profileMembersImage.style.cssText = "filter: grayscale(100%)";
     }, 1000);
 });
